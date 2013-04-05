@@ -1,0 +1,252 @@
+// Headers
+//================================================//
+@media only screen and (max-width: 1100px) {
+	
+	.callouts {
+
+		article {
+
+			p {
+				height: 200px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1060px) {
+
+	.masthead {
+	
+		.callout {
+	
+			h5 {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.primary {
+
+		li {
+
+			a {
+				font-size: 1.15em;
+			}
+		}
+	}
+
+	.news {
+
+		article {
+
+			p {
+				height: 135px;
+			}
+		}
+	}
+
+	.button {
+		font-size: 1.25em;
+	}
+
+	.entry-details {
+		font-size: .85em;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.primary {
+
+		li {
+
+			&:nth-child(1) {
+				@include span-columns(4, 24);
+				@include pre(1, 24);
+			}
+	
+			&:nth-child(2) {
+				@include span-columns(4, 24);
+			}
+	
+			&:nth-child(3) {
+				@include span-columns(3, 24);
+				@include pre(6, 24);
+			}
+	
+			&:nth-child(4) {
+				@include span-columns(3, 24);
+			}
+	
+			&:nth-child(5) {
+				@include span-columns(2, 24);
+			}
+		}
+	}
+
+	.callouts, 
+	.news {
+
+		article {
+
+			.article-content {
+
+				p {
+					font-size: .95em;
+				}
+	
+				h3 {
+					font-size: 1.5em;
+				}
+
+				h4 {
+					font-size: 1em;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 890px) {
+
+	.primary {
+
+		li {
+
+			a {
+				font-size: 1em;
+			}
+
+			&:nth-child(1) {
+				@include span-columns(4, 24);
+				@include pre(.75, 24);
+			}
+	
+			&:nth-child(2) {
+				@include span-columns(5, 24);
+			}
+	
+			&:nth-child(3) {
+				@include span-columns(3, 24);
+				@include pre(5, 24);
+			}
+	
+			&:nth-child(4) {
+				@include span-columns(3, 24);
+			}
+	
+			&:nth-child(5) {
+				@include span-columns(2, 24);
+			}			
+		}
+	}
+
+	.button {
+		font-size: 1em;
+		padding-left: .25em;
+		padding-right: .25em;
+	}
+
+	.callouts {
+
+		article {
+
+			.article-content {
+
+				p {
+					font-size: .95em;
+					height: 220px;
+				}
+	
+				h3 {
+					height: 66px;
+				}
+			}
+		}
+	}
+
+	.news {
+
+		article {
+
+			.article-content {
+
+				p {
+					font-size: .75em;
+					height: 90px;
+				}
+
+				.entry-details {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.masthead {
+		padding-top: 3em;
+
+		.tagline {
+			font-size: 1em;
+		}
+
+		.callout {
+			font-size: .85em;
+		}
+	}
+
+	.intro,
+	.subscribe {
+		@include span-columns(24 omega, 24);
+
+		.button {
+			padding: 1em;
+		}
+	}
+
+	.intro {
+		p {
+			margin-top: 0;
+			margin-bottom: 2em;
+		}
+	}
+
+	.callouts {
+
+		.article-content {
+
+			h3 {
+				font-size: 1.25em;
+			}
+
+			p {
+				display: none;
+			}
+		}
+	}
+
+	.news {
+
+		article {
+			@include span-columns(12,24);
+			margin-bottom: 1em;
+
+			&:nth-of-type(even) {
+				@include span-columns(12 omega, 24);
+			}
+		}
+	}
+
+	#attribution {
+		@include span-columns(15,24);
+		@include pre(1,24);
+	}
+
+	#copyright {
+		@include span-columns(7,24);
+	}
+
+}

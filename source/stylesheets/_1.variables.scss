@@ -11,9 +11,9 @@ $black:                 #000 !default;
 $charcoal:				#2d2d2d !default;
 $grayDarker:            #676768 !default; //default text, borders, underlines
 $grayDark:              #818181 !default; // body, section headers
-$gray:                  #555 !default;
+$gray:                  #9d9d9d !default;
 $grayLight:             #999 !default; //placeholderText
-$grayLighter:           #c9c9c9 !default;
+$grayLighter:           #efefef !default;
 $white:                 #fff !default;
 $offWhite:				#f7f7f9 !default;
 $box-shadow-color:		#6c6c6c !default;
@@ -33,7 +33,7 @@ $textColor:             $black !default;
 // Links
 // -------------------------
 $linkColor:             $green !default;
-$linkColorHover:        darken($linkColor, 15%) !default;
+$linkColorHover:        lighten($linkColor, 15%) !default;
 
 
 // Typography
@@ -46,6 +46,7 @@ $alternatesansFontFamily:	"Helvetica Neue", Helvetica, Arial, "Lucida Grande", s
 $baseFontSize:          1em !default;
 $baseFontFamily:        $serifFontFamily !default;
 $baseLineHeight:        1.4em !default;
+$baseFontColor:			$charcoal;
 $altFontFamily:         $alternatesansFontFamily !default;
 
 $headingsFontFamily:    $sansFontFamily; // empty to use BS default, $baseFontFamily
@@ -151,22 +152,12 @@ $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 // Navbar
 // -------------------------
-$navbarHeight:                    50px !default;
-$navbarBackground:                $grayLighter !default;
-$navbarBackgroundHighlight:       $grayLight !default;
 
-$navbarText:                      $grayDarker !default;
-$navbarLinkColor:                 $grayDarker !default;
-$navbarLinkColorHover:            $gray !default;
-$navbarLinkColorActive:           $navbarLinkColorHover !default;
-$navbarLinkBackgroundHover:       transparent !default;
-$navbarLinkBackgroundActive:      $navbarBackground !default;
-
-$navbarSearchBackground:          lighten($navbarBackground, 25%) !default;
-$navbarSearchBackgroundFocus:     $white !default;
-$navbarSearchBorder:              darken($navbarSearchBackground, 30%) !default;
-$navbarSearchPlaceholderColor:    #ccc !default;
-$navbarBrandColor:                $navbarLinkColor !default;
+$child-1:				4.2808219;
+$child-2:				11.3013699;
+$child-3:				35.6746575;
+$child-4:				41.6678082;
+$child-5:				48.9452055;
 
 
 // CSS3

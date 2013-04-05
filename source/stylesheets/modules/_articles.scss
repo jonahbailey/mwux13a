@@ -1,16 +1,138 @@
-// Articles
+// General Articles
 //================================================
 
-.callouts {
+.callouts, .news {
 
 	.article-content {
 		@include box-sizing(border-box);
 		padding: 1em;
-		background: $grayLighter;
+		
+		background: image-url("mesh-white.svg") 0 0;
+		background-color: $grayLighter;
 
 		h3 {
-			color: $white;
+			color: $charcoal;
 			font-size: 1.75em;
+			margin-bottom: .35em;
+		}
+
+		p {
+			margin-bottom: 1em;
+			color: $grayDarker;
+		}
+
+		.entry-details {
+			* {
+				font-size: .85em;
+			}
+
+			a {
+				color: $green;
+			}
 		}
 	}
 }
+
+// Homepage Callouts
+//================================================
+
+.callouts {
+	@include span-columns(24 omega, 24);
+
+	article {
+		@include span-columns(8, 24);
+
+		&:last-child {
+			@include span-columns(8 omega, 24);
+		}
+
+		p {
+			height: 150px;
+		}
+
+		.button {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+// Homepage News
+//================================================
+
+.news {
+	@include span-columns(24 omega, 24);
+	padding: 1em 0 3em;
+
+	article {
+		@include span-columns(6, 24);
+
+		&:last-child {
+			@include span-columns(6 omega, 24);
+		}
+
+		p {
+			height: 110px;
+		}
+	}
+
+	h4 {
+		color: $charcoal;
+		font-size: 1.25em;
+		margin-bottom: .75em;
+		line-height: 1.25;
+		height: 52px;
+	}
+
+	.article-content {
+		background: image-url("mesh-white.svg") 0 0;
+		background-color: $grayLighter;
+
+	}
+}
+
+// Speakers, Volunteers Page Callouts
+//================================================
+.speakers,
+.volunteers {
+
+	.callouts {
+		margin: 2em 0 2em;
+	
+		article {
+			@include span-columns(12, 24);
+	
+			&:last-child {
+				@include span-columns(12 omega, 24);
+			}
+		}
+
+		p {
+			height: inherit;
+		}
+
+		.button {
+			//margin: 1em;
+		}
+	}
+
+	.information {
+		//height: 500px;
+	}
+}
+
+// Speakers Page Callouts
+//================================================
+
+.volunteers {
+
+	.callouts {
+		margin: 2em 0 2em;
+
+		p {
+			height: inherit;
+		}
+
+	}
+}
+

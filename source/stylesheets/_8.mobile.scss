@@ -1,0 +1,106 @@
+// Headers
+//================================================//
+
+@media only screen and (max-width: 600px) {
+
+	.home {
+		margin-top: -38px;
+		height: 33px;
+		width: 100px;
+	}
+
+	.masthead {
+	
+		h1 {
+			font-size: 2em;
+		}
+	}
+
+	.subscribe {
+
+		h5 {
+			font-size: 1.25em;
+		}
+
+		.email {
+			@include span-columns(24 omega, 24);
+		}
+
+		.button {
+			@extend .email;
+			margin-top: 1em;
+		}
+
+		.facebook {
+			@include pre(2);
+		}
+	}
+
+	.callouts,
+	.news {
+
+		article,
+		article:last-child,
+		article:nth-of-type(even) {
+			@include span-columns(24 omega, 24);
+			margin-bottom: 2em;
+		
+
+			.article-content {
+
+				h3 {
+					height: inherit;
+				}
+	
+				p,
+				h4 {
+					display: block;
+					height: inherit;
+				}
+
+				.entry-details {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.sponsors {
+		padding: 2em 0 2em;
+
+		h5 {
+			margin-bottom: 1em;
+		}
+
+		li,
+		li:last-child {
+			@include span-columns(24 omega, 24);
+
+			a {
+				height: 75px;
+				background-size: 65% !important;
+			}
+		}
+	}
+
+	#learn,
+	#collaborate,
+	#contact {
+		@include span-columns(24 omega, 24);
+		text-align: center;
+		margin-bottom: 1em;
+
+		li {
+			text-align: center;
+		}
+	}
+
+	#attribution {
+		@include span-columns(23 omega, 24);
+	}
+
+	#copyright {
+		@include span-columns(24 omega, 24);
+		text-align: center;
+	}
+}

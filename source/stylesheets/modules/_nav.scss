@@ -1,29 +1,68 @@
 // Navbar
 //================================================
 
-nav {
+.primary {
+	margin-top: 1.35em;
 
 	ul {
 		list-style: none;
+		margin: -59px auto 0;
+		z-index: 0;
+		@include span-columns(24 omega, 24);
 
-		li {
-			text-align: center;
+	}
 
-			a {
-				text-decoration: none;
-			}
+	li {
+		@include box-sizing(border-box);
+		float: left;
+		position: relative;
+		text-align: center;
+
+		&:nth-child(1) {
+			@include span-columns(5, 24);
+		}
+
+		&:nth-child(2) {
+			@include span-columns(5, 24);
+		}
+
+		&:nth-child(3) {
+			@include span-columns(3, 24);
+			@include pre(4, 24);
+		}
+
+		&:nth-child(4) {
+			@include span-columns(3, 24);
+		}
+
+		&:nth-child(5) {
+			@include span-columns(3, 24);
+		}
+
+
+		a {
+			text-decoration: none;
+			font-size: 1.25em;
 		}
 	}
+}
 
-	#left {
-		
-	}
+.home {
+	@include box-sizing(border-box);
+	height: 50px;
+	background: image-url('logo.svg') no-repeat center;
+	background-size: 100%;
+	width: 153px;
+	margin: 10px auto 0;
+	display: block;
+	position: relative;
+	z-index: 100;
 
-	#right {
-		
-	}
-
-	#logo {
-		
+	a {
+		@extend .hide-text;
+		display: block;
+		height: 50px;
+		width: 153px;
 	}
 }
+

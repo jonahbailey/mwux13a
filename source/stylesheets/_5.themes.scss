@@ -5,15 +5,21 @@
 //================================================//
 
 .spring {
-	background: image-url("topo.svg");
-	background-size: 50%;
+	//background-color: $grayLighter;
+	background: image-url("BG_Texture_B.png");
+	//background-size: 100%;
 
 	.masthead#home {
-		background: image-url("masthead.jpg") center center, 100%;
+		background: image-url("masthead.jpg") no-repeat;
+		background-size: cover;
 	}
 
 	a {
-		color: $green;
+		color: $linkColor;
+
+		&:hover {
+			color: $linkColorHover
+		}
 	}
 
 	.button {

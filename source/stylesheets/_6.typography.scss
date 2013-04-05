@@ -3,6 +3,8 @@
 
 * {
 	font-family: $baseFontFamily;
+	color: $baseFontColor;
+	line-height: $baseLineHeight;
 }
 
 
@@ -23,7 +25,7 @@ h5, h6 {
 .button {
 	font-family: $headingsFontFamily;
 	text-transform: uppercase;
-	font-size: 1.5em;
+	font-size: 1.55em;
 }
 
 // Nav
@@ -37,6 +39,39 @@ nav {
 	}
 }
 
+// Masthead
+//================================================//
+
+.masthead {
+
+	h1 {
+		font-size: 3em;
+	}
+	.callout {
+
+		h5 {
+			font-size: 2em;
+			color: $white;
+		}
+
+		a {
+			font-family: $headingsFontFamily;
+		}
+	}
+}
 
 // Body Text
 //================================================//
+
+
+// Footer
+//================================================//
+
+footer {
+
+	h2 {
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+		color: white;	
+	}
+}
