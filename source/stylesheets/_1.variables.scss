@@ -1,0 +1,191 @@
+/* Variables
+================================================== */
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$charcoal:				#2d2d2d !default;
+$grayDarker:            #676768 !default; //default text, borders, underlines
+$grayDark:              #818181 !default; // body, section headers
+$gray:                  #555 !default;
+$grayLight:             #999 !default; //placeholderText
+$grayLighter:           #c9c9c9 !default;
+$white:                 #fff !default;
+$offWhite:				#f7f7f9 !default;
+$box-shadow-color:		#6c6c6c !default;
+
+// Accent colors
+// -------------------------
+$green:					#65c997 !default;
+$yellow:				#e0c446 !default;
+$orange:				#ed6d4e !default;
+
+// Scaffolding
+// -------------------------
+$bodyBackground:		$white !default;
+$textColor:             $black !default;
+
+
+// Links
+// -------------------------
+$linkColor:             $green !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
+
+
+// Typography
+// -------------------------
+
+$serifFontFamily:       	"adelle", Georgia, Times, serif !default;
+$sansFontFamily:        	"din-condensed-web", "HelveticaNeue-Lig"Helvetica Neue Light"ht", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$alternatesansFontFamily:	"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+
+$baseFontSize:          1em !default;
+$baseFontFamily:        $serifFontFamily !default;
+$baseLineHeight:        1.4em !default;
+$altFontFamily:         $alternatesansFontFamily !default;
+
+$headingsFontFamily:    $sansFontFamily; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    400 !default;    // instead of browser default, bold
+$headingsColor:         $black !default; // empty to use BS default, $textColor
+
+$inputFontFamily:		$serifFontFamily;
+
+$buttonFontSize:		.75em !default;
+
+
+// Tables
+// -------------------------
+$tableBackground:                   transparent !default; // overall background-color
+$tableBackgroundAccent:             #f9f9f9 !default; // for striping
+$tableBackgroundHover:              #f5f5f5 !default; // for hover
+$tableBorder:                       #ddd !default; // table and cell border
+$hrBorder:							$grayDark !default;
+
+
+// Buttons - set as gradients in the button mixin
+// -------------------------
+
+//Primary
+$primaryColor: 						#52b1d0 !default;
+
+//Secondary
+$primaryColor-secondary:			#d2d2d2 !default;
+
+//Danger
+$primaryColor-danger:				#c75048 !default;
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $primaryColor;
+$btnBackgroundHighlight:            darken($primaryColor, 10%);
+$btnBorder:                         darken($primaryColor, 20%) !default;
+
+$btnBackgroundSecondary:            $primaryColor-secondary;
+$btnBackgroundSecondaryHighlight:   darken($primaryColor-secondary, 10%);
+$btnBorderSecondary:                darken($primaryColor-secondary, 20%) !default;
+
+$btnBackgroundDanger:               $primaryColor-danger;
+$btnBackgroundDangerHighlight:      darken($primaryColor-danger, 10%);
+$btnBorderDanger:                   darken($primaryColor-danger, 20%) !default;
+
+
+// Forms
+// -------------------------
+$inputBackground:               $white !default;
+$inputBorder:                   #ccc !default;
+$inputBorderRadius:             3px !default;
+$inputDisabledBackground:       $grayLighter !default;
+$formActionsBackground:         #f5f5f5 !default;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000 !default;
+$zindexPopover:           1010 !default;
+$zindexTooltip:           1020 !default;
+$zindexFixedNavbar:       1030 !default;
+$zindexModalBackdrop:     1040 !default;
+$zindexModal:             1050 !default;
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight !default;
+
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white !default;
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownLinkColor:             $grayDark !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkBackgroundHover:   $linkColorHover !default;
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853 !default;
+$warningBackground:       #fcf8e3 !default;
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
+
+$errorText:               #b94a48 !default;
+$errorBackground:         #f2dede !default;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
+
+$successText:             #468847 !default;
+$successBackground:       #dff0d8 !default;
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
+
+$infoText:                #3a87ad !default;
+$infoBackground:          #d9edf7 !default;
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
+
+// Navbar
+// -------------------------
+$navbarHeight:                    50px !default;
+$navbarBackground:                $grayLighter !default;
+$navbarBackgroundHighlight:       $grayLight !default;
+
+$navbarText:                      $grayDarker !default;
+$navbarLinkColor:                 $grayDarker !default;
+$navbarLinkColorHover:            $gray !default;
+$navbarLinkColorActive:           $navbarLinkColorHover !default;
+$navbarLinkBackgroundHover:       transparent !default;
+$navbarLinkBackgroundActive:      $navbarBackground !default;
+
+$navbarSearchBackground:          lighten($navbarBackground, 25%) !default;
+$navbarSearchBackgroundFocus:     $white !default;
+$navbarSearchBorder:              darken($navbarSearchBackground, 30%) !default;
+$navbarSearchPlaceholderColor:    #ccc !default;
+$navbarBrandColor:                $navbarLinkColor !default;
+
+
+// CSS3
+// -------------------------
+
+$radius:		10px;			
+$shadow: 		0px 2px 3px 2px $box-shadow-color;
+
+/*
+$transition
+$degrees
+$ratio
+$x
+$y
+$z
+$visibility
+$clip
+$size
+$boxmodel
+$select
+$opacity
+*/

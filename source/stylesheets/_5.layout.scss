@@ -1,0 +1,21 @@
+// Layout
+//================================================
+
+// Navbar
+//================================================
+
+#left {
+	@include span-columns(10,24);
+	
+	li {
+		@include span-columns(5,10);
+	}
+}
+
+#right {
+	@include span-columns(10 omega, 24);
+}
+
+#logo {
+	@include span-columns(4,24);
+}

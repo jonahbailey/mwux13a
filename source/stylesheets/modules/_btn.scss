@@ -1,2 +1,9 @@
-/* Buttons
-================================================== */
+// Buttons
+//================================================
+
+.button {
+	@include box-sizing(border-box);
+	padding: .5em;
+	text-decoration: none;
+	text-align: center;
+}

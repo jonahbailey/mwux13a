@@ -6,9 +6,13 @@
     %meta{:content => "Middleman", :name => "description"}
     %meta{:content => "on", "http-equiv" => "cleartype"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width", :name => "viewport"}
     %link{:href => "stylesheets/style.css", :rel => "stylesheet"}
-
-  %body
+    %script{:type => "text/javascript",
+        :src  => "//use.typekit.net/diw1mze.js"}
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+  %body.spring
     = render_partial 'header'
     = yield
     = render_partial 'footer'

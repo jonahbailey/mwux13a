@@ -1,0 +1,42 @@
+// Headers
+//================================================//
+
+* {
+	font-family: $baseFontFamily;
+}
+
+
+h1, h2, h3, h4 {
+	font-family: $baseFontFamily;
+	font-weight: $headingsFontWeight;
+}
+
+h5, h6 {
+	font-family: $headingsFontFamily;
+	font-weight: $headingsFontWeight;
+	text-transform: uppercase;
+}
+
+// Links
+//================================================//
+
+.button {
+	font-family: $headingsFontFamily;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+
+// Nav
+//================================================//
+
+nav {
+
+	a {
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+	}
+}
+
+
+// Body Text
+//================================================//

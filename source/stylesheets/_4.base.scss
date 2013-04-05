@@ -1,0 +1,45 @@
+//Base
+//================================================
+
+//Clearfix
+//================================================
+.cf:before, 
+.cf:after { 
+content:""; 
+display:table; 
+} 
+
+.cf:after { 
+clear:both; 
+} 
+
+/* For IE 6/7 (trigger hasLayout) */ 
+.cf { 
+zoom:1; 
+}
+
+// Basics
+//================================================
+
+.container {
+	@include container;
+}
+
+header {
+	width: 100%;
+	background: image-url("bg-nav.png") bottom, 100%;
+}
+
+.content {
+	background: image-url("bg-body.png");
+}
+
+.subscribe {
+	background: image-url("bg-subscribe.png") 100%;
+}
+
+footer {
+	border-top: 1px solid #363636;
+	@include gradient-vertical;
+	@include box-shadow(-5 0 5 #000);
+}

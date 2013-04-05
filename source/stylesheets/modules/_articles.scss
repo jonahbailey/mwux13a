@@ -1,0 +1,16 @@
+// Articles
+//================================================
+
+.callouts {
+
+	.article-content {
+		@include box-sizing(border-box);
+		padding: 1em;
+		background: $grayLighter;
+
+		h3 {
+			color: $white;
+			font-size: 1.75em;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+// Themes
+//================================================//
+
+// Spring Theme
+//================================================//
+
+.spring {
+	background: image-url("topo.svg");
+	background-size: 50%;
+
+	.masthead#home {
+		background: image-url("masthead.jpg") center center, 100%;
+	}
+
+	a {
+		color: $green;
+	}
+
+	.button {
+		color: $white;
+		background: $green;
+	}
+}
+
+// Summer Theme
+//================================================//
+
+
+
+// Fall Theme
+//================================================//
