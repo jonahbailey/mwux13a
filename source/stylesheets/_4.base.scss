@@ -20,10 +20,18 @@ zoom:1;
 
 // Basics
 //================================================
+html,
+body {
+	height: 100%;
+}
 
 .container {
 	@include container;
 	padding: 0;
+
+	&.interior {
+		padding: 2em;	
+	}
 }
 
 header {
@@ -40,7 +48,7 @@ header {
 .content {
 	background: image-url("bg-body.png");
 	@include box-sizing(border-box);
-	padding: 0 2em;
+	padding: 2em;
 }
 
 .main {
@@ -54,8 +62,9 @@ header {
 
 .masthead {
 	padding-top: 5em;
-	border-left: 1px solid rgba(0,0,0,0.7);
-	border-right: 1px solid rgba(0,0,0,0.7);
+	border-left: 1px solid rgba(0,0,0,0.25);
+	border-right: 1px solid rgba(0,0,0,0.25);
+	background-size: cover;
 
 	* {
 		text-align: center;
@@ -91,7 +100,7 @@ header {
 .announcement {
 	@include span-columns(24 omega, 24);
 	@include box-sizing(border-box);
-	padding: 2em 0 2em;
+	padding: 0 0 2em;
 }
 
 .intro {
@@ -100,7 +109,7 @@ header {
 	p {
 		font-size: 1.25em;
 		line-height: 1.5em;
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 }
 
@@ -148,13 +157,13 @@ header {
 	background-position: center center;
 	height: 55px;
 	width: 55px;
-	background-size: 100%;
 	display: block;
 	float: left;
 }
 
 .facebook {
 	background: image-url("facebook.svg")no-repeat;
+	background-size: 100%;
 	@include post(1);
 	margin-left: 27.0454545%;
 }
@@ -162,10 +171,12 @@ header {
 .twitter {
 	background: image-url("twitter.svg")no-repeat;
 	@include post(1);
+	background-size: 100%;
 }
 
 .linked-in {
 	background: image-url("linkedin.svg")no-repeat;
+	background-size: 100%;
 }
 
 // Section Headers
@@ -173,11 +184,13 @@ header {
 
 
 .sponsors, 
-.news {
+.news,
+.venues {
 	h5 {
 		text-align: center;
 		font-size: 1.5em;
-		color: $grayDark;
+		color: $black;
+		margin-bottom: 1em;
 	}
 }
 
@@ -208,6 +221,8 @@ header {
 			@include hide-text;
 			height: 60px;
 			display: block;
+			@include transition-property(background);
+			@include transition-duration($duration);
 		}
 
 		.atomic-object {
@@ -260,6 +275,12 @@ header {
 	margin-top: -6px;
 	background: image-url("bg-body.png");
 
+	.masthead {
+		padding:0;
+		border: none;
+
+	}
+
 	h1 {
 		margin: 0 1em 1em;
 	}
@@ -275,6 +296,26 @@ header {
 	h5 {
 		font-size: 1.25em;
 		margin-bottom: .75em;
+	}
+
+	blockquote {
+		margin: 1em 2em;
+
+		p {
+			font-size: 1.25em;
+			line-height: 1.6em;
+			color: $grayDarker;
+			margin-bottom: 1em;
+			border-left: 2px solid $grayLighter;
+			padding-left: 1em;
+		}
+	}
+}
+
+.speakers {
+
+	.theme-intro {
+		@include span-columns(12 omega, 24);
 	}
 }
 
@@ -292,6 +333,7 @@ header {
 
 	.open-positions {
 		@include span-columns(24 omega, 24);
+		display: none;
 	}
 
 	ul {

@@ -1,4 +1,4 @@
-// Headers
+// Homepage
 //================================================//
 @media only screen and (max-width: 1100px) {
 	
@@ -60,26 +60,34 @@
 
 		li {
 
+			// &:nth-child(1) {
+			// 	@include span-columns(4, 24);
+			// 	@include pre(1, 24);
+			// }
+	
+			// &:nth-child(2) {
+			// 	@include span-columns(4, 24);
+			// }
+	
+			// &:nth-child(3) {
+			// 	@include span-columns(3, 24);
+			// 	@include pre(6, 24);
+			// }
+	
+			// &:nth-child(4) {
+			// 	@include span-columns(3, 24);
+			// }
+	
+			// &:nth-child(5) {
+			// 	@include span-columns(2, 24);
+			// }
+
 			&:nth-child(1) {
-				@include span-columns(4, 24);
-				@include pre(1, 24);
+				@include span-columns(12, 24);
 			}
 	
 			&:nth-child(2) {
-				@include span-columns(4, 24);
-			}
-	
-			&:nth-child(3) {
-				@include span-columns(3, 24);
-				@include pre(6, 24);
-			}
-	
-			&:nth-child(4) {
-				@include span-columns(3, 24);
-			}
-	
-			&:nth-child(5) {
-				@include span-columns(2, 24);
+				@include span-columns(12 omega, 24);
 			}
 		}
 	}
@@ -117,27 +125,35 @@
 				font-size: 1em;
 			}
 
+			// &:nth-child(1) {
+			// 	@include span-columns(4, 24);
+			// 	@include pre(.75, 24);
+			// }
+	
+			// &:nth-child(2) {
+			// 	@include span-columns(5, 24);
+			// }
+	
+			// &:nth-child(3) {
+			// 	@include span-columns(3, 24);
+			// 	@include pre(5, 24);
+			// }
+	
+			// &:nth-child(4) {
+			// 	@include span-columns(3, 24);
+			// }
+	
+			// &:nth-child(5) {
+			// 	@include span-columns(2, 24);
+			// }
+
 			&:nth-child(1) {
-				@include span-columns(4, 24);
-				@include pre(.75, 24);
+				@include span-columns(12, 24);
 			}
 	
 			&:nth-child(2) {
-				@include span-columns(5, 24);
+				@include span-columns(12 omega, 24);
 			}
-	
-			&:nth-child(3) {
-				@include span-columns(3, 24);
-				@include pre(5, 24);
-			}
-	
-			&:nth-child(4) {
-				@include span-columns(3, 24);
-			}
-	
-			&:nth-child(5) {
-				@include span-columns(2, 24);
-			}			
 		}
 	}
 
@@ -249,4 +265,58 @@
 		@include span-columns(7,24);
 	}
 
+}
+
+// Speakers, Volunteers
+//================================================//
+@media only screen and (max-width: 890px) {
+
+	.speakers,
+	.volunteers {
+
+		.masthead {
+			margin-top: 0;
+		}
+
+		.callouts {
+
+			article {
+
+				.article-content {
+
+					p {
+						height: inherit;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.speakers,
+	.volunteers {
+
+		.masthead {
+			display: none;
+		}
+
+		.theme-intro {
+			@include span-columns(24 omega, 24);
+		}
+
+		.callouts {
+
+			article {
+
+				.article-content {
+
+					p {
+						display: block;
+					}
+				}
+			}
+		}
+	}
 }

@@ -33,8 +33,7 @@ $textColor:             $black !default;
 // Links
 // -------------------------
 $linkColor:             $green !default;
-$linkColorHover:        lighten($linkColor, 15%) !default;
-
+$linkColorHover:        lighten($linkColor, 25%) !default;
 
 // Typography
 // -------------------------
@@ -165,7 +164,7 @@ $child-5:				48.9452055;
 
 $radius:		10px;			
 $shadow: 		0px 2px 3px 2px $box-shadow-color;
-
+$duration: 	.5s;
 /*
 $transition
 $degrees

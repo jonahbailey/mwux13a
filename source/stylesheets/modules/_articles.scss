@@ -1,7 +1,13 @@
 // General Articles
 //================================================
 
-.callouts, .news {
+.callouts, 
+.news,
+.venues {
+
+	.article-link {
+		text-decoration: none;
+	}
 
 	.article-content {
 		@include box-sizing(border-box);
@@ -13,6 +19,11 @@
 		h3 {
 			color: $charcoal;
 			font-size: 1.75em;
+			margin-bottom: .35em;
+		}
+
+		h4 {
+			color: $charcoal;
 			margin-bottom: .35em;
 		}
 
@@ -136,3 +147,84 @@
 	}
 }
 
+// Interior Pages (Grand Rapids & About MWUX)
+//================================================
+
+.container.grand-rapids {
+
+	.callouts {
+
+		article {
+
+			p {
+				height: inherit;
+			}
+
+			&:last-child {
+				@include span-columns(16 omega,24);
+			}
+
+			&:first-of-type {
+				.article-content {
+					height: 393.578125px
+				}
+			}
+		}
+	}
+}
+
+.venues {
+	padding-top: 2em;
+	@include span-columns(24 omega, 24);
+
+	article {
+		@include span-columns(24 omega, 24);
+		background: image-url("mesh-white.svg") 0 0;
+		background-color: $grayLighter;
+		margin-bottom: 2em;
+		position: relative;
+
+		.image {
+			@include span-columns(11,24);
+			position: absolute;
+			top: 0;
+			left: 0;
+			height:100%;
+			background: image-url("kendall.jpg") no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		.article-content {
+			@include span-columns(13 omega, 24);
+			background: transparent;
+		}
+
+		.button {
+			width: 100%;
+			display: block;
+		}
+
+		&:nth-of-type(2n) {
+			margin-bottom: 0;
+
+			.image {
+				@include span-columns(11 omega, 24);
+				left: inherit;
+				right: 0;
+				background: image-url("uica.jpg");
+				background-size: cover;
+				background-position: center center;
+
+			}
+
+			.article-content {
+				@include span-columns(13, 24);
+			}
+
+			.button {
+				float: left;
+			}
+		}
+	}
+}
