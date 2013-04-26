@@ -101,14 +101,20 @@ header {
 	@include span-columns(24 omega, 24);
 	@include box-sizing(border-box);
 	padding: 0 0 2em;
+
+	h5 {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
 }
 
 .intro {
 	@include span-columns(12, 24);
+	padding: 2em 0 2em;
 	
 	p {
-		font-size: 1.25em;
-		line-height: 1.5em;
+		font-size: 1em;
+		line-height: 1.6em;
 		margin-top: 1em;
 	}
 }
@@ -121,10 +127,9 @@ header {
 	padding: 2em;
 
 	h5 {
-		font-size: 1.5em;
-		margin-bottom: 1em;
 		text-align: center;
 	}
+
 
 	.button {
 		margin-left: -2.85714%;
@@ -282,7 +287,7 @@ header {
 	}
 
 	h1 {
-		margin: 0 1em 1em;
+		margin: 1em 0 1em;
 	}
 
 	img {
@@ -290,7 +295,7 @@ header {
 	}
 
 	h2 {
-		margin-bottom: .75em;
+		margin: 1em 0 1em;
 	}
 
 	h5 {
@@ -302,7 +307,7 @@ header {
 		margin: 1em 2em;
 
 		p {
-			font-size: 1.25em;
+			font-size: 1.15em;
 			line-height: 1.6em;
 			color: $grayDarker;
 			margin-bottom: 1em;
@@ -315,10 +320,69 @@ header {
 .speakers {
 
 	.theme-intro {
-		@include span-columns(12 omega, 24);
+		p {
+			font-size: 1.15em;
+			line-height: 1.6em;
+			color: $grayDarker;
+			padding: 1em 4em 0;
+		}
+	}
+
+	.explanation {
+		@include span-columns(24 omega, 24);
+		margin-top: 2em;
+
+
+		.headshot {
+			@include span-columns(8 omega, 8);
+			@include box-sizing(border-box);
+
+			img {
+				width: 100%;
+			}
+			//&#laurel {
+			//	background: image-url("laurel.jpg") no-repeat;
+			//	background-size: 100%;
+			//}
+
+			//&#grant {
+			//	background: image-url("grant.jpg") no-repeat;
+			//	background-size: 100%;
+			//}
+
+			//&#samuel {
+			//	background: image-url("samuel.jpg") no-repeat;
+			//	background-size: 100%;
+			//}
+		}
+
+		h5 {
+			@include span-columns(8 omega, 8);
+			@include box-sizing(border-box);
+			padding: .5em;
+			margin: 0;
+			color: $white;
+			background: rgba($black, .75);
+			font-size: 1.05em;
+		}
+
+		.article-content {
+			@include span-columns(8 omega, 8);
+
+			ul {
+				padding-left: 2em;
+			}
+		}
 	}
 }
 
+.chairs {
+	margin-bottom: 2em;
+}
+
+.form {
+	margin: 2em auto;
+}
 
 .volunteers {
 

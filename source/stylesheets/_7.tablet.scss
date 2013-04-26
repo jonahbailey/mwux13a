@@ -25,15 +25,15 @@
 		}
 	}
 
-	.primary {
+	// .primary {
 
-		li {
+	// 	li {
 
-			a {
-				font-size: 1.15em;
-			}
-		}
-	}
+	// 		a {
+	// 			font-size: 1.15em;
+	// 		}
+	// 	}
+	// }
 
 	.news {
 
@@ -56,44 +56,45 @@
 
 @media only screen and (max-width: 1000px) {
 
-	.primary {
+	// .primary {
 
-		li {
+	// 	li {
 
-			// &:nth-child(1) {
-			// 	@include span-columns(4, 24);
-			// 	@include pre(1, 24);
-			// }
+	// 		// &:nth-child(1) {
+	// 		// 	@include span-columns(4, 24);
+	// 		// 	@include pre(1, 24);
+	// 		// }
 	
-			// &:nth-child(2) {
-			// 	@include span-columns(4, 24);
-			// }
+	// 		// &:nth-child(2) {
+	// 		// 	@include span-columns(4, 24);
+	// 		// }
 	
-			// &:nth-child(3) {
-			// 	@include span-columns(3, 24);
-			// 	@include pre(6, 24);
-			// }
+	// 		// &:nth-child(3) {
+	// 		// 	@include span-columns(3, 24);
+	// 		// 	@include pre(6, 24);
+	// 		// }
 	
-			// &:nth-child(4) {
-			// 	@include span-columns(3, 24);
-			// }
+	// 		// &:nth-child(4) {
+	// 		// 	@include span-columns(3, 24);
+	// 		// }
 	
-			// &:nth-child(5) {
-			// 	@include span-columns(2, 24);
-			// }
+	// 		// &:nth-child(5) {
+	// 		// 	@include span-columns(2, 24);
+	// 		// }
 
-			&:nth-child(1) {
-				@include span-columns(12, 24);
-			}
+	// 		&:nth-child(1) {
+	// 			@include span-columns(12, 24);
+	// 		}
 	
-			&:nth-child(2) {
-				@include span-columns(12 omega, 24);
-			}
-		}
-	}
+	// 		&:nth-child(2) {
+	// 			@include span-columns(12 omega, 24);
+	// 		}
+	// 	}
+	// }
 
 	.callouts, 
-	.news {
+	.news,
+	.speakers {
 
 		article {
 
@@ -147,13 +148,13 @@
 			// 	@include span-columns(2, 24);
 			// }
 
-			&:nth-child(1) {
-				@include span-columns(12, 24);
-			}
-	
-			&:nth-child(2) {
-				@include span-columns(12 omega, 24);
-			}
+			// &:nth-child(1) {
+				// @include span-columns(12, 24);
+			// }
+	// 
+			// &:nth-child(2) {
+				// @include span-columns(12 omega, 24);
+			// }
 		}
 	}
 
@@ -180,6 +181,25 @@
 			}
 		}
 	}
+
+	.speakers {
+
+		article {
+
+			.article-content {
+
+				h3 {
+					font-size: 1.15em;
+					height: 60px
+				}
+
+				p {
+					font-size: .85em;
+				}
+			}
+		}
+	}
+
 
 	.news {
 

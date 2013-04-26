@@ -3,7 +3,8 @@
 
 .callouts, 
 .news,
-.venues {
+.venues,
+.explanation {
 
 	.article-link {
 		text-decoration: none;
@@ -42,6 +43,14 @@
 			}
 		}
 	}
+
+	article {
+
+		.button {
+			display: block;
+			width: 100%;
+		}
+	}
 }
 
 // Homepage Callouts
@@ -59,11 +68,6 @@
 
 		p {
 			height: 150px;
-		}
-
-		.button {
-			display: block;
-			width: 100%;
 		}
 	}
 }
@@ -124,6 +128,21 @@
 
 		.button {
 			//margin: 1em;
+		}
+	}
+
+	.explanation {
+
+		article {
+			@include span-columns(8, 24);
+
+			&:last-child {
+				@include span-columns(8 omega, 24);
+			}
+
+			h3 {
+				height: 78px;
+			}
 		}
 	}
 
@@ -225,6 +244,32 @@
 			.button {
 				float: left;
 			}
+		}
+	}
+}
+
+.why-mwux {
+	article {
+		@include span-columns(12, 24);
+		background: image-url("mesh-white.svg") 0 0;
+		background-color: $grayLighter;
+		margin-bottom: 2em;
+		position: relative;
+
+		.image {
+			background: image-url("2011.jpg") no-repeat;
+		}
+
+		&:last-of-type {
+			@include span-columns(12 omega, 24);
+
+			.image {
+				background: image-url("2012.jpg") no-repeat;
+			}
+		}
+
+		p {
+			height: inherit;
 		}
 	}
 }

@@ -143,6 +143,38 @@
 				@include span-columns(24 omega, 24);
 			}
 		}
+
+		.theme-intro {
+
+			p {
+				font-size: 1.15em;
+				line-height: 1.6em;
+				padding: 1em 1em .25em;
+			}
+		}
+
+		.explanation {
+			
+			article,
+			article:last-child,
+			article:nth-of-type(even) {
+				@include span-columns(24 omega, 24);
+				margin-bottom: 2em;
+
+				.article-content {
+
+					h3 {
+						height: inherit;
+					}
+
+					p,
+					h4 {
+						display: block;
+						height: inherit;
+					}
+				}
+			}
+		}		
 	}
 
 	.volunteers {

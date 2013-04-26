@@ -69,8 +69,9 @@
 	a {
 		@extend .hide-text;
 		display: block;
-		height: 50px;
+		height: 80px;
 		width: 153px;
+		background: image-url('chevron.svg') no-repeat bottom center;
 	}
 }
 
