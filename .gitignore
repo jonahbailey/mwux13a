@@ -1,3 +1,19 @@
 # compiled assets
 /build/*
 *.sass-cache/
+/build/grand-rapids/index.html
+/build/images/bg-nav.png
+/build/images/facebook.svg
+/build/images/grant.jpg
+/build/images/laurel.jpg
+/build/images/linkedin.svg
+/build/images/logo.svg
+/build/images/masthead.svg
+/build/images/samuel.jpg
+/build/images/twitter.svg
+/build/index.html
+/build/sessions/index.html
+/build/speakers/index.html
+/build/stylesheets/style.css
+/build/volunteers/index.html
+/build/workshops/index.html
