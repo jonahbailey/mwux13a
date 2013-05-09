@@ -8,15 +8,16 @@
 }
 
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	font-family: $baseFontFamily;
 	font-weight: $headingsFontWeight;
 }
 
-h5, h6 {
+h6 {
 	font-family: $headingsFontFamily;
 	font-weight: $headingsFontWeight;
 	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 p {
@@ -30,6 +31,7 @@ p {
 	font-family: $headingsFontFamily;
 	text-transform: uppercase;
 	font-size: 1.55em;
+	letter-spacing: 1px;
 }
 
 // Nav
@@ -40,6 +42,7 @@ nav {
 	a {
 		font-family: $headingsFontFamily;
 		text-transform: uppercase;
+		letter-spacing: 1px;
 	}
 }
 
@@ -54,8 +57,11 @@ nav {
 	.callout {
 
 		h5 {
-			font-size: 2em;
+			font-size: 1.5em;
 			color: $white;
+			font-family: $headingsFontFamily;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
 
 		a {
@@ -76,6 +82,7 @@ footer {
 	h2 {
 		font-family: $headingsFontFamily;
 		text-transform: uppercase;
-		color: white;	
+		color: white;
+		letter-spacing: 1px;	
 	}
 }

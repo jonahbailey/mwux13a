@@ -1,9 +1,9 @@
 .container.main
-	.masthead#home
-		%h1 October 17-19, 2013
-		#place-marker.icon
-		%h2 Grand Rapids, MI
-		%h2.tagline Midwest UX focuses on all things user experience - interaction design, information architecture, UX research and UI design.
+	.masthead#home.cf
+		.event-info.cf
+			%h1 October 17-19, 2013
+			//%h2 Grand Rapids, MI
+			%h2.tagline Midwest UX focuses on all things user experience - interaction design, information architecture, UX research and UI design.
 		.callout
 			%h5 Registration Starts in June! <a href="">Sign Up for Updates</a> And <a href="/images/mwux.ics">Save the Date</a>
 	.content.cf
@@ -17,7 +17,7 @@
 				#mc_embed_signup
 					%form
 						.mc-field-group
-							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email here...">
 							<input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
 				%ul.social-media
 					%li
@@ -45,17 +45,17 @@
 					%h3 Best Kept Secrets
 					%p We’re bringing together innovative ideas and concepts from all of the different professional expressions of UX—usability, interaction design and information architecture—in an exciting, convenient and affordable location.
 					%a.button{:href=>"/grand-rapids"} Get to Know GR
-		/ .sponsors.cf
-		/ 	%h5 Platinum Sponsors
-		/ 	%ul.platinum
-		/ 		%li
-		/ 			%a.atomic-object{:href=>"http://atomicobject.com"} Atomic Object
-		/ 		%li
-		/ 			%a.mutuallyhuman{:href=>"http://mutuallyhuman.com"} Mutually Human
-		/ 		%li
-		/ 			%a.universal-mind{:href=>"http://universalmind.com"} Universal Mind
-		/ 		%li
-		/ 			%a.visual-hero{:href=>"http://visualhero.com"} Visual Hero
+		.sponsors.cf
+			%h5 Platinum Sponsors
+			%ul.platinum
+				%li
+					%a.atomic-object{:href=>"http://atomicobject.com"} Atomic Object
+				%li
+					%a.mutuallyhuman{:href=>"http://mutuallyhuman.com"} Mutually Human
+				%li
+					%a.universal-mind{:href=>"http://universalmind.com"} Universal Mind
+				%li
+					%a.visual-hero{:href=>"http://visualhero.com"} Visual Hero
 		/ .news.cf
 		/ 	%article
 		/ 		%img{:src => "/images/news/fireworks.jpg"}

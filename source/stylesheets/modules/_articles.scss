@@ -13,7 +13,7 @@
 	.article-content {
 		@include box-sizing(border-box);
 		padding: 1em;
-		
+		border: 1px solid rgba(0,0,0,0.05);
 		background: image-url("mesh-white.svg") 0 0;
 		background-color: $grayLighter;
 
@@ -197,25 +197,30 @@
 	@include span-columns(24 omega, 24);
 
 	article {
-		@include span-columns(24 omega, 24);
+		@include span-columns(12, 24);
+		@include box-sizing(border-box);
 		background: image-url("mesh-white.svg") 0 0;
 		background-color: $grayLighter;
-		margin-bottom: 2em;
-		position: relative;
 
 		.image {
-			@include span-columns(11,24);
-			position: absolute;
-			top: 0;
-			left: 0;
-			height:100%;
+			@include span-columns(12 omega, 12);
+			@include box-sizing(border-box);
 			background: image-url("kendall.jpg") no-repeat;
 			background-size: cover;
 			background-position: center center;
+			height: 250px;
+			padding-top: 226px;
+
+			h6 {
+				background: $charcoal;
+				color: white;
+				@include box-sizing(border-box);
+				padding: .5em 2em .5em;
+			}
 		}
 
 		.article-content {
-			@include span-columns(13 omega, 24);
+			@include span-columns(12 omega, 12);
 			background: transparent;
 		}
 
@@ -225,24 +230,12 @@
 		}
 
 		&:nth-of-type(2n) {
-			margin-bottom: 0;
+			@include span-columns(12 omega, 24);
 
 			.image {
-				@include span-columns(11 omega, 24);
-				left: inherit;
-				right: 0;
 				background: image-url("uica.jpg");
 				background-size: cover;
 				background-position: center center;
-
-			}
-
-			.article-content {
-				@include span-columns(13, 24);
-			}
-
-			.button {
-				float: left;
 			}
 		}
 	}
@@ -251,6 +244,7 @@
 .why-mwux {
 	article {
 		@include span-columns(12, 24);
+		@include box-sizing(border-box);
 		background: image-url("mesh-white.svg") 0 0;
 		background-color: $grayLighter;
 		margin-bottom: 2em;
@@ -270,6 +264,16 @@
 
 		p {
 			height: inherit;
+		}
+	}
+}
+
+.past-editions {
+	article {
+		border: 1px solid rgba(0,0,0,0.05);
+
+		.article-content {
+			border: none;
 		}
 	}
 }

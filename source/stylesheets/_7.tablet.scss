@@ -1,17 +1,17 @@
 // Homepage
 //================================================//
-@media only screen and (max-width: 1100px) {
+// @media only screen and (max-width: 1100px) {
 	
-	.callouts {
+// 	.callouts {
 
-		article {
+// 		article {
 
-			p {
-				height: 200px;
-			}
-		}
-	}
-}
+// 			p {
+// 				height: 200px;
+// 			}
+// 		}
+// 	}
+// }
 
 @media only screen and (max-width: 1060px) {
 
@@ -116,6 +116,19 @@
 	}
 }
 
+@media only screen and (max-width: 923px) {
+
+	.primary {
+
+		.logo {
+	
+			&:after {
+				top: 65px;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 890px) {
 
 	.primary {
@@ -162,6 +175,16 @@
 		font-size: 1em;
 		padding-left: .25em;
 		padding-right: .25em;
+	}
+
+	.masthead {
+
+		.event-info {
+
+			h1 {
+				font-size: 2.5em;
+			}
+		}
 	}
 
 	.callouts {
@@ -216,6 +239,29 @@
 					display: none;
 				}
 			}
+		}
+	}
+}
+
+@media only screen and (max-width: 865px) {
+	
+	.primary {
+
+		.logo {
+	
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.masthead#home {
+		background: image-url("masthead.svg") no-repeat;
+		background-size: cover;
+		background-position: -10% -10%;
+	
+		.event-info {
+
 		}
 	}
 }
@@ -337,6 +383,33 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+@media only screen and (min-width: 723px) {
+
+	.home.mobile-logo {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 723px) {
+	
+	.logo {
+		display: none;
+	}
+
+	.home.mobile-logo {
+		display: block;
+		margin: 0 auto;
+		float: none;
+
+		h1 {
+			@include box-sizing(border-box);
+			height: 33px;
+			background: image-url('logo.svg') no-repeat center;
+			background-size: 100%;
 		}
 	}
 }

@@ -28,14 +28,13 @@ body {
 .container {
 	@include container;
 	padding: 0;
-
-	&.interior {
-		padding: 2em;	
-	}
+	z-index: 10;
 }
 
 header {
-	background: image-url("bg-header.png");
+	border-bottom: 1px solid #484848;
+	@include gradient-vertical(#727272, #606060);
+	@include box-shadow($charcoal 0 1px 7px 0px);
 	position: relative;
 	z-index: 10;
 	
@@ -70,24 +69,43 @@ header {
 		text-align: center;
 	}
 
+	.event-info {
+		background-color: rgba(#fff,.85); 
+		@include box-sizing(border-box);
+		padding: 1em;
+		margin-bottom: 3.5em;
+		@include span-columns(12,24);
+		@include pre(1, 24);
+	}
+
 	h1 {
 		margin-bottom: .5em;
+		color: #64C29E;
+		//font-family: $headingsFontFamily;
+		//text-transform: uppercase;
 	}
 
 	h2 {
-		margin-bottom: 1.5em;
+		margin-bottom: .5em;
+		color: #64C29E;
+		//font-family: $headingsFontFamily;
+		//text-transform: uppercase;
 	}
 
 	.tagline {
-		margin-bottom: 3.5em;
+		font-size: 1.25em;
 		@include box-sizing(border-box);
 		padding: 0 3em;
 	}
 
-	h5 {
-		background-color: rgba(0,0,0,0.75); 
-		@include box-sizing(border-box);
-		padding: 1em;
+	.callout {
+		@include span-columns(24 omega, 24);
+
+		h5 {
+			background-color: rgba(0,0,0,0.75); 
+			@include box-sizing(border-box);
+			padding: 1em;
+		}
 	}
 }
 
@@ -122,9 +140,11 @@ header {
 .subscribe {
 	background: image-url("mesh-white.svg");
 	background-color: $grayLighter;
+	border: 1px solid rgba(0,0,0,0.05);
 	@include span-columns(12 omega, 24);
 	@include box-sizing(border-box);
 	padding: 2em;
+
 
 	h5 {
 		text-align: center;
@@ -198,7 +218,6 @@ header {
 		margin-bottom: 1em;
 	}
 }
-
 
 // Callouts and News Articles are in _articles partial
 
@@ -276,23 +295,39 @@ header {
 //================================================
 
 .interior {
-	padding-top: 2em;
-	margin-top: -6px;
 	background: image-url("bg-body.png");
 
 	.masthead {
 		padding:0;
 		border: none;
+		margin-bottom: 2em;
+		margin-top: -8px;
 
+		.event-info {
+			background-color: rgba(#fff,.85); 
+			@include box-sizing(border-box);
+			padding: 0;
+			@include span-columns(12,24);
+			@include pre(6, 24);
+			margin-top: 4em;
+
+			h1 {
+				margin: 0;
+			}
+		}
+	}
+
+	.main {
+		padding: 2em;
 	}
 
 	h1 {
 		margin: 1em 0 1em;
 	}
 
-	img {
-		@include span-columns(12, 24);
-	}
+	//img {
+	//	@include span-columns(12, 24);
+	//}
 
 	h2 {
 		margin: 1em 0 1em;
@@ -320,13 +355,42 @@ header {
 .speakers {
 
 	.theme-intro {
+		@include box-sizing(border-box);
+		padding: 0 4em 0;
+
 		p {
 			font-size: 1.15em;
 			line-height: 1.6em;
 			color: $grayDarker;
-			padding: 1em 4em 0;
+			padding: 1em 0 0;
+		}
+
+		.metadata {
+			color: $charcoal;
 		}
 	}
+
+	ul {
+		padding: 2em;
+		font-size: 1.17em;
+	}
+
+	.author {
+		@include span-columns(4 omega, 24);
+
+		img {
+			margin: 0 auto;
+		}
+
+		.name {
+			color: $charcoal;
+			text-align: center;
+			margin-top: 1em;
+
+		}
+	}
+
+
 
 	.explanation {
 		@include span-columns(24 omega, 24);
@@ -364,6 +428,8 @@ header {
 			color: $white;
 			background: rgba($black, .75);
 			font-size: 1.05em;
+			font-family: $headingsFontFamily;
+			text-transform: uppercase;
 		}
 
 		.article-content {
@@ -395,38 +461,61 @@ header {
 		text-align: center;
 	}
 
-	.open-positions {
-		@include span-columns(24 omega, 24);
-		display: none;
-	}
+	.theme-intro {
 
-	ul {
-		list-style: none;
-		@include span-columns(12 omega, 12);
-
-		.button {
-			display: block;
+		p {
+			font-size: 1.15em;
+			line-height: 1.6em;
+			color: $grayDarker;
+			padding: 1em 4em 0;
 		}
 	}
 
-	li {
-		margin-bottom: 1em;
+	.information {
+
+		ul {
+			padding-left: 2em;
+			padding-bottom: 2em;
+
+			li {
+				color: $grayDarker;
+			}
+
+		}
 	}
 
-	li:nth-child(even) {
-		@include span-columns(6, 12);
-	}
+	.open-positions {
+		@include span-columns(24 omega, 24);
+		display: none;
 
-	li:nth-child(odd) {
-		@include span-columns(6 omega, 12);
-	}
-
-	.long-term {
-		@include span-columns(12, 24);
-	}
-
-	.short-term {
-		@include span-columns(12 omega, 24);
+		ul {
+			list-style: none;
+			@include span-columns(12 omega, 12);
+	
+			.button {
+				display: block;
+			}
+		}
+	
+		li {
+			margin-bottom: 1em;
+		}
+	
+		li:nth-child(even) {
+			@include span-columns(6, 12);
+		}
+	
+		li:nth-child(odd) {
+			@include span-columns(6 omega, 12);
+		}
+	
+		.long-term {
+			@include span-columns(12, 24);
+		}
+	
+		.short-term {
+			@include span-columns(12 omega, 24);
+		}
 	}
 }
 
@@ -434,8 +523,8 @@ header {
 //================================================
 
 footer {
-	border-top: 1px solid #363636;
-	@include gradient-vertical;
+	border-top: 1px solid $charcoal;
+	@include gradient-vertical(#606060, #727272);
 	@include box-shadow(-5 0 5 #000);
 	padding: 1em 0 1em;
 

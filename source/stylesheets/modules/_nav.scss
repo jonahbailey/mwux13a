@@ -2,21 +2,20 @@
 //================================================
 
 .primary {
-	margin-top: 1.35em;
+	position: relative;
+	padding: 1em 0 1em;
 
 	ul {
 		list-style: none;
-		margin: -59px auto 0;
-		z-index: 0;
 		@include span-columns(24 omega, 24);
 
 	}
 
 	li {
 		@include box-sizing(border-box);
-		float: left;
 		position: relative;
 		text-align: center;
+		margin-top: .75em;
 
 		&:nth-child(1) {
 			@include span-columns(5, 24);
@@ -24,14 +23,22 @@
 
 		&:nth-child(2) {
 			@include span-columns(5, 24);
+			margin-right: 0;
 		}
 
 		&:nth-child(3) {
-			@include span-columns(5, 24);
-			@include pre(4, 24);
+			@include span-columns(4, 24);
+			margin: 0;
+			padding-left: $grid-padding;
+			padding-right: $grid-padding;
 		}
 
 		&:nth-child(4) {
+			@include span-columns(5, 24);
+			//@include pre(4, 24);
+		}
+
+		&:nth-child(5) {
 			@include span-columns(5 omega, 24);
 		}
 
@@ -51,27 +58,40 @@
 		a {
 			text-decoration: none;
 			font-size: 1.25em;
+			color: $white;
+
+			&:hover {
+				color: $green;
+			}
 		}
 	}
 }
 
-.home {
-	@include box-sizing(border-box);
-	height: 50px;
-	background: image-url('logo.svg') no-repeat center;
-	background-size: 100%;
-	width: 153px;
-	margin: 10px auto 0;
-	display: block;
-	position: relative;
-	z-index: 100;
-
-	a {
-		@extend .hide-text;
-		display: block;
-		height: 80px;
-		width: 153px;
-		background: image-url('chevron.svg') no-repeat bottom center;
+.logo {
+	&:after {
+		content:"";
+		width: 186.3636364%;
+		background: image-url('chevron.svg') no-repeat center center;
+		background-size: contain;
+		position: absolute;
+		height: 30px;
+		top: 66px;
+		left: -46%;
 	}
 }
 
+.home {
+	@extend .hide-text;
+	z-index: 100;
+	height: 50px;
+	@include span-columns(4 omega, 4);
+
+
+
+	h1 {
+		@include box-sizing(border-box);
+		height: 50px;
+		background: image-url('logo.svg') no-repeat center;
+		background-size: 100%;
+	}
+}

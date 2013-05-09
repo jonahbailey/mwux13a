@@ -10,7 +10,7 @@
 	//background-size: 100%;
 
 	.masthead#home {
-		background: image-url("masthead.jpg") no-repeat;
+		background: image-url("masthead.svg") no-repeat;
 		background-size: cover;
 	}
 
@@ -47,6 +47,14 @@
 			color: $white;
 			background: darken($green, 10%);
 		}
+	}
+}
+
+.interior {
+
+	.masthead {
+		background: image-url("masthead.svg") no-repeat;
+		background-size: cover;
 	}
 }
 

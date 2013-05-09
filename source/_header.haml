@@ -1,15 +1,17 @@
 %header.cf
 	.container.cf
-		%h1.home <a href="/">Midwest UX</a>
 		%nav.primary.cf
-			%ul
+			<a class="home mobile-logo cf" href="/"><h1></h1></a>
+			%ul.cf
 				%li
 					%a{:href=>"/speakers"} Call for Speakers
 				%li
-					%a{:href=>"/volunteers"} Call for Volunteers
-				%li
 					%a{:href=>"/why-mwux"} Why MWUX?
+				%li.logo
+					<a class="home cf" href="/"><h1></h1></a>
 				%li
 					%a{:href=>"/grand-rapids"} Grand Rapids
+				%li
+					%a{:href=>"/volunteers"} Call for Volunteers
 				/ %li
 				/ 	%a{:href=>"/news"} News
