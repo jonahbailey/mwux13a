@@ -94,4 +94,15 @@
 		background: image-url('logo.svg') no-repeat center;
 		background-size: 100%;
 	}
+
+	&:hover {
+
+		h1 {
+			background: image-url('logo-green.svg') no-repeat center;
+		}
+	}
+}
+
+.home.mobile-logo {
+	display: none;
 }

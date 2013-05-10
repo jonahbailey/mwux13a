@@ -13,13 +13,6 @@
 
 @media only screen and (max-width: 600px) {
 
-	.container {
-
-		&.interior {
-			padding: 1em;
-		}
-	}
-
 	.home {
 
 		a {
@@ -29,10 +22,30 @@
 	}
 
 	.masthead {
-	
-		h1 {
-			font-size: 2em;
+
+		.event-info {
+			@include span-columns(24 omega, 24);
+
+			h1 {
+				font-size: 2em;
+			}
 		}
+
+		.tagline {
+			font-size: .75em;
+		}
+
+		.callout {
+			 
+			h5 {
+				font-size: 1em;
+				padding: 1em;
+			}
+		}
+	}
+
+	.intro {
+		padding: 0;
 	}
 
 	.subscribe {
@@ -71,13 +84,13 @@
 			.article-content {
 
 				h3 {
-					height: inherit;
+					height: auto;
 				}
 	
 				p,
 				h4 {
 					display: block;
-					height: inherit;
+					height: auto;
 				}
 
 				.entry-details {
@@ -118,19 +131,50 @@
 	}
 
 	#attribution {
-		@include span-columns(23 omega, 24);
+		@include span-columns(24 omega, 24);
+		text-align: center;
+		font-size: .75em;
 	}
 
 	#copyright {
 		@include span-columns(24 omega, 24);
 		text-align: center;
+		font-size: .75em;
+	}
+
+
+// Interior Pages
+//================================================//
+.interior {
+
+	.main {
+		padding: 1em;
+	}
+
+	.masthead {
+		margin-bottom: 0;
+
+		.event-info {
+			@include span-columns(18, 24);
+			@include pre(3);
+			margin-top: 2em;
+			margin-bottom: 2em;
+
+			h1 {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 1.25em;
 	}
 }
 
 // Speakers, Volunteers
 //================================================//
 
-@media only screen and (max-width: 600px) {
+
 
 	.speakers,
 	.volunteers {
@@ -142,14 +186,19 @@
 			article:nth-of-type(even) {
 				@include span-columns(24 omega, 24);
 			}
+
+			.information {
+				height: auto;
+			}
 		}
 
 		.theme-intro {
+			padding: 0;
 
 			p {
-				font-size: 1.15em;
+				font-size: .85em;
 				line-height: 1.6em;
-				padding: 1em 1em .25em;
+				padding: 1.15em 0 .25em;
 			}
 		}
 
@@ -164,16 +213,22 @@
 				.article-content {
 
 					h3 {
-						height: inherit;
+						height: auto;
 					}
 
 					p,
 					h4 {
 						display: block;
-						height: inherit;
+						height: auto;
 					}
 				}
 			}
+		}
+
+		.author {
+			@include span-columns(12, 24);
+			@include pre(6, 24);
+
 		}		
 	}
 
@@ -198,5 +253,60 @@
 			margin: 1em 0 1em;
 		}
 	}
+
+// Why MWUX?
+//================================================//
+
+.why-mwux {
+
+	.main {
+		padding-top: 2em;
+	}
+
+	article,
+	article:last-of-type {
+		@include span-columns(24 omega, 24);
+
+		.article-content {
+			height: auto;
+
+			p {
+				height: auto;
+			}
+		}
+	}
 }
 
+
+// Grand Rapids
+//================================================//
+
+.container.grand-rapids {
+
+	.main {
+		padding-top: 2em;
+	}
+
+	.callouts {
+
+		article:last-child,
+		article:first-of-type {
+			@include span-columns(24 omega, 24);
+
+			.article-content {
+				height: auto;
+			}
+		}
+	}
+}
+
+.venues {
+
+	article,
+	article:last-child {
+		@include span-columns(24 omega, 24);
+		margin-bottom: 2em;
+	}
+}
+
+}

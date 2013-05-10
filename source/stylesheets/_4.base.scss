@@ -48,12 +48,12 @@ header {
 	background: image-url("bg-body.png");
 	@include box-sizing(border-box);
 	padding: 2em;
+	border-left: 1px solid rgba(0,0,0,0.1);
+	border-right: 1px solid rgba(0,0,0,0.1);
 }
 
 .main {
 	margin-top: -8px;
-	border-left: 1px solid rgba(0,0,0,0.1);
-	border-right: 1px solid rgba(0,0,0,0.1);
 }
 
 //  Homepage - Masthead
@@ -61,8 +61,8 @@ header {
 
 .masthead {
 	padding-top: 5em;
-	border-left: 1px solid rgba(0,0,0,0.25);
-	border-right: 1px solid rgba(0,0,0,0.25);
+	// border-left: 1px solid darken($green, 15%);
+	// border-right: 1px solid darken($green, 15%);
 	background-size: cover;
 
 	* {
@@ -75,7 +75,7 @@ header {
 		padding: 1em;
 		margin-bottom: 3.5em;
 		@include span-columns(12,24);
-		@include pre(1, 24);
+		@include pre(6, 24);
 	}
 
 	h1 {
@@ -104,7 +104,7 @@ header {
 		h5 {
 			background-color: rgba(0,0,0,0.75); 
 			@include box-sizing(border-box);
-			padding: 1em;
+			padding: .5em;
 		}
 	}
 }
@@ -204,21 +204,6 @@ header {
 	background-size: 100%;
 }
 
-// Section Headers
-//================================================
-
-
-.sponsors, 
-.news,
-.venues {
-	h5 {
-		text-align: center;
-		font-size: 1.5em;
-		color: $black;
-		margin-bottom: 1em;
-	}
-}
-
 // Callouts and News Articles are in _articles partial
 
 // Homepage - Sponsors
@@ -291,7 +276,7 @@ header {
 	}
 }
 
-// Interior Pages (Speakers & Volunteers) 
+// General Interior Pages
 //================================================
 
 .interior {
@@ -325,10 +310,6 @@ header {
 		margin: 1em 0 1em;
 	}
 
-	//img {
-	//	@include span-columns(12, 24);
-	//}
-
 	h2 {
 		margin: 1em 0 1em;
 	}
@@ -351,6 +332,9 @@ header {
 		}
 	}
 }
+
+// Interior Pages (Speakers & Volunteers) 
+//================================================
 
 .speakers {
 
@@ -423,7 +407,7 @@ header {
 		h5 {
 			@include span-columns(8 omega, 8);
 			@include box-sizing(border-box);
-			padding: .5em;
+			padding: .5em 1.05em;
 			margin: 0;
 			color: $white;
 			background: rgba($black, .75);
@@ -516,6 +500,21 @@ header {
 		.short-term {
 			@include span-columns(12 omega, 24);
 		}
+	}
+}
+
+// Section Headers
+//================================================
+
+
+.sponsors, 
+.news,
+.venues {
+	h5 {
+		text-align: center;
+		font-size: 1.5em;
+		color: $black;
+		margin-bottom: 1em;
 	}
 }
 

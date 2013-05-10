@@ -1,57 +1,62 @@
 // General Articles
 //================================================
 
-.callouts, 
-.news,
-.venues,
-.explanation {
+// article {
 
-	.article-link {
-		text-decoration: none;
+	// img,
+	// .image {
+		// @include border-top-radius(5px);
+	// }
+// }
+
+
+
+.article-link {
+	text-decoration: none;
+}
+
+.article-content {
+	@include box-sizing(border-box);
+	padding: 1em;
+	border: 1px solid rgba(0,0,0,0.05);
+	background: image-url("mesh-white.svg") 0 0;
+	background-color: $grayLighter;
+
+	h3 {
+		color: $charcoal;
+		font-size: 1.75em;
+		margin-bottom: .35em;
 	}
 
-	.article-content {
-		@include box-sizing(border-box);
-		padding: 1em;
-		border: 1px solid rgba(0,0,0,0.05);
-		background: image-url("mesh-white.svg") 0 0;
-		background-color: $grayLighter;
-
-		h3 {
-			color: $charcoal;
-			font-size: 1.75em;
-			margin-bottom: .35em;
-		}
-
-		h4 {
-			color: $charcoal;
-			margin-bottom: .35em;
-		}
-
-		p {
-			margin-bottom: 1em;
-			color: $grayDarker;
-		}
-
-		.entry-details {
-			* {
-				font-size: .85em;
-			}
-
-			a {
-				color: $green;
-			}
-		}
+	h4 {
+		color: $charcoal;
+		margin-bottom: .35em;
 	}
 
-	article {
+	p {
+		margin-bottom: 1em;
+		color: $grayDarker;
+	}
 
-		.button {
-			display: block;
-			width: 100%;
+	.entry-details {
+		* {
+			font-size: .85em;
+		}
+
+		a {
+			color: $green;
 		}
 	}
 }
+
+article {
+
+	.button {
+		display: block;
+		width: 100%;
+	}
+}
+
 
 // Homepage Callouts
 //================================================
@@ -110,7 +115,6 @@
 //================================================
 .speakers,
 .volunteers {
-
 	.callouts {
 		margin: 2em 0 2em;
 	
@@ -122,36 +126,36 @@
 			}
 		}
 
-		p {
-			height: inherit;
+		.information {
+			height: 400px;
 		}
 
-		.button {
-			//margin: 1em;
-		}
 	}
 
 	.explanation {
 
 		article {
-			@include span-columns(8, 24);
+			@include span-columns(12, 24);
 
 			&:last-child {
-				@include span-columns(8 omega, 24);
-			}
-
-			h3 {
-				height: 78px;
+				@include span-columns(12 omega, 24);
 			}
 		}
 	}
+}
 
-	.information {
-		//height: 500px;
+.volunteers {
+
+	.callouts {
+
+		.information {
+			height: 630px;
+		}
+
 	}
 }
 
-// Speakers Page Callouts
+// Volunteer Page Callouts
 //================================================
 
 .volunteers {
@@ -160,7 +164,7 @@
 		margin: 2em 0 2em;
 
 		p {
-			height: inherit;
+			height: auto;
 		}
 
 	}
@@ -176,7 +180,7 @@
 		article {
 
 			p {
-				height: inherit;
+				height: auto;
 			}
 
 			&:last-child {
@@ -209,13 +213,14 @@
 			background-size: cover;
 			background-position: center center;
 			height: 250px;
-			padding-top: 226px;
+			padding-top: 213px;
 
 			h6 {
-				background: $charcoal;
+				background-color: rgba(0,0,0,0.75); 
 				color: white;
+				font-size: 1em;
 				@include box-sizing(border-box);
-				padding: .5em 2em .5em;
+				padding: .5em 1.25em .5em;
 			}
 		}
 
@@ -233,7 +238,7 @@
 			@include span-columns(12 omega, 24);
 
 			.image {
-				background: image-url("uica.jpg");
+				background: image-url("gr-night.jpg");
 				background-size: cover;
 				background-position: center center;
 			}
@@ -262,8 +267,16 @@
 			}
 		}
 
-		p {
-			height: inherit;
+		.article-content {
+			height: 639px;
+
+			h3 {
+				height: auto;
+			}
+			p {
+				height: auto;
+				display: inline-block;
+			}
 		}
 	}
 }
@@ -274,6 +287,11 @@
 
 		.article-content {
 			border: none;
+			height: auto;
+
+			p {
+				height: 105px;
+			}
 		}
 	}
 }
