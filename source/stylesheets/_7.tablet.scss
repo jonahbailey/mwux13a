@@ -101,19 +101,6 @@
 	}
 }
 
-@media only screen and (max-width: 923px) {
-
-	.primary {
-
-		.logo {
-	
-			&:after {
-				top: 65px;
-			}
-		}
-	}
-}
-
 @media only screen and (max-width: 890px) {
 
 	.primary {
@@ -254,16 +241,6 @@
 }
 
 @media only screen and (max-width: 865px) {
-	
-	.primary {
-
-		.logo {
-	
-			&:after {
-				display: none;
-			}
-		}
-	}
 
 	.masthead#home {
 		background: image-url("masthead.svg") no-repeat;
@@ -278,10 +255,29 @@
 
 @media only screen and (max-width: 768px) {
 
-input {
-	@include border-radius(0);
-	@include box-shadow(none);
-}
+
+	.primary {
+
+		.logo {
+	
+			&:after {
+				top: 48px;
+			}
+		}
+	}
+
+	.home {
+
+		h1 {
+			height: 47px;
+			margin-top: .35em;
+		}
+	}
+
+	input {
+		@include border-radius(0);
+		@include box-shadow(none);
+	}
 
 	.masthead {
 		padding-top: 3em;
@@ -364,7 +360,7 @@ input {
 		@include box-sizing(border-box);
 		position: relative;
 		text-align: center;
-		margin-top: .85em;
+		margin: .85em 0;
 
 		&:nth-child(1) {
 			@include span-columns(5, 24);
@@ -390,12 +386,6 @@ input {
 		&:nth-child(5) {
 			@include span-columns(5 omega, 24);
 		}
-	}
-}
-
-.home {
-	h1 {
-		height: 47px;
 	}
 }
 
@@ -452,6 +442,7 @@ input {
 			height: 33px;
 			background: image-url('logo.svg') no-repeat center;
 			background-size: 100%;
+			margin: 0;
 		}
 	}
 }

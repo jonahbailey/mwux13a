@@ -35,11 +35,11 @@ $textColor:             $black !default;
 $linkColor:             $green !default;
 $linkColorHover:        lighten($linkColor, 25%) !default;
 
-// Typography
+// Typography "adelle",
 // -------------------------
 
-$serifFontFamily:       	"adelle", Georgia, Times, serif !default;
-$sansFontFamily:        	"din-condensed-web", "HelveticaNeue-Lig"Helvetica Neue Light"ht", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$serifFontFamily:       	 "adelle", Georgia, Times, serif !default;
+$sansFontFamily:        	"din-condensed-web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $alternatesansFontFamily:	"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
 
 $baseFontSize:          1em !default;

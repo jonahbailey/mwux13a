@@ -72,7 +72,7 @@ article {
 		}
 
 		p {
-			height: 150px;
+			height: 100px;
 		}
 	}
 }
@@ -124,6 +124,10 @@ article {
 			&:last-child {
 				@include span-columns(12 omega, 24);
 			}
+
+			p {
+				height: auto;
+			}
 		}
 
 		.information {
@@ -135,10 +139,14 @@ article {
 	.explanation {
 
 		article {
-			@include span-columns(12, 24);
+			@include span-columns(8, 24);
 
 			&:last-child {
-				@include span-columns(12 omega, 24);
+				margin-right: 0;
+			}
+
+			&:first-of-type {
+				@include pre(4, 24);
 			}
 		}
 	}
@@ -268,7 +276,7 @@ article {
 		}
 
 		.article-content {
-			height: 639px;
+			height: 490px;
 
 			h3 {
 				height: auto;

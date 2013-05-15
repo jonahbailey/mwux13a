@@ -52,10 +52,6 @@ header {
 	border-right: 1px solid rgba(0,0,0,0.1);
 }
 
-.main {
-	margin-top: -8px;
-}
-
 //  Homepage - Masthead
 //================================================
 
@@ -285,8 +281,8 @@ header {
 	.masthead {
 		padding:0;
 		border: none;
-		margin-bottom: 2em;
-		margin-top: -8px;
+		//margin-bottom: 2em;
+		//margin-top: -8px;
 
 		.event-info {
 			background-color: rgba(#fff,.85); 
