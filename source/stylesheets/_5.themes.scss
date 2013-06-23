@@ -51,6 +51,17 @@
 		}
 	}
 
+	.button.inactive {
+		background: $grayDark;
+		color: grayLighter;
+
+		&:hover {
+			@include box-shadow(inset darken($grayDark, 25%) 0px 0px 10px);
+			color: $grayLighter;
+			background: darken($grayDark, 10%);
+		}
+	}
+
 	
 }
 
