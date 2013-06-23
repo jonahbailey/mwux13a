@@ -56,9 +56,9 @@
 		color: grayLighter;
 
 		&:hover {
-			@include box-shadow(inset darken($grayDark, 25%) 0px 0px 10px);
+			@include box-shadow(none);
 			color: $grayLighter;
-			background: darken($grayDark, 10%);
+			background: $grayDark;
 		}
 	}
 
