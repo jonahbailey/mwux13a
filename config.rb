@@ -81,7 +81,7 @@ end
 # Activate sync extension
 activate :sync do |sync|
   sync.fog_provider = 'AWS' # Your storage provider
-  sync.fog_directory = 'mwux13' # Your bucket name
+  sync.fog_directory = '2013.midwestuxconference.com' # Your bucket name
   sync.fog_region = 'us-east-1' # The region your storage bucket is in (eg us-east-1, us-west-1, eu-west-1, ap-southeast-1 )
   sync.aws_access_key_id = 'AKIAJGEYFSPK3M4CTMHA' # Your Amazon S3 access key
   sync.aws_secret_access_key = 'Z9yljKa5s+xSTXzLxrw8JR8JCWyr2P6LKV+6LWNx' # Your Amazon S3 access secret

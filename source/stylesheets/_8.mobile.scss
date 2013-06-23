@@ -13,6 +13,13 @@
 
 @media only screen and (max-width: 600px) {
 
+	.spring {
+
+		.masthead#home {
+			padding-top: 12em;
+		}
+	}
+
 	.home {
 
 		a {
@@ -23,23 +30,12 @@
 
 	.masthead {
 
-		.event-info {
-			@include span-columns(24 omega, 24);
-
-			h1 {
-				font-size: 2em;
-			}
-		}
-
-		.tagline {
-			font-size: .75em;
-		}
-
 		.callout {
 			 
 			h5 {
-				font-size: 1em;
-				padding: 1em;
+				font-size: 1.5em;
+				padding: 0em;
+				margin-bottom: 1em;
 			}
 		}
 	}
@@ -100,7 +96,7 @@
 		}
 	}
 
-	.sponsors {
+	.sponsors-listing {
 		padding: 2em 0 2em;
 
 		h5 {

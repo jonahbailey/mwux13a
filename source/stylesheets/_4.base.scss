@@ -96,12 +96,9 @@ header {
 
 	.callout {
 		@include span-columns(24 omega, 24);
-
-		h5 {
-			background-color: rgba(0,0,0,0.75); 
-			@include box-sizing(border-box);
-			padding: .5em;
-		}
+		background-color: rgba(0,0,0,0.75); 
+		@include box-sizing(border-box);
+		padding: 1.5em;
 	}
 }
 
@@ -148,9 +145,9 @@ header {
 
 
 	.button {
-		margin-left: -2.85714%;
 		border: none;
 		height: 50px;
+		margin: 0 0 0 -2.85714%;
 	}
 
 	.email {
@@ -206,7 +203,7 @@ header {
 //================================================
 
 
-.sponsors {
+.sponsors-listing {
 	@include span-columns(24 omega, 24);
 	padding: 3em 0 3em;
 
@@ -351,12 +348,20 @@ header {
 	}
 
 	ul {
-		padding: 2em;
-		font-size: 1.17em;
+		padding: 1em 2em 2em;
+		font-size: 1em;
+
+		li {
+			margin: .75em 0
+		}
 	}
 
 	.author {
 		@include span-columns(4 omega, 24);
+
+		* {
+			text-align: right;
+		}
 
 		img {
 			margin: 0 auto;
@@ -364,9 +369,18 @@ header {
 
 		.name {
 			color: $charcoal;
-			text-align: center;
-			margin-top: 1em;
+			margin: 1em 0 0;
 
+		}
+
+		a {
+			display: inline-block;
+			width: 100%;
+		}
+
+		h5 {
+			font-size: .75em;
+			margin-top: .5em;
 		}
 	}
 
@@ -384,20 +398,6 @@ header {
 			img {
 				width: 100%;
 			}
-			//&#laurel {
-			//	background: image-url("laurel.jpg") no-repeat;
-			//	background-size: 100%;
-			//}
-
-			//&#grant {
-			//	background: image-url("grant.jpg") no-repeat;
-			//	background-size: 100%;
-			//}
-
-			//&#samuel {
-			//	background: image-url("samuel.jpg") no-repeat;
-			//	background-size: 100%;
-			//}
 		}
 
 		h5 {
@@ -499,11 +499,56 @@ header {
 	}
 }
 
+.sponsors {
+
+	.theme-intro {
+
+		p {
+			font-size: 1.15em;
+			line-height: 1.6em;
+			color: $grayDarker;
+			padding: 1em 4em 1em;
+		}
+	}
+
+	.callouts {
+
+		article {
+			@include span-columns(12,24);
+
+			&:last-of-type {
+				@include span-columns(12 omega, 24);
+
+				li {
+					@include span-columns(6, 12);
+
+					&:nth-child(odd) {
+						@include span-columns(3,6);
+					}
+	
+					&:nth-child(even) {
+						@include span-columns(3 omega, 6);
+					}
+				}
+			}
+
+			ul {
+				margin-left: 1em;
+				margin-top: 1em;
+
+				li {
+					margin-bottom: .5em;
+				}
+			}
+		}
+	}
+}
+
 // Section Headers
 //================================================
 
 
-.sponsors, 
+.sponsors-listing, 
 .news,
 .venues {
 	h5 {

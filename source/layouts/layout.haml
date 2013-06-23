@@ -3,7 +3,8 @@
   %head
     %title Midwest UX 2013 | Grand Rapids, MI | Oct. 17-19
     %meta{:charset => "utf-8"}
-    %meta{:content => "Middleman", :name => "description"}
+    %meta{:content => "Midwest UX 2013", :name => "description"}
+    <meta property="og:image" content="http://2013.midwestuxconference.com/images/logo.png" />
     %meta{:content => "on", "http-equiv" => "cleartype"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "width=device-width", :name => "viewport"}
@@ -13,6 +14,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"}
     %script{:src => "/javascripts/plugins/jquery.meanmenu.js"}
+    %script{:src => "/javascripts/jquery.equal-height.js"}
   %body.spring
     = render_partial 'header'
     = yield

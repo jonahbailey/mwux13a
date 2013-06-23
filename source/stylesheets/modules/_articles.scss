@@ -1,13 +1,13 @@
 // General Articles
 //================================================
 
-// article {
+article {
+	@include box-sizing(border-box);
+	border: 1px solid rgba(0,0,0,0.05);
+	background: image-url("mesh-white.svg") 0 0;
+	background-color: $grayLighter;
+}
 
-	// img,
-	// .image {
-		// @include border-top-radius(5px);
-	// }
-// }
 
 
 
@@ -18,9 +18,6 @@
 .article-content {
 	@include box-sizing(border-box);
 	padding: 1em;
-	border: 1px solid rgba(0,0,0,0.05);
-	background: image-url("mesh-white.svg") 0 0;
-	background-color: $grayLighter;
 
 	h3 {
 		color: $charcoal;
@@ -49,11 +46,14 @@
 	}
 }
 
-article {
-
+.article-footer {
+	@include box-sizing(border-box);
+	padding: 0 1em 1em;
+	float: right;
+	width: 100%;
+	
 	.button {
 		display: block;
-		width: 100%;
 	}
 }
 
@@ -71,9 +71,9 @@ article {
 			@include span-columns(8 omega, 24);
 		}
 
-		p {
-			height: 100px;
-		}
+		// p {
+		// 	height: 100px;
+		// }
 	}
 }
 
@@ -129,11 +129,6 @@ article {
 				height: auto;
 			}
 		}
-
-		.information {
-			height: 400px;
-		}
-
 	}
 
 	.explanation {
@@ -145,21 +140,10 @@ article {
 				margin-right: 0;
 			}
 
-			&:first-of-type {
-				@include pre(4, 24);
-			}
+			// &:first-of-type {
+			// 	@include pre(4, 24);
+			// }
 		}
-	}
-}
-
-.volunteers {
-
-	.callouts {
-
-		.information {
-			height: 630px;
-		}
-
 	}
 }
 
@@ -255,20 +239,24 @@ article {
 }
 
 .why-mwux {
+
 	article {
-		@include span-columns(12, 24);
+		@include span-columns(8, 24);
 		@include box-sizing(border-box);
 		background: image-url("mesh-white.svg") 0 0;
 		background-color: $grayLighter;
 		margin-bottom: 2em;
-		position: relative;
+		position: relative;		
 
-		.image {
-			background: image-url("2011.jpg") no-repeat;
+		&:first-of-type {
+			
+			.image {
+				background: image-url("2011.jpg") no-repeat;
+			}
 		}
-
+		
 		&:last-of-type {
-			@include span-columns(12 omega, 24);
+			@include span-columns(8 omega, 24);
 
 			.image {
 				background: image-url("2012.jpg") no-repeat;
@@ -276,7 +264,6 @@ article {
 		}
 
 		.article-content {
-			height: 490px;
 
 			h3 {
 				height: auto;
@@ -292,14 +279,19 @@ article {
 .past-editions {
 	article {
 		border: 1px solid rgba(0,0,0,0.05);
+		@include span-columns(12, 24);
+
+		&:last-of-type {
+			@include span-columns(12 omega, 24);
+		}
 
 		.article-content {
 			border: none;
 			height: auto;
 
-			p {
-				height: 105px;
-			}
+			// p {
+			// 	height: 105px;
+			// }
 		}
 	}
 }

@@ -12,6 +12,7 @@
 	.masthead#home {
 		background: image-url("masthead.svg") no-repeat;
 		background-size: cover;
+		padding-top: 22em;
 	}
 
 	.masthead#panorama {
@@ -40,6 +41,7 @@
 		background: $green;
 		@include transition-property(color, background, box-shadow);
 		@include transition-duration($duration);
+		display: block;
 
 
 		&:hover {

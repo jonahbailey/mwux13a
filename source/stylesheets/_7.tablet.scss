@@ -185,7 +185,6 @@
 
 				h3 {
 					font-size: 1.15em;
-					height: 60px
 				}
 
 				p {
@@ -204,7 +203,6 @@
 
 				p {
 					font-size: .75em;
-					//height: 90px;
 				}
 
 				.entry-details {
@@ -319,10 +317,6 @@
 			h3 {
 				font-size: 1.25em;
 			}
-
-			p {
-				display: none;
-			}
 		}
 	}
 
@@ -406,20 +400,6 @@
 					p {
 						display: block;
 					}
-				}
-			}
-		}
-	}
-
-	.container.grand-rapids {
-
-		.callouts {
-
-			article,
-			article:first-of-type {
-
-				.article-content {
-					height: 420px;
 				}
 			}
 		}
