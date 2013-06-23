@@ -51,6 +51,17 @@
 		}
 	}
 
+	.button.inactive {
+		background: $grayDark;
+		color: grayLighter;
+
+		&:hover {
+			@include box-shadow(none);
+			color: $grayLighter;
+			background: $grayDark;
+		}
+	}
+
 	
 }
 
