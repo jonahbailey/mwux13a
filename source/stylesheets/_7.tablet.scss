@@ -236,6 +236,16 @@
 			}
 		}
 	}
+
+	footer {
+		.about-mwux {
+			@include span-columns(24 omega, 24);
+		}
+
+		nav {
+			@include span-columns(24 omega, 24);
+		}
+	}
 }
 
 @media only screen and (max-width: 865px) {
