@@ -572,7 +572,8 @@ footer {
 	border-top: 1px solid $charcoal;
 	@include gradient-vertical(#606060, #727272);
 	@include box-shadow(-5 0 5 #000);
-	padding: 1em 0 1em;
+	padding: 1em;
+	@include box-sizing(border-box);
 
 	.about-mwux {
 		@include span-columns(9, 24);
