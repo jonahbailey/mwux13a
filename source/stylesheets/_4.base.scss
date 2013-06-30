@@ -136,7 +136,7 @@ header {
 	border: 1px solid rgba(0,0,0,0.05);
 	@include span-columns(12 omega, 24);
 	@include box-sizing(border-box);
-	padding: 2em;
+	padding: 2em 4em;
 
 
 	h5 {
@@ -147,7 +147,11 @@ header {
 	.button {
 		border: none;
 		height: 50px;
-		margin: 0 0 0 -2.85714%;
+		margin: 0;
+		display: inline-block;
+		float: left;
+		width: 25%;
+
 	}
 
 	.email {
@@ -155,8 +159,10 @@ header {
 		padding: .9em;
 		height: 50px;
 		@include box-sizing(border-box);
-		@include span-columns(8, 12);
-		@include pre(1,12);
+		display: inline-block;
+		float: left;
+		margin: 0;
+		width: 75%;
 	}
 }
 
@@ -568,8 +574,17 @@ footer {
 	@include box-shadow(-5 0 5 #000);
 	padding: 1em 0 1em;
 
+	.about-mwux {
+		@include span-columns(9, 24);
+
+		p {
+			color: $white;
+			margin-bottom: .5em;
+		}
+	}
+
 	nav {
-		@include span-columns(24 omega, 24);
+		@include span-columns(15 omega, 24);
 		@include box-sizing(border-box);
 		padding: 0 2em 2em;
 	}
@@ -588,15 +603,15 @@ footer {
 }
 
 #learn {
-	@include span-columns(8, 24);
+	@include span-columns(5, 15);
 }
 
 #collaborate {
-	@include span-columns(8, 24);
+	@include span-columns(5, 15);
 }
 
 #contact {
-	@include span-columns(8 omega, 24);
+	@include span-columns(5 omega, 15);
 }
 
 #attribution {

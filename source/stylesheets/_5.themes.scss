@@ -10,19 +10,20 @@
 	//background-size: 100%;
 
 	.masthead#home {
-		background: image-url("masthead.svg") no-repeat;
 		background-size: cover;
 		padding-top: 22em;
 	}
 
-	.masthead#panorama {
-		background: image-url("masthead.jpg") no-repeat;
-		padding: 6em 0 4em;
+	.masthead.topo#home {
+		background: image-url("06-26_Body_Masthead_Rough-01.jpg") no-repeat center center;
+	}
 
-		* {
-			text-align: center;
-		}
+	.masthead.brainwaves#home {
+		background: image-url("06-26_Body_Masthead_Rough-02.jpg") no-repeat center center;
+	}
 
+	.masthead.city#home {
+		background: image-url("06-26_Body_Masthead_Rough-03.jpg") no-repeat center center;
 	}
 
 	a {
