@@ -60,6 +60,8 @@ $(function() {
 	columnConform(
 		'.explanation .article-content', 
 		'.callouts .article-content',
-		'.venues .article-content'
+		'.venues .article-content',
+		'.speaker-announcement .article-content',
+
 	);
 });

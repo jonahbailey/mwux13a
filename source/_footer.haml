@@ -4,6 +4,16 @@
 			%h2 Midwest UX Conference
 			%p The Midwest UX Conference is a unique three-day event that combines inspiring talks with hands-on activities presented by a mix of regional professionals and international experts.
 			%p Join us October 17-19, 2013 in Grand Rapids, MI 
+			.subscribe
+				%h2 Get Updates
+				#mc_embed_signup
+					<form action="http://midwestux.us4.list-manage.com/subscribe/post?u=18017a6772f1211a5fadf2168&amp;id=cbbe8bea60" method="post" "mc-="" embedded-subscribe-form"="" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+					<div class="mc-field-group">
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email here...">
+					<input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+					</div>
+					</form>
+
 		%nav.cf
 			#learn
 				%h2 About MWUX
@@ -36,10 +46,11 @@
 						%a{:href=>"http://www.facebook.com/midwestux", :target=>"_blank"} Facebook
 					%li
 						%a{:href=>"http://linkedin.com/groups/MIdwestUX-4694760", :target=>"_blank"} LinkedIn
-		#attribution
-			%p Selected photos courtesy of <a href="http://about.me/pablohart">Paul Hart</a>, <a href="http://dornbyg.com/">Dorn Byg</a> and <a href="http://www.richarddeming.com">Richard Deming</a>
-		#copyright
-			%p &copy; 2013 Midwest UX
+		.cf
+			#attribution
+				%p Selected photos courtesy of <a href="http://about.me/pablohart">Paul Hart</a>, <a href="http://dornbyg.com/">Dorn Byg</a> and <a href="http://www.richarddeming.com">Richard Deming</a>
+			#copyright
+				%p &copy; 2013 Midwest UX
 			
 <script>
 jQuery(document).ready(function () {jQuery('header nav').meanmenu();});

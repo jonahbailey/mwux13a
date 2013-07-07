@@ -70,10 +70,19 @@ article {
 		&:last-child {
 			@include span-columns(8 omega, 24);
 		}
+	}
+}
 
-		// p {
-		// 	height: 100px;
-		// }
+.speaker-announcement {
+	@include span-columns(24 omega, 24);
+	margin-bottom: 2em;
+
+	article {
+		@include span-columns(6, 24);
+
+		&:last-child {
+			@include span-columns(6 omega, 24);
+		}
 	}
 }
 
