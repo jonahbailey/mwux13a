@@ -355,52 +355,88 @@ header {
 			margin-top: .5em;
 		}
 	}
+}
 
+// for call for speakers and team page
 
+.explanation,
+.chairs {
+	@include span-columns(24 omega, 24);
+	margin-top: 2em;
 
-	.explanation {
-		@include span-columns(24 omega, 24);
-		margin-top: 2em;
+	.headshot {
+		@include span-columns(8 omega, 8);
+		@include box-sizing(border-box);
 
-
-		.headshot {
-			@include span-columns(8 omega, 8);
-			@include box-sizing(border-box);
-
-			img {
-				width: 100%;
-			}
+		img {
+			width: 100%;
 		}
+	}
 
-		h5 {
-			@include span-columns(8 omega, 8);
-			@include box-sizing(border-box);
-			padding: .5em 1.05em;
-			margin: 0;
-			color: $white;
-			background: rgba($black, .75);
-			font-size: 1.05em;
-			font-family: $headingsFontFamily;
-			text-transform: uppercase;
-		}
+	h5 {
+		@include span-columns(8 omega, 8);
+		@include box-sizing(border-box);
+		padding: .5em 1.05em;
+		margin: 0;
+		color: $grayDarker;
+		background: rgba($white, .5);
+		font-size: 1.05em;
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+	}
 
-		.article-content {
-			@include span-columns(8 omega, 8);
+	.article-content {
+		@include span-columns(8 omega, 8);
 
-			ul {
-				padding-left: 2em;
-			}
+		ul {
+			padding-left: 2em;
 		}
 	}
 }
 
 .chairs {
-	margin-bottom: 2em;
+	margin-top: 0;
 }
+
+// Team Page
+
+.core-team {
+	@include span-columns(24 omega, 24);
+
+	.headshot {
+		@include span-columns(6 omega, 6);
+		@include box-sizing(border-box);
+
+		img {
+			width: 100%;
+		}
+	}
+
+	h5 {
+		@include span-columns(6 omega, 6);
+		@include box-sizing(border-box);
+		padding: .5em 1.05em;
+		margin: 0;
+		color: $grayDarker;
+		background: rgba($white, .5);
+		font-size: 1.05em;
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+	}
+
+	.article-content {
+		@include span-columns(6 omega, 6);
+	}
+
+}
+
+// Speaker & Workshop submission form
 
 .form {
 	margin: 2em auto;
 }
+
+// Volunteers
 
 .volunteers {
 
