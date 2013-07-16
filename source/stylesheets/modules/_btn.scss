@@ -8,4 +8,5 @@
 	text-align: center;
 	border: 1px solid rgba(0,0,0,0.1);
 	color: $white;
+	@include border-radius($radius);
 }

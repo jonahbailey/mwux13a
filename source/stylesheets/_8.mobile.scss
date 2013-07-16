@@ -67,7 +67,7 @@
 		}
 	}
 
-	.callouts,
+	section,
 	.news {
 
 		article,
@@ -175,7 +175,7 @@
 	.speakers,
 	.volunteers {
 
-		.callouts {
+		section {
 
 			article,
 			article:last-child,
@@ -283,7 +283,7 @@
 		padding-top: 2em;
 	}
 
-	.callouts {
+	section {
 
 		article:last-child,
 		article:first-of-type {

@@ -59,7 +59,7 @@ function columnConform() {
 $(function() {
 	columnConform(
 		'.explanation .article-content', 
-		'.callouts .article-content',
+		'section .article-content',
 		'.venues .article-content',
 		'.speaker-announcement .article-content'
 

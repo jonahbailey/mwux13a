@@ -4,7 +4,7 @@
 			%h4.date-location Registration Starts in July! <a href="/images/mwux.ics">Save the Date.</a>
 			%h5 October 17-19, 2013. Grand Rapids, Michigan
 	.content.cf
-		.callouts.cf
+		%section.callouts.cf
 			%article
 				%img{:src =>"/images/speakers-home.jpg"}
 				.article-content
@@ -26,19 +26,8 @@
 					%p Grand Rapids exemplifies the deep design heritage of the Midwest.
 				.article-footer
 					%a.button{:href=>"/news"} Stay Up To Date
-		/ .sponsors-listing.cf
-		/ 	%h5 Platinum Sponsors
-		/ 	%ul.platinum
-		/ 		%li
-		/ 			%a.atomic-object{:href=>"http://atomicobject.com"} Atomic Object
-		/ 		%li
-		/ 			%a.mutuallyhuman{:href=>"http://mutuallyhuman.com"} Mutually Human
-		/ 		%li
-		/ 			%a.universal-mind{:href=>"http://universalmind.com"} Universal Mind
-		/ 		%li
-		/ 			%a.visual-hero{:href=>"http://visualhero.com"} Visual Hero
-		.speaker-announcement.cf
-			%h5 Our Keynote Speakers
+		%section.speaker-announcement.cf
+			%h5.section-header Our Keynote Speakers
 			%article
 				%img{:src =>"/images/speakers-home.jpg"}
 				.article-content
@@ -67,8 +56,19 @@
 					%p After a record number of submissions the call for speakers is now closed. We will be in touch with everyone who submitted within the next few weeks.
 				.article-footer
 					%a.button{:href=>"/speakers"} More About Speaker 1
-		.news.cf
-			%h5 Latest Conference News
+		.sponsors-listing.cf
+			%h5.section-header Platinum Sponsors
+			%ul.platinum
+				%li
+					%a.atomic-object{:href=>"http://atomicobject.com"} Atomic Object
+				%li
+					%a.mutuallyhuman{:href=>"http://mutuallyhuman.com"} Mutually Human
+				%li
+					%a.universal-mind{:href=>"http://universalmind.com"} Universal Mind
+				%li
+					%a.visual-hero{:href=>"http://visualhero.com"} Visual Hero
+		%section.news.cf
+			%h5.section-header Latest Conference News
 			%article
 				%img{:src => "/images/news/fireworks.jpg"}
 				.article-content
