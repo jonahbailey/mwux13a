@@ -78,6 +78,15 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+activate :blog do |blog|
+  # set options on blog
+  blog.prefix = "news"
+  blog.permalink = "blog/:year/:month/:day/:title.html"
+  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
+  # blog.layout = "blog_layout"
+
+end
+
 # Activate sync extension
 activate :sync do |sync|
   sync.fog_provider = 'AWS' # Your storage provider

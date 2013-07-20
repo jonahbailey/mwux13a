@@ -100,7 +100,7 @@ header {
 		@include span-columns(24 omega, 24);
 		background-color: rgba(255,255,255,.85); 
 		@include box-sizing(border-box);
-		padding: 1.75em 1.5em 1.5em;
+		padding: 2em 1.5em 2em;
 	}
 }
 
@@ -108,6 +108,35 @@ header {
 
 // Homepage - Announcement
 //================================================
+
+.registration-callout {
+	@include span-columns(24 omega, 24);
+	background: image-url("city.jpg")no-repeat;
+	background-size: cover;
+	margin-top: 0;
+
+	h3 {
+		color: $white;
+		font-size: 1.5em;
+		text-align: center;
+		@include box-sizing(border-box);
+		padding: 2em 4em;
+	}
+
+	.button {
+		color: $green;
+		background: $white;
+		margin: 0 auto 2em;
+		width: 33%;
+
+		&:hover {
+			color: $green;
+			background: darken($white, 1%);
+			@include box-shadow(inset darken($white, 25%) 0px 0px 10px);
+			border: 1px solid rgba(119,192,163,1);
+		}
+	}
+}
 
 // Callouts and News Articles are in _articles partial
 
@@ -238,25 +267,26 @@ header {
 	}
 }
 
-// Interior Pages (Speakers & Volunteers) 
+// Interior Pages
 //================================================
+
+.intro {
+
+	p {
+		font-size: 1.15em;
+		line-height: 1.6em;
+		color: $grayDarker;
+		padding: 1em 4em 0;
+	}
+}
+
+
+// Speakers
 
 .speakers {
 
-	.theme-intro {
-		@include box-sizing(border-box);
-		padding: 0 4em 0;
-
-		p {
-			font-size: 1.15em;
-			line-height: 1.6em;
-			color: $grayDarker;
-			padding: 1em 0 0;
-		}
-
-		.metadata {
-			color: $charcoal;
-		}
+	.metadata {
+		color: $charcoal;
 	}
 
 	ul {
@@ -297,7 +327,7 @@ header {
 	}
 }
 
-// for call for speakers and team page
+// for call for Speakers and Team
 
 .explanation,
 .chairs {
@@ -370,6 +400,50 @@ header {
 
 }
 
+// Program
+
+.schedule {
+
+	article {
+		@include span-columns(8, 24);
+		padding: 1em;
+		background: transparent;
+		border: none;
+
+		h3 {
+			text-align: center;
+			//border: 1px solid rgba(0,0,0,0.05);
+			background: image-url("mesh-white.svg") 0 0;
+			@include border-radius($radius);
+			font-family: $headingsFontFamily;
+			text-transform: uppercase;
+			font-size: 1.55em;
+			letter-spacing: 1px;
+			background-color: $grayLighter;
+			padding: .5em;
+			margin-bottom: 1em;
+		}
+
+		a {
+			@include span-columns(8 omega, 8);
+			margin-bottom: 1em;
+			border: none;
+		}
+	}
+
+	.thursday {
+
+	}
+
+	.friday {
+
+	}
+
+	.saturday {
+		@include span-columns(8 omega, 24);
+	}
+}
+
 // Speaker & Workshop submission form
 
 .form {
@@ -387,16 +461,6 @@ header {
 		@include box-sizing(border-box);
 		padding: .5em;
 		text-align: center;
-	}
-
-	.theme-intro {
-
-		p {
-			font-size: 1.15em;
-			line-height: 1.6em;
-			color: $grayDarker;
-			padding: 1em 4em 0;
-		}
 	}
 
 	.information {

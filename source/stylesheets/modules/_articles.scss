@@ -87,8 +87,9 @@ article {
 	@include span-columns(24 omega, 24);
 	margin-bottom: 2em;
 
-
-
+	h3 {
+		font-size: 1.5em;
+	}
 	article {
 		@include span-columns(6, 24);
 

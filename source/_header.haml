@@ -2,17 +2,25 @@
 	.container.cf
 		%nav.primary.cf
 			<a class="home mobile-logo cf" href="/"><h1></h1></a>
-			%ul.cf
+			%ul.cf.navigation
 				%li
 					%a{:href=>"/speakers"} Speakers
 				%li
 					%a{:href=>"/program"} Program
+
 				%li
 					%a{:href=>"/register"} Register
 				%li.logo
 					<a class="home cf" href="/"><h1></h1></a>
 				%li
-					%a{:href=>"/why-mwux"} About MWUX
+					%a{:href=>"/about-mwux"} About MWUX
+					%ul.cf.dropdown
+						%li
+							%a{:href=>"team"} Team
+						%li
+							%a{:href=>"media"} Media Info
+						%li
+							%a{:href=>"call-for-cities"} Call for Cities
 				%li
 					%a{:href=>"/city-guide"} City Guide
 				%li

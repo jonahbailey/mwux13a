@@ -29,45 +29,56 @@
 		background-size: cover;
 	}
 
-	a {
-		@include transition-property(color);
-		@include transition-duration($duration);
-		color: $linkColor;
-
-
-		&:hover {
-			color: $linkColorHover;			
-		}
-	}
-
-	.button {
-		color: $white;
-		background: $green;
-		@include transition-property(color, background, box-shadow);
-		@include transition-duration($duration);
-		display: block;
-
-
-		&:hover {
-			@include box-shadow(inset darken($green, 25%) 0px 0px 10px);
-			color: $white;
-			background: darken($green, 10%);
-		}
-	}
-
-	.button.inactive {
-		background: $grayDark;
-		color: grayLighter;
-
-		&:hover {
-			@include box-shadow(none);
-			color: $grayLighter;
-			background: $grayDark;
-		}
-	}
-
-	
 }
+
+a {
+	@include transition-property(color);
+	@include transition-duration($duration);
+	color: $linkColor;
+
+
+	&:hover {
+		color: $linkColorHover;			
+	}
+}
+
+.button {
+	color: $white;
+	background: $green;
+	@include transition-property(color, background, box-shadow);
+	@include transition-duration($duration);
+	display: block;
+
+
+	&:hover {
+		@include box-shadow(inset darken($green, 25%) 0px 0px 10px);
+		color: $white;
+		background: darken($green, 10%);
+	}
+}
+
+.button.inactive {
+	background: $grayLighter;
+	color: $gray;
+
+	&:hover {
+		@include box-shadow(none);
+		background: $grayLighter;
+		cursor: default;
+		color: $gray;
+	}
+}
+
+.button.active-event {
+	background: lighten($green,20%);
+	color: $white;
+
+	&:hover {
+		@include box-shadow(inset darken($green, 10%) 0px 0px 10px);
+		color: $white;
+		background: lighten($green, 10%);
+	}
+}	
 
 .interior {
 
