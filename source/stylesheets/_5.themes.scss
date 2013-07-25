@@ -1,6 +1,55 @@
 // Themes
 //================================================//
 
+a {
+	@include transition-property(color);
+	@include transition-duration($duration);
+	color: $linkColor;
+
+
+	&:hover {
+		color: $linkColorHover;			
+	}
+}
+
+.button {
+	color: $white;
+	background: $linkColor;
+	@include transition-property(color, background, box-shadow);
+	@include transition-duration($duration);
+	display: block;
+
+
+	&:hover {
+		@include box-shadow(inset darken($linkColor, 25%) 0px 0px 10px);
+		color: $white;
+		background: darken($linkColor, 10%);
+	}
+}
+
+.button.inactive {
+	background: $grayLighter;
+	color: $gray;
+
+	&:hover {
+		@include box-shadow(none);
+		background: $grayLighter;
+		cursor: default;
+		color: $gray;
+	}
+}
+
+.button.active-event {
+	background: lighten($linkColor,20%);
+	color: $white;
+
+	&:hover {
+		@include box-shadow(inset darken($linkColor, 10%) 0px 0px 10px);
+		color: $white;
+		background: lighten($linkColor, 10%);
+	}
+}	
+
 // Spring Theme
 //================================================//
 
@@ -8,6 +57,22 @@
 	//background-color: $grayLighter;
 	background: image-url("BG_Texture_B.png");
 	//background-size: 100%;
+
+	.home {
+
+		h1 {
+			background: image-url('logo-green.svg') no-repeat center;
+			background-size: 100%;
+		}
+
+		&:hover {
+
+			h1 {
+				background: image-url('logo.svg') no-repeat center;
+				background-size: 100%;
+			}
+		}
+	}
 
 	.masthead#home {
 		background-size: cover;
@@ -29,68 +94,85 @@
 		background-size: cover;
 	}
 
-}
+	.registration-callout {
+		background: image-url("city.jpg")no-repeat;
+	}
 
-a {
-	@include transition-property(color);
-	@include transition-duration($duration);
-	color: $linkColor;
-
-
-	&:hover {
-		color: $linkColorHover;			
+// Interior Masthead Image
+	.interior {
+		.masthead {
+			background: image-url("masthead-spring.svg") no-repeat;
+			background-size: cover;
+		}
 	}
 }
 
-.button {
-	color: $white;
-	background: $green;
-	@include transition-property(color, background, box-shadow);
-	@include transition-duration($duration);
-	display: block;
-
-
-	&:hover {
-		@include box-shadow(inset darken($green, 25%) 0px 0px 10px);
-		color: $white;
-		background: darken($green, 10%);
-	}
-}
-
-.button.inactive {
-	background: $grayLighter;
-	color: $gray;
-
-	&:hover {
-		@include box-shadow(none);
-		background: $grayLighter;
-		cursor: default;
-		color: $gray;
-	}
-}
-
-.button.active-event {
-	background: lighten($green,20%);
-	color: $white;
-
-	&:hover {
-		@include box-shadow(inset darken($green, 10%) 0px 0px 10px);
-		color: $white;
-		background: lighten($green, 10%);
-	}
-}	
-
-.interior {
-
-	.masthead {
-		background: image-url("masthead.svg") no-repeat;
-		background-size: cover;
-	}
-}
 
 // Summer Theme
 //================================================//
 
+.summer {
+	background: image-url("BG_Texture_B.png");
+
+	.home {
+
+		h1 {
+			background: image-url('logo-yellow.svg') no-repeat center;
+			background-size: 100%;
+		}
+
+		&:hover {
+
+			h1 {
+				background: image-url('logo.svg') no-repeat center;
+				background-size: 100%;
+			}
+		}
+	}
+
+	.masthead#home {
+		background-size: cover;
+		padding-top: 22em;
+	}
+
+	.masthead.topo#home {
+		background: image-url("06-26_Body_Masthead_Rough_Yellow_01.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	.masthead.brainwaves#home {
+		background: image-url("06-26_Body_Masthead_Rough_Yellow_02.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	.masthead.city#home {
+		background: image-url("06-26_Body_Masthead_Rough_Yellow_03.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	.registration-callout {
+		background: image-url("city-summer.jpg")no-repeat;
+		background-size: cover;
+	}
+
+// Interior Masthead Image
+	.interior {
+		.masthead.topo {
+			background: image-url("06-26_Body_Masthead_Rough_Blank_01.jpg") no-repeat;
+			background-size: cover;
+		}
+
+		.masthead.brainwaves {
+			background: image-url("06-26_Body_Masthead_Rough_Blank_02.jpg") no-repeat;
+			background-size: cover;
+		}
+
+		.masthead.city {
+			background: image-url("06-26_Body_Masthead_Rough_Blank_03.jpg") no-repeat;
+			background-size: cover;
+		}
+	}
+}
 
 
 // Fall Theme

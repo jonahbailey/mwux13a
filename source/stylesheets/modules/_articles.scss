@@ -45,7 +45,7 @@ article {
 		}
 
 		a {
-			color: $green;
+			color: $linkColor;
 		}
 	}
 }
@@ -99,11 +99,29 @@ article {
 	}
 }
 
+.team {
+
+	article {
+		margin-bottom: 2em;
+		border: none;
+		background: transparent;
+	}
+}
+
+.chairs {
+	article {
+		@include span-columns(8, 24);
+
+		&:nth-of-type(3n) {
+			@include span-columns(8 omega, 24);
+		}
+	}
+}
+
 .core-team {
 
 	article {
 		@include span-columns(6, 24);
-		margin-bottom: 2em;
 
 		&:nth-of-type(4n) {
 			@include span-columns(6 omega, 24);

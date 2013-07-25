@@ -58,7 +58,7 @@
 			color: $white;
 
 			&:hover {
-				color: $green;
+				color: $linkColor;
 
 				.dropdown {
 					display: block;
@@ -134,20 +134,9 @@
 		display: block;
 	}
 
-
 	h1 {
 		@include box-sizing(border-box);
 		height: 50px;
-		background: image-url('logo-green.svg') no-repeat center;
-		background-size: 100%;
-	}
-
-	&:hover {
-
-		h1 {
-			background: image-url('logo.svg') no-repeat center;
-			background-size: 100%;
-		}
 	}
 }
 
