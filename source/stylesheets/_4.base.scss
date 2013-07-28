@@ -20,6 +20,12 @@ zoom:1;
 
 // Basics
 //================================================
+
+.hidden {
+  display: none;
+  visibility: hidden;
+} 
+
 html,
 body {
 	height: 100%;
@@ -367,7 +373,10 @@ header {
 // Team Page
 
 .team {
-
+	h2 {
+		text-align: center;
+	}
+	
 	h5 {
 		@include span-columns(6 omega, 6);
 		@include box-sizing(border-box);
@@ -454,6 +463,29 @@ header {
 	.saturday {
 		@include span-columns(8 omega, 24);
 	}
+}
+
+.program-info {
+	@include transition-property(height);
+	@include transition-duration($duration);
+
+	h5 {
+		text-align: center;
+	}
+
+	p {
+		color: $grayDarker;
+	}
+}
+
+.program-info.hidden {
+	height: 0;
+}
+
+.program-info.show {
+	height: auto;
+	@include transition-property(height);
+	@include transition-duration($duration);
 }
 
 // Speaker & Workshop submission form

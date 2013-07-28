@@ -91,10 +91,10 @@ article {
 		font-size: 1.5em;
 	}
 	article {
-		@include span-columns(6, 24);
+		@include span-columns(8, 24);
 
-		&:last-child {
-			@include span-columns(6 omega, 24);
+		&:last-of-type {
+			@include omega;
 		}
 	}
 }

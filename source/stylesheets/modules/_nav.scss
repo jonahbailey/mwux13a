@@ -59,13 +59,12 @@
 
 			&:hover {
 				color: $linkColor;
-
-				.dropdown {
-					display: block;
-				}
 			}
 		}
 
+		a:hover + .dropdown {
+			display: block;
+		}
 	}
 }
 

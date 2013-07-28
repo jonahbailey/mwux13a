@@ -6,6 +6,8 @@ published: true
 
 Speakers, as you consider your talk for MidwestUX, I’d ask that you reflect on this year’s theme, Place. I am curious as to how you define place, place-making and the broader sense of creating meaning in your community and in your work. If you are looking for a bit more of a concrete example, let me tell you about how we approach the theme in the creation of this year’s event experience.
 
+READMORE
+
 To create a holistic event experience, we are using three main principles that encompass various aspects of the theme, as well as reflect what we do as professionals:
 
 * Consider context

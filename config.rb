@@ -22,6 +22,9 @@ require 'susy'
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
+
+page "/blog/*", :layout => "blog-layout"
+
 #
 # A path which all have the same layout
 # with_layout :admin do
@@ -81,9 +84,9 @@ end
 activate :blog do |blog|
   # set options on blog
   blog.prefix = "news"
-  blog.permalink = "blog/:year/:month/:day/:title.html"
-  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
-  # blog.layout = "blog_layout"
+  blog.permalink = "news/:year/:month/:day/:title.html"
+  blog.summary_separator = /READMORE/
+  blog.layout = "blog"
 
 end
 
