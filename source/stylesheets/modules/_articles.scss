@@ -92,6 +92,8 @@ article {
 	}
 	article {
 		@include span-columns(8, 24);
+		border: none;
+		background: $white;
 
 		&:last-of-type {
 			@include omega;
