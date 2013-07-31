@@ -128,10 +128,19 @@ header {
 	}
 
 	.button {
+		@include span-columns(6,24);
 		color: $linkColor;
 		background: $white;
-		margin: 0 auto 2em;
-		width: 33%;
+		margin-bottom: 2em;
+
+		&:first-of-type {
+			@include pre(6);
+		}
+
+		&:last-of-type {
+			margin-right: none;
+		}
+
 
 		&:hover {
 			color: $linkColor;
@@ -253,7 +262,6 @@ header {
 	}
 
 	h5 {
-		font-size: 1.25em;
 		margin-bottom: .75em;
 	}
 
@@ -605,7 +613,7 @@ header {
 
 .section-header {
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 2em;
 	color: $black;
 	margin-bottom: 1em;
 }

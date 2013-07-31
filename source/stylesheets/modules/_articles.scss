@@ -32,6 +32,7 @@ article {
 	h4 {
 		color: $charcoal;
 		margin-bottom: .35em;
+		font-size: 1.25em;
 	}
 
 	p {
@@ -200,6 +201,36 @@ article {
 		}
 	}
 }
+
+// Program Articles
+//================================================
+
+.workshops {
+	article {
+		@include span-columns(6, 24);
+		border: none;
+		background: $white;
+		margin-bottom: 1em;
+
+		&:nth-of-type(4n) {
+			@include omega;
+		}
+	}
+}
+
+.excursions {
+	article {
+		@include span-columns(12, 24);
+		border: none;
+		background: $white;
+		margin-bottom: 1em;
+
+		&:nth-of-type(2n) {
+			@include omega;
+		}
+	}
+}
+
 
 // Volunteer Page Callouts
 //================================================
