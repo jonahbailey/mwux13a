@@ -7,9 +7,6 @@ section {
 
 article {
 	@include box-sizing(border-box);
-	border: 1px solid rgba(0,0,0,0.05);
-	background: image-url("mesh-white.svg") 0 0;
-	background-color: $grayLighter;
 }
 
 
@@ -159,12 +156,6 @@ article {
 		line-height: 1.25;
 		height: 52px;
 	}
-
-	.article-content {
-		background: image-url("mesh-white.svg") 0 0;
-		background-color: $grayLighter;
-
-	}
 }
 
 // Speakers, Volunteers Page Callouts
@@ -281,8 +272,6 @@ article {
 	article {
 		@include span-columns(12, 24);
 		@include box-sizing(border-box);
-		background: image-url("mesh-white.svg") 0 0;
-		background-color: $grayLighter;
 
 		.image {
 			@include span-columns(12 omega, 12);
@@ -329,8 +318,6 @@ article {
 	article {
 		@include span-columns(8, 24);
 		@include box-sizing(border-box);
-		background: image-url("mesh-white.svg") 0 0;
-		background-color: $grayLighter;
 		margin-bottom: 2em;
 		position: relative;		
 
@@ -364,7 +351,6 @@ article {
 
 .past-editions {
 	article {
-		border: 1px solid rgba(0,0,0,0.05);
 		@include span-columns(12, 24);
 
 		&:last-of-type {

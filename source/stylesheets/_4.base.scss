@@ -3,19 +3,19 @@
 
 //Clearfix
 //================================================
-.cf:before, 
-.cf:after { 
-content:""; 
-display:table; 
-} 
+.cf:before,
+.cf:after {
+content:"";
+display:table;
+}
 
-.cf:after { 
-clear:both; 
-} 
+.cf:after {
+clear:both;
+}
 
-/* For IE 6/7 (trigger hasLayout) */ 
-.cf { 
-zoom:1; 
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+zoom:1;
 }
 
 // Basics
@@ -24,7 +24,7 @@ zoom:1;
 .hidden {
   display: none;
   visibility: hidden;
-} 
+}
 
 html,
 body {
@@ -43,7 +43,7 @@ header {
 	//@include box-shadow($charcoal 0 1px 7px 0px);
 	position: relative;
 	z-index: 10;
-	
+
 	.container {
 		position: relative;
 		z-index: 10;
@@ -74,7 +74,7 @@ header {
 	}
 
 	.event-info {
-		background-color: rgba(#fff,.85); 
+		background-color: rgba(#fff,.85);
 		@include box-sizing(border-box);
 		padding: 1em;
 		margin-bottom: 3.5em;
@@ -104,7 +104,7 @@ header {
 
 	.callout {
 		@include span-columns(24 omega, 24);
-		background-color: rgba(255,255,255,.85); 
+		background-color: rgba(255,255,255,.85);
 		@include box-sizing(border-box);
 		padding: 2em 1.5em 2em;
 	}
@@ -209,7 +209,7 @@ header {
 			&:hover {
 				background: image-url("sponsors/visual-hero-color.png")no-repeat center center;
 				background-size: 80%;
-				}	
+				}
 			}
 
 		.universal-mind {
@@ -219,7 +219,7 @@ header {
 			&:hover {
 				background: image-url("sponsors/universal-mind-color.png")no-repeat center center;
 				background-size: 80%;
-			}		
+			}
 		}
 	}
 }
@@ -237,7 +237,7 @@ header {
 		//margin-top: -8px;
 
 		.event-info {
-			background-color: rgba(#fff,.85); 
+			background-color: rgba(#fff,.85);
 			@include box-sizing(border-box);
 			padding: 0;
 			@include span-columns(12,24);
@@ -385,7 +385,7 @@ header {
 	h2 {
 		text-align: center;
 	}
-	
+
 	h5 {
 		@include span-columns(6 omega, 6);
 		@include box-sizing(border-box);
@@ -431,6 +431,24 @@ header {
 }
 
 // Program
+
+.program {
+	section {
+		@include span-columns(24 omega, 24);
+	}
+
+	.sections {
+		width: 1070px;
+		.button {
+			float: left;
+			width: 25%;
+			background: lighten($linkColor, 15%);
+			&.selected {
+				background: $linkColor;
+			}
+		}
+	}
+}
 
 .schedule {
 
@@ -536,28 +554,28 @@ header {
 		ul {
 			list-style: none;
 			@include span-columns(12 omega, 12);
-	
+
 			.button {
 				display: block;
 			}
 		}
-	
+
 		li {
 			margin-bottom: 1em;
 		}
-	
+
 		li:nth-child(even) {
 			@include span-columns(6, 12);
 		}
-	
+
 		li:nth-child(odd) {
 			@include span-columns(6 omega, 12);
 		}
-	
+
 		.long-term {
 			@include span-columns(12, 24);
 		}
-	
+
 		.short-term {
 			@include span-columns(12 omega, 24);
 		}
@@ -580,7 +598,7 @@ header {
 					&:nth-child(odd) {
 						@include span-columns(3,6);
 					}
-	
+
 					&:nth-child(even) {
 						@include span-columns(3 omega, 6);
 					}
@@ -609,7 +627,7 @@ header {
 	margin-bottom: 1em;
 }
 
-// Footer 
+// Footer
 //================================================
 
 footer {
