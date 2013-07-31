@@ -299,7 +299,8 @@
 		}
 	}
 
-	.news {
+	.news,
+	.core-team {
 
 		article {
 			@include span-columns(12,24);
