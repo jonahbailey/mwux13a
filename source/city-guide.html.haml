@@ -1,9 +1,29 @@
 .container.grand-rapids.interior
-	.masthead.cf
+	.masthead.city.cf
 		.event-info.cf
 			%h1 Grand Rapids, Michigan
 	.main.content.cf
-		.callouts.cf
+		%section.stay.cf
+
+			%article
+				%img{:src =>"/images/amway.jpg"}
+				.article-content.cf
+					%h3 Conference Hotel
+					%p If you wish to book a hotel during your time at Midwest UX 2013, we’ve made arrangements for a special conference rate for a block of rooms at the elegant Amway Grand Hotel in downtown Grand Rapids, MI during the conference. 
+
+					%p The <strong>special rate of $129/room is about a 50% savings</strong> over Amway Grand's regular room rates and very competitive with all of the downtown hotels. These prices are good for the nights of October 16th through the 18th and the rooms in our block will go fast so <strong>book soon to take advantage of this offer!</strong> You can book online or call (800) 253-3590 and let them know you're with Midwest UX.
+				.article-footer
+					%a.button{:href=>"https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=10730356"} Book Your Room Today
+
+			%article
+				%img{:src => "/images/grbrewing-crate.jpg"}
+				.article-content.cf
+					%h3 Gastronomy
+					%p Two unique factors make Grand Rapids dining extra special: We're located in the middle of one of the world's best growing regions. And we're home to one of America's finest culinary schools. The result is an astonishing variety of fresh, farm-to-table cuisine for every taste and budget - downtown, around town and along the lakeshore.		
+				.article-footer
+					%a.button{:href=>"http://www.experiencegr.com/restaurants/"} Gastronomy
+
+		%section.callouts.cf
 			%article
 				%img{:src =>"/images/zimmerman.jpg"}
 				.article-content.cf
@@ -19,8 +39,8 @@
 					%p In addition to Festival of The Arts, Grand Rapids also hosts ArtPrize, a radically open art competition, and one of the world’s most generous. Over the course of three years, ArtPrize has hosted 4,557 artists in 515 venues around the downtown area and given away $1,428,000 in prizes. 
 				.article-footer
 					%a.button{:href=>"http://www.experiencegr.com"} More About Grand Rapids
-		.venues.cf
-			%h5 Venues
+		%section.venues.cf
+			%h5.section-header Venues
 			%article
 				.image
 					%h6 Education Partner

@@ -58,8 +58,6 @@ function columnConform() {
 // are unequalizing the blocks
 $(function() {
 	columnConform(
-		'.explanation .article-content', 
-		'.callouts .article-content',
-		'.venues .article-content'
+		'article .article-content'
 	);
 });

@@ -1,0 +1,57 @@
+.container.registration.interior
+	.masthead.city.cf
+		.event-info.cf
+			%h1 Registration
+	.main.content.cf
+		.intro.cf
+		%section.registration.cf#registration
+			%h3 Conference Pass + Excursion ($350)
+			%p The main conference is a full day <strong>Friday, October 18 & Saturday, October 19</strong>. The second half of our day on Friday will be spent exploring User Experience in context through excursions. These will include lunch at a local restaurant and an educational experience.
+			%p <strong>Excursion are included free with your conference pass</strong> but space is limited in each excursion and we expect some will sell out quickly, so buy your tickets today to reserve your place.
+			%form{:action => "http://www.eventbrite.com/orderstart?ebtv=C", :method => "post"}
+				%input{:name => "eid", :type => "hidden", :value => "3210614033"}
+				%input{:name => "has_javascript", :type => "hidden", :value => "1"}
+				%table#excursions
+					%tr
+						%th
+							Pass + Excursion
+						%th
+							Remaining
+						%th
+							Price
+						%th
+							Qty
+
+				%h3 Thursday Morning Workshops
+				%p Workshops will be held Thursday, October 16 &mdash; before the full conference. Tickets for workshops are sold separately and are all a half day (morning or afternoon).
+
+				%table#am-workshops
+					%tr
+						%th
+							Morning Workshops
+						%th
+							Remaining
+						%th
+							Price
+						%th
+							Qty
+
+				%h3 Thursday Afternoon Workshops
+				%p Workshops will be held Thursday, October 16 &mdash; before the full conference. Tickets for workshops are sold separately and are all a half day (morning or afternoon).
+
+				%table#pm-workshops
+					%tr
+						%th
+							Afternoon Workshops
+						%th
+							Remaining
+						%th
+							Price
+						%th
+							Qty
+
+				%input.button{:type=>"submit", :value=>"Register Now"}
+
+		%section
+			%img{:src =>"/images/eventbrite.png"} &nbsp;
+			%p Our registration system is powered by Eventbrite. After making your selection of a conference pass paired with free excursion and two optional workshops (morning and afternoon) you will be sent to Eventbrite's site to complete your purchase.

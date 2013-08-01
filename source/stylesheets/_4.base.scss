@@ -3,23 +3,29 @@
 
 //Clearfix
 //================================================
-.cf:before, 
-.cf:after { 
-content:""; 
-display:table; 
-} 
+.cf:before,
+.cf:after {
+content:"";
+display:table;
+}
 
-.cf:after { 
-clear:both; 
-} 
+.cf:after {
+clear:both;
+}
 
-/* For IE 6/7 (trigger hasLayout) */ 
-.cf { 
-zoom:1; 
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+zoom:1;
 }
 
 // Basics
 //================================================
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 html,
 body {
 	height: 100%;
@@ -33,11 +39,11 @@ body {
 
 header {
 	border-bottom: 1px solid #484848;
-	@include gradient-vertical(#727272, #606060);
-	@include box-shadow($charcoal 0 1px 7px 0px);
+	@include gradient-vertical(#606060, #727272);
+	//@include box-shadow($charcoal 0 1px 7px 0px);
 	position: relative;
 	z-index: 10;
-	
+
 	.container {
 		position: relative;
 		z-index: 10;
@@ -45,7 +51,7 @@ header {
 }
 
 .content {
-	background: image-url("bg-body.png");
+	background: $white;
 	@include box-sizing(border-box);
 	padding: 2em;
 	border-left: 1px solid rgba(0,0,0,0.1);
@@ -57,16 +63,18 @@ header {
 
 .masthead {
 	padding-top: 5em;
-	// border-left: 1px solid darken($green, 15%);
-	// border-right: 1px solid darken($green, 15%);
+	// border-left: 1px solid darken($linkColor, 15%);
+	// border-right: 1px solid darken($linkColor, 15%);
 	background-size: cover;
-
+	border-left: 1px solid rgba(0,0,0,0.1);
+	border-right: 1px solid rgba(0,0,0,0.1);
+	// border-bottom: 1px solid rgba(220,220,220,0.75);
 	* {
 		text-align: center;
 	}
 
 	.event-info {
-		background-color: rgba(#fff,.85); 
+		background-color: rgba(#fff,.85);
 		@include box-sizing(border-box);
 		padding: 1em;
 		margin-bottom: 3.5em;
@@ -76,7 +84,7 @@ header {
 
 	h1 {
 		margin-bottom: .5em;
-		color: #64C29E;
+		color: $linkColor;
 		//font-family: $headingsFontFamily;
 		//text-transform: uppercase;
 	}
@@ -96,9 +104,9 @@ header {
 
 	.callout {
 		@include span-columns(24 omega, 24);
-		background-color: rgba(0,0,0,0.75); 
+		background-color: rgba(255,255,255,.85);
 		@include box-sizing(border-box);
-		padding: 1.5em;
+		padding: 2em 1.5em 2em;
 	}
 }
 
@@ -107,100 +115,41 @@ header {
 // Homepage - Announcement
 //================================================
 
-
-.announcement {
+.registration-callout {
 	@include span-columns(24 omega, 24);
+	margin-top: 0;
 	@include box-sizing(border-box);
-	padding: 0 0 2em;
 
-	h5 {
+	h3 {
+		color: $white;
 		font-size: 1.5em;
-		margin-bottom: 1em;
-	}
-}
-
-.intro {
-	@include span-columns(12, 24);
-	padding: 2em 0 2em;
-	
-	p {
-		font-size: 1em;
-		line-height: 1.6em;
-		margin-top: 1em;
-	}
-}
-
-.subscribe {
-	background: image-url("mesh-white.svg");
-	background-color: $grayLighter;
-	border: 1px solid rgba(0,0,0,0.05);
-	@include span-columns(12 omega, 24);
-	@include box-sizing(border-box);
-	padding: 2em 4em;
-
-
-	h5 {
 		text-align: center;
+		@include box-sizing(border-box);
+		padding: 2em 4em;
 	}
-
 
 	.button {
-		border: none;
-		height: 50px;
-		margin: 0;
-		display: inline-block;
-		float: left;
-		width: 25%;
+		@include span-columns(6,24);
+		color: $linkColor;
+		background: $white;
+		margin-bottom: 2em;
 
+		&:first-of-type {
+			@include pre(6);
+		}
+
+		&:last-of-type {
+			margin-right: none;
+		}
+
+
+		&:hover {
+			color: $linkColor;
+			background: darken($white, 1%);
+			@include box-shadow(inset darken($white, 25%) 0px 0px 10px);
+			border: 1px solid darken($linkColor, 20%);
+		}
 	}
-
-	.email {
-		border: 1px solid $green;
-		padding: .9em;
-		height: 50px;
-		@include box-sizing(border-box);
-		display: inline-block;
-		float: left;
-		margin: 0;
-		width: 75%;
-	}
-}
-
-.highlight {
-	color: $green;
-}
-
-.social-media {
-	@include span-columns(12 omega, 12);
-	list-style: none;
-	padding: 2em 0 0;
-}
-
-.network {
-	@include hide-text;
-	background-position: center center;
-	height: 55px;
-	width: 55px;
-	display: block;
-	float: left;
-}
-
-.facebook {
-	background: image-url("facebook.svg")no-repeat;
-	background-size: 100%;
-	@include post(1);
-	margin-left: 27.0454545%;
-}
-
-.twitter {
-	background: image-url("twitter.svg")no-repeat;
-	@include post(1);
-	background-size: 100%;
-}
-
-.linked-in {
-	background: image-url("linkedin.svg")no-repeat;
-	background-size: 100%;
 }
 
 // Callouts and News Articles are in _articles partial
@@ -211,7 +160,7 @@ header {
 
 .sponsors-listing {
 	@include span-columns(24 omega, 24);
-	padding: 3em 0 3em;
+	padding: 3em 0 4em;
 
 	ul {
 		list-style: none;
@@ -260,7 +209,7 @@ header {
 			&:hover {
 				background: image-url("sponsors/visual-hero-color.png")no-repeat center center;
 				background-size: 80%;
-				}	
+				}
 			}
 
 		.universal-mind {
@@ -270,7 +219,7 @@ header {
 			&:hover {
 				background: image-url("sponsors/universal-mind-color.png")no-repeat center center;
 				background-size: 80%;
-			}		
+			}
 		}
 	}
 }
@@ -283,12 +232,11 @@ header {
 
 	.masthead {
 		padding:0;
-		border: none;
 		//margin-bottom: 2em;
 		//margin-top: -8px;
 
 		.event-info {
-			background-color: rgba(#fff,.85); 
+			background-color: rgba(#fff,.85);
 			@include box-sizing(border-box);
 			padding: 0;
 			@include span-columns(12,24);
@@ -314,7 +262,6 @@ header {
 	}
 
 	h5 {
-		font-size: 1.25em;
 		margin-bottom: .75em;
 	}
 
@@ -332,25 +279,26 @@ header {
 	}
 }
 
-// Interior Pages (Speakers & Volunteers) 
+// Interior Pages
 //================================================
+
+.intro {
+
+	p {
+		font-size: 1.15em;
+		line-height: 1.6em;
+		color: $grayDarker;
+		padding: 1em 4em 0;
+	}
+}
+
+
+// Speakers
 
 .speakers {
 
-	.theme-intro {
-		@include box-sizing(border-box);
-		padding: 0 4em 0;
-
-		p {
-			font-size: 1.15em;
-			line-height: 1.6em;
-			color: $grayDarker;
-			padding: 1em 0 0;
-		}
-
-		.metadata {
-			color: $charcoal;
-		}
+	.metadata {
+		color: $charcoal;
 	}
 
 	ul {
@@ -389,52 +337,257 @@ header {
 			margin-top: .5em;
 		}
 	}
+}
 
+// for call for Speakers and Team
 
+.explanation,
+.chairs {
+	@include span-columns(24 omega, 24);
+	margin-top: 2em;
 
-	.explanation {
-		@include span-columns(24 omega, 24);
-		margin-top: 2em;
+	.headshot {
+		@include span-columns(8 omega, 8);
+		@include box-sizing(border-box);
 
-
-		.headshot {
-			@include span-columns(8 omega, 8);
-			@include box-sizing(border-box);
-
-			img {
-				width: 100%;
-			}
+		img {
+			width: 100%;
 		}
+	}
 
-		h5 {
-			@include span-columns(8 omega, 8);
-			@include box-sizing(border-box);
-			padding: .5em 1.05em;
-			margin: 0;
-			color: $white;
-			background: rgba($black, .75);
-			font-size: 1.05em;
-			font-family: $headingsFontFamily;
-			text-transform: uppercase;
-		}
+	h5 {
+		@include span-columns(8 omega, 8);
+		@include box-sizing(border-box);
+		padding: .5em 1.05em;
+		margin: 0;
+		color: $grayDarker;
+		background: rgba($white, .5);
+		font-size: 1.05em;
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+	}
 
-		.article-content {
-			@include span-columns(8 omega, 8);
+	.article-content {
+		@include span-columns(8 omega, 8);
 
-			ul {
-				padding-left: 2em;
-			}
+		ul {
+			padding-left: 2em;
 		}
 	}
 }
 
-.chairs {
-	margin-bottom: 2em;
+
+
+// Team Page
+
+.team {
+	h2 {
+		text-align: center;
+	}
+
+	h5 {
+		@include span-columns(6 omega, 6);
+		@include box-sizing(border-box);
+		padding: 1em 0 0;
+		margin: 0;
+		color: $grayDarker;
+		background: rgba($white, .5);
+		font-size: 1.5em;
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+		text-align: center;
+	}
 }
+
+.chairs {
+	@include span-columns(24 omega, 24);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.core-team {
+	@include span-columns(24 omega, 24);
+	margin-top: 0;
+
+	.headshot {
+		@include span-columns(6 omega, 6);
+		@include box-sizing(border-box);
+
+		img {
+			width: 100%;
+		}
+	}
+
+	p {
+		text-align: center;
+	}
+
+	.article-content {
+		@include span-columns(6 omega, 6);
+		padding: 0 0 1em;
+	}
+
+}
+
+// Program
+
+.program {
+	section {
+		@include span-columns(24 omega, 24);
+	}
+
+	.sections {
+		width: 1070px;
+		background: $white;
+		
+		.button {
+			float: left;
+			width: 25%;
+			background: transparent;
+			color: $linkColor;
+			border: none;
+			
+			&.selected {
+				border-bottom: 5px solid $linkColor
+			}
+
+			&:hover {
+				@include box-shadow(none);
+			}
+
+			// &:first-of-type {
+			// 	@include border-right-radius(0);
+			// 	border-right: 0;
+			// }
+
+			// &:nth-of-type(2) {
+			// 	@include border-radius(0);
+			// 	border-right: 0;
+			// }
+
+			// &:nth-of-type(3) {
+			// 	@include border-radius(0);
+			// 	border-right: 0;
+			// }
+
+			// &:nth-of-type(4) {
+			// 	@include border-left-radius(0);
+			// }
+		}
+	}
+}
+
+.schedule {
+
+	article {
+		@include span-columns(8, 24);
+		padding: 1em;
+		background: transparent;
+		border: none;
+
+		h3 {
+			text-align: center;
+			//border: 1px solid rgba(0,0,0,0.05);
+			background: image-url("mesh-white.svg") 0 0;
+			@include border-radius($radius);
+			font-family: $headingsFontFamily;
+			text-transform: uppercase;
+			font-size: 1.55em;
+			letter-spacing: 1px;
+			background-color: $grayLighter;
+			padding: .5em;
+			margin-bottom: 1em;
+		}
+
+		a {
+			@include span-columns(8 omega, 8);
+			margin-bottom: 1em;
+			border: none;
+		}
+	}
+
+	.thursday {
+
+	}
+
+	.friday {
+
+	}
+
+	.saturday {
+		@include span-columns(8 omega, 24);
+	}
+}
+
+.program-info {
+	@include transition-property(height);
+	@include transition-duration($duration);
+
+	h5 {
+		text-align: center;
+	}
+
+	p {
+		color: $grayDarker;
+	}
+}
+
+.program-info.hidden {
+	height: 0;
+}
+
+.program-info.show {
+	height: auto;
+	@include transition-property(height);
+	@include transition-duration($duration);
+}
+
+// Registration
+
+.registration {
+
+	section {
+		&:first-of-type {
+			@include span-columns(16, 24);
+		}
+
+		&:last-of-type {
+			@include span-columns (8 omega, 24);
+		}
+	}
+
+	h3 {
+		margin-bottom: 1em;
+		font-weight: 400;
+	}
+
+	table {
+			width: 100%;
+			margin-bottom: 25px;
+		th{
+			text-align: left;
+			padding-bottom: 20px;
+		}
+		td{
+			padding-right: 15px;
+			padding-bottom: 15px;
+		}
+	}
+
+	.sold-out {
+		color: red;
+	}
+}
+
+
+
+// Speaker & Workshop submission form
 
 .form {
 	margin: 2em auto;
 }
+
+// Volunteers
 
 .volunteers {
 
@@ -445,16 +598,6 @@ header {
 		@include box-sizing(border-box);
 		padding: .5em;
 		text-align: center;
-	}
-
-	.theme-intro {
-
-		p {
-			font-size: 1.15em;
-			line-height: 1.6em;
-			color: $grayDarker;
-			padding: 1em 4em 0;
-		}
 	}
 
 	.information {
@@ -477,28 +620,28 @@ header {
 		ul {
 			list-style: none;
 			@include span-columns(12 omega, 12);
-	
+
 			.button {
 				display: block;
 			}
 		}
-	
+
 		li {
 			margin-bottom: 1em;
 		}
-	
+
 		li:nth-child(even) {
 			@include span-columns(6, 12);
 		}
-	
+
 		li:nth-child(odd) {
 			@include span-columns(6 omega, 12);
 		}
-	
+
 		.long-term {
 			@include span-columns(12, 24);
 		}
-	
+
 		.short-term {
 			@include span-columns(12 omega, 24);
 		}
@@ -507,17 +650,7 @@ header {
 
 .sponsors {
 
-	.theme-intro {
-
-		p {
-			font-size: 1.15em;
-			line-height: 1.6em;
-			color: $grayDarker;
-			padding: 1em 4em 1em;
-		}
-	}
-
-	.callouts {
+	section {
 
 		article {
 			@include span-columns(12,24);
@@ -531,7 +664,7 @@ header {
 					&:nth-child(odd) {
 						@include span-columns(3,6);
 					}
-	
+
 					&:nth-child(even) {
 						@include span-columns(3 omega, 6);
 					}
@@ -553,19 +686,14 @@ header {
 // Section Headers
 //================================================
 
-
-.sponsors-listing, 
-.news,
-.venues {
-	h5 {
-		text-align: center;
-		font-size: 1.5em;
-		color: $black;
-		margin-bottom: 1em;
-	}
+.section-header {
+	text-align: center;
+	font-size: 2em;
+	color: $black;
+	margin-bottom: 1em;
 }
 
-// Footer 
+// Footer
 //================================================
 
 footer {
@@ -577,6 +705,7 @@ footer {
 
 	.about-mwux {
 		@include span-columns(9, 24);
+		margin-bottom: 2em;
 
 		p {
 			color: $white;
@@ -603,6 +732,33 @@ footer {
 	}
 }
 
+.subscribe {
+	@include span-columns(9, 9);
+	@include box-sizing(border-box);
+	margin-top: 1em;
+
+	.button {
+		border: none;
+		height: 50px;
+		margin: 0;
+		display: inline-block;
+		float: left;
+		width: 25%;
+
+	}
+
+	.email {
+		border: none;
+		padding: .9em;
+		height: 50px;
+		@include box-sizing(border-box);
+		display: inline-block;
+		float: left;
+		margin: 0;
+		width: 75%;
+	}
+}
+
 #learn {
 	@include span-columns(5, 15);
 }
@@ -613,6 +769,39 @@ footer {
 
 #contact {
 	@include span-columns(5 omega, 15);
+}
+
+.social-media {
+	@include span-columns(12 omega, 12);
+	list-style: none;
+	padding: 2em 0 0;
+}
+
+.network {
+	@include hide-text;
+	background-position: center center;
+	height: 55px;
+	width: 55px;
+	display: block;
+	float: left;
+}
+
+.facebook {
+	background: image-url("facebook.svg")no-repeat;
+	background-size: 100%;
+	@include post(1);
+	margin-left: 27.0454545%;
+}
+
+.twitter {
+	background: image-url("twitter.svg")no-repeat;
+	@include post(1);
+	background-size: 100%;
+}
+
+.linked-in {
+	background: image-url("linkedin.svg")no-repeat;
+	background-size: 100%;
 }
 
 #attribution {

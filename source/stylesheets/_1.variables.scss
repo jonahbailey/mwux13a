@@ -8,8 +8,8 @@
 // Grays
 // -------------------------
 $black:                 #000 !default;
-$charcoal:				#2d2d2d !default;
-$grayDarker:            #676768 !default; //default text, borders, underlines
+$charcoal:				#2d2d2d !default; // default text
+$grayDarker:            #676768 !default; // borders, underlines
 $grayDark:              #818181 !default; // body, section headers
 $gray:                  #9d9d9d !default;
 $grayLight:             #999 !default; //placeholderText
@@ -21,7 +21,7 @@ $box-shadow-color:		#6c6c6c !default;
 // Accent colors
 // -------------------------
 $green:					#65c997 !default;
-$yellow:				#e0c446 !default;
+$yellow:				#f0c835 !default;
 $orange:				#ed6d4e !default;
 
 // Scaffolding
@@ -32,7 +32,7 @@ $textColor:             $black !default;
 
 // Links
 // -------------------------
-$linkColor:             $green !default;
+$linkColor:             $yellow !default;
 $linkColorHover:        lighten($linkColor, 25%) !default;
 
 // Typography "adelle",
@@ -162,7 +162,7 @@ $child-5:				48.9452055;
 // CSS3
 // -------------------------
 
-$radius:		10px;			
+$radius:		2px;			
 $shadow: 		0px 2px 3px 2px $box-shadow-color;
 $duration: 	.5s;
 /*

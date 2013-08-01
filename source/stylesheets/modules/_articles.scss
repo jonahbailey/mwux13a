@@ -1,11 +1,12 @@
 // General Articles
 //================================================
 
+section {
+	margin: 2em 0;
+}
+
 article {
 	@include box-sizing(border-box);
-	border: 1px solid rgba(0,0,0,0.05);
-	background: image-url("mesh-white.svg") 0 0;
-	background-color: $grayLighter;
 }
 
 
@@ -28,6 +29,7 @@ article {
 	h4 {
 		color: $charcoal;
 		margin-bottom: .35em;
+		font-size: 1.25em;
 	}
 
 	p {
@@ -41,7 +43,7 @@ article {
 		}
 
 		a {
-			color: $green;
+			color: $linkColor;
 		}
 	}
 }
@@ -51,7 +53,7 @@ article {
 	padding: 0 1em 1em;
 	float: right;
 	width: 100%;
-	
+
 	.button {
 		display: block;
 	}
@@ -66,14 +68,64 @@ article {
 
 	article {
 		@include span-columns(8, 24);
+		border: none;
+		background: $white;
 
 		&:last-child {
 			@include span-columns(8 omega, 24);
 		}
 
-		// p {
-		// 	height: 100px;
-		// }
+		h3 {
+			text-align: center;
+		}
+	}
+}
+
+.speaker-announcement {
+	@include span-columns(24 omega, 24);
+	margin-bottom: 2em;
+
+	h3 {
+		font-size: 1.5em;
+	}
+	article {
+		@include span-columns(8, 24);
+		border: none;
+		background: $white;
+
+		&:last-of-type {
+			@include omega;
+		}
+	}
+}
+
+.team {
+
+	article {
+		margin-bottom: 2em;
+		border: none;
+		background: transparent;
+	}
+}
+
+.chairs {
+	article {
+		@include span-columns(8, 24);
+
+		&:nth-of-type(3n) {
+			@include span-columns(8 omega, 24);
+		}
+	}
+}
+
+.core-team {
+
+	article {
+		@include span-columns(6, 24);
+
+		&:nth-of-type(4n) {
+			@include span-columns(6 omega, 24);
+		}
 	}
 }
 
@@ -103,24 +155,18 @@ article {
 		line-height: 1.25;
 		height: 52px;
 	}
-
-	.article-content {
-		background: image-url("mesh-white.svg") 0 0;
-		background-color: $grayLighter;
-
-	}
 }
 
 // Speakers, Volunteers Page Callouts
 //================================================
 .speakers,
 .volunteers {
-	.callouts {
+	section {
 		margin: 2em 0 2em;
-	
+
 		article {
 			@include span-columns(12, 24);
-	
+
 			&:last-child {
 				@include span-columns(12 omega, 24);
 			}
@@ -147,12 +193,42 @@ article {
 	}
 }
 
+// Program Articles
+//================================================
+
+.workshops {
+	article {
+		@include span-columns(12, 24);
+		border: none;
+		background: $white;
+		margin-bottom: 1em;
+
+		&:nth-of-type(2n) {
+			@include omega;
+		}
+	}
+}
+
+.excursions {
+	article {
+		@include span-columns(12, 24);
+		border: none;
+		background: $white;
+		margin-bottom: 1em;
+
+		&:nth-of-type(2n) {
+			@include omega;
+		}
+	}
+}
+
+
 // Volunteer Page Callouts
 //================================================
 
 .volunteers {
 
-	.callouts {
+	section {
 		margin: 2em 0 2em;
 
 		p {
@@ -165,25 +241,26 @@ article {
 // Interior Pages (Grand Rapids & About MWUX)
 //================================================
 
-.container.grand-rapids {
-
+.grand-rapids {
 	.callouts {
-
 		article {
-
-			p {
-				height: auto;
+			&:nth-of-type(1) {
+				@include span-columns(8, 24);
 			}
-
-			&:last-child {
+			&:nth-of-type(2) {
 				@include span-columns(16 omega,24);
 			}
+		}
+	}
+}
 
-			&:first-of-type {
-				.article-content {
-					height: 393.578125px
-				}
-			}
+.stay {
+	article {
+		&:nth-of-type(1) {
+			@include span-columns(16, 24);
+		}
+		&:nth-of-type(2) {
+			@include span-columns(8 omega,24);
 		}
 	}
 }
@@ -195,8 +272,6 @@ article {
 	article {
 		@include span-columns(12, 24);
 		@include box-sizing(border-box);
-		background: image-url("mesh-white.svg") 0 0;
-		background-color: $grayLighter;
 
 		.image {
 			@include span-columns(12 omega, 12);
@@ -208,7 +283,7 @@ article {
 			padding-top: 213px;
 
 			h6 {
-				background-color: rgba(0,0,0,0.75); 
+				background-color: rgba(0,0,0,0.75);
 				color: white;
 				font-size: 1em;
 				@include box-sizing(border-box);
@@ -243,18 +318,16 @@ article {
 	article {
 		@include span-columns(8, 24);
 		@include box-sizing(border-box);
-		background: image-url("mesh-white.svg") 0 0;
-		background-color: $grayLighter;
 		margin-bottom: 2em;
-		position: relative;		
+		position: relative;
 
 		&:first-of-type {
-			
+
 			.image {
 				background: image-url("2011.jpg") no-repeat;
 			}
 		}
-		
+
 		&:last-of-type {
 			@include span-columns(8 omega, 24);
 
@@ -278,7 +351,6 @@ article {
 
 .past-editions {
 	article {
-		border: 1px solid rgba(0,0,0,0.05);
 		@include span-columns(12, 24);
 
 		&:last-of-type {

@@ -1,30 +1,12 @@
 // Homepage
 //================================================//
 
-@media only screen and (max-width: 723px) {
-
-	.home {
-		margin-top: -38px;
-		height: 33px;
-		width: 100px;
-	}
-}
-
-
 @media only screen and (max-width: 600px) {
 
-	.spring {
+	.summer {
 
 		.masthead#home {
 			padding-top: 12em;
-		}
-	}
-
-	.home {
-
-		a {
-			height: 35px;
-			width: 100px;
 		}
 	}
 
@@ -33,66 +15,63 @@
 		.callout {
 			 
 			h5 {
-				font-size: 1.5em;
-				padding: 0em;
+				font-size: 1.25em;
+			}
+		}
+	}
+
+	.registration-callout {
+		padding: 1em;
+
+
+		h3 {
+			font-size: 1em;
+			padding: 0;
+			margin-bottom: 1em;
+		}
+
+		.button {
+			width: 100%;
+
+			&:first-of-type {
+				margin-left: 0;
 				margin-bottom: 1em;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
 			}
 		}
 	}
 
 	.intro {
 		padding: 0;
-	}
 
-	.subscribe {
-
-		h5 {
-			font-size: 1.25em;
-		}
-
-		.email {
-			@include span-columns(24 omega, 24);
-			@include border-radius(0);
-		}
-
-		.button {
-			@extend .email;
-			margin-top: 1em;
-			padding: 0;
-			@include border-radius(0);
-		}
-
-		.facebook {
-			@include pre(1);
+		p {
+			padding: 1em;
+			margin: 0;
 		}
 	}
 
+	section {
+		margin: 0;
+	}
+
+	section,
+	.speaker-announcement,
 	.callouts,
-	.news {
+	.news,
+	.workshops,
+	.excursions,
+	.sponsors section,
+	.chairs,
+	.core-team {
 
 		article,
 		article:last-child,
 		article:nth-of-type(even) {
 			@include span-columns(24 omega, 24);
-			margin-bottom: 2em;
-		
-
-			.article-content {
-
-				h3 {
-					height: auto;
-				}
-	
-				p,
-				h4 {
-					display: block;
-					height: auto;
-				}
-
-				.entry-details {
-					display: block;
-				}
-			}
+			margin-bottom: 1em;
 		}
 	}
 
@@ -141,31 +120,35 @@
 
 // Interior Pages
 //================================================//
-.interior {
+	.interior {
 
-	.main {
-		padding: 1em;
-	}
+		.main {
+			padding: 1em;
+		}
 
-	.masthead {
-		margin-bottom: 0;
+		.masthead {
+			margin-bottom: 0;
 
-		.event-info {
-			@include span-columns(18, 24);
-			@include pre(3);
-			margin-top: 2em;
-			margin-bottom: 2em;
+			.event-info {
+				@include span-columns(18, 24);
+				@include pre(3);
+				margin-top: 2em;
+				margin-bottom: 2em;
 
-			h1 {
-				font-size: 1.5em;
+				h1 {
+					font-size: 1.5em;
+				}
 			}
 		}
-	}
 
-	h2 {
-		font-size: 1.25em;
+		h2 {
+			font-size: 1.25em;
+		}
+
+		h4 {
+			font-size: 1.25em;
+		}
 	}
-}
 
 // Speakers, Volunteers
 //================================================//
@@ -175,7 +158,7 @@
 	.speakers,
 	.volunteers {
 
-		.callouts {
+		section {
 
 			article,
 			article:last-child,
@@ -250,59 +233,66 @@
 		}
 	}
 
+// Program
+//================================================//
+	.section-header {
+		font-size: 1.5em;
+		margin-top: 2em;
+	}
+
+	.program {
+
+		section {
+			margin: 0;
+		}
+	}
+
 // Why MWUX?
 //================================================//
 
-.why-mwux {
+	.why-mwux {
 
-	.main {
-		padding-top: 2em;
-	}
+		.main {
+			padding-top: 2em;
+		}
 
-	article,
-	article:last-of-type {
-		@include span-columns(24 omega, 24);
-
-		.article-content {
-			height: auto;
-
-			p {
-				height: auto;
-			}
+		article,
+		article:last-of-type {
+			@include span-columns(24 omega, 24);
 		}
 	}
-}
 
 
 // Grand Rapids
 //================================================//
 
-.container.grand-rapids {
+	.container.grand-rapids {
 
-	.main {
-		padding-top: 2em;
+		.main {
+			padding-top: 2em;
+		}
+
+		section {
+
+			article:last-child,
+			article:first-of-type {
+				@include span-columns(24 omega, 24);
+			}
+		}
 	}
 
-	.callouts {
+	.venues {
 
-		article:last-child,
-		article:first-of-type {
+		article,
+		article:last-child {
 			@include span-columns(24 omega, 24);
-
-			.article-content {
-				height: auto;
-			}
+			margin-bottom: 2em;
 		}
 	}
 }
 
-.venues {
-
-	article,
-	article:last-child {
-		@include span-columns(24 omega, 24);
-		margin-bottom: 2em;
+@media only screen and (max-width: 320px) {
+	.sections {
+		display: none;
 	}
-}
-
 }

@@ -1,57 +1,59 @@
 .container.main
 	.masthead#home.cf
-		/ .event-info.cf
-		/ 	%h1 October 17-19, 2013
-		/ 	//%h2 Grand Rapids, MI
-		/ 	%h2.tagline Midwest UX focuses on all things user experience - interaction design, information architecture, UX research and UI design.
 		.callout
-			%h5.date-location October 17-19, 2013. Grand Rapids, Michigan
-			%h4 Registration Starts in July! <a href="/images/mwux.ics">Save the Date.</a>
+			%h5 October 17-19, 2013. Grand Rapids, Michigan
+	%section.registration-callout.cf
+		%h3 Midwest UX makes a world-class conference experience readily-accessible to the burgeoning Midwest design and UX communities. It provides topflight instruction, networking, entertainment, and innovative immersive experiences. Don't even think of missing out! 
+		%a.button{:href=>"/program"} See The Program
+		%a.button{:href=>"/registration"} Register Now
 	.content.cf
-		.announcement.cf
-			.intro
-				%h5 <span class="highlight">//</span> Our Theme: Place
-				%p We identify with the places in our lives because they have meaning to us personally and collectively. From ourselves to our relationships to our spaces and our culture, life takes place and that is the challenge to us all as designers, makers and builders. 
-			.subscribe
-				%h5 <span class="highlight">//</span> Get Updates
-				#mc_embed_signup
-					<form action="http://midwestux.us4.list-manage.com/subscribe/post?u=18017a6772f1211a5fadf2168&amp;id=cbbe8bea60" method="post" "mc-="" embedded-subscribe-form"="" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-					<div class="mc-field-group">
-					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email here...">
-					<input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
-					</div>
-					</form>
-				%ul.social-media
-					%li
-						<a class="facebook network" href="http://www.facebook.com/midwestux">Facebook</a>
-					%li
-						<a class="twitter network" href="http://twitter.com/midwestUX">Twitter</a>
-					%li
-						<a class="linked-in network" href="http://linkedin.com/groups/MIdwestUX-4694760">LinkedIn</a>
-		.callouts.cf
+		%section.callouts.cf
 			%article
 				%img{:src =>"/images/speakers-home.jpg"}
 				.article-content
-					%h3 Call for Speakers
-					%p After a record number of submissions the call for speakers is now closed. We will be in touch with everyone who submitted within the next few weeks.
+					%h3 Call for Sponsors
+					%p Connect with influential user experience professionals, industry leaders, talented developers and designers. 
 				.article-footer
-					%a.button{:href=>"/speakers"} Now Closed
+					%a.button{:href=>"/sponsors"} Make It Happen
 			%article
 				%img{:src => "/images/volunteers.jpg"}
 				.article-content
-					%h3 Call for Volunteers
-					%p We’re looking for individuals who value well-designed experiences to help volunteer before, during and after the event. 
+					%h3 Workshops
+					%p Workshops provide an extra day of in-depth, hands on learning to extend your conference experience. Find the right workshop for you. 
 				.article-footer
-					%a.button{:href=>"/volunteers"} Sign Up to Help
+					%a.button{:href=>"/program#workshops"} Get Skills
 			%article
-				%img{:src => "/images/gr.jpg"}
+				%img{:src => "/images/excursions.jpg"}
 				.article-content
-					%h3 Midwest Design
-					%p Grand Rapids exemplifies the deep design heritage of the Midwest.
+					%h3 Excursions
+					%p Grand Rapids exemplifies the Midwest's deep design heritage. From top breweries to a Frank Lloyd Wright home and beyond, immerse yourself.
 				.article-footer
-					%a.button{:href=>"/grand-rapids"} Get to Know GR
+					%a.button{:href=>"/program#excursions"} Have Fun
+		%section.speaker-announcement.cf
+			%h5.section-header Our Keynote Speakers
+			%article
+				%img{:src =>"/images/Abby_Covert.jpg"}
+				.article-content
+					%h3 Abby Covert
+					%p Abby Covert is an independent information architect working and living in New York City. For her work as Director of Strategic Planning & User Experience at DraftFCB, Abby was listed by the Direct Marketing Associations 30 Under 30 in 2011. She is also an active mentor to the design community, is a highly regarded speaker, and writes her popular blog under the pseudonym  Abby the IA.
+				.article-footer
+					%a.button{:href=>"/http://abbytheia.wordpress.com/about/"} About Abby
+			%article
+				%img{:src =>"/images/Karl_Fast.jpg"}
+				.article-content
+					%h3 Karl Fast
+					%p Karl Fast is a professor of UX Design at Kent State University. His work explores how people adapt to live in a world where information and computation are abundant resources. He teaches information architecture, information visualization, and human-information interaction. He is a founding member of the Information Architecture Institute. He's also Canadian.
+				.article-footer
+					%a.button{:href=>"/http://about.me/karlfast"} About Karl
+			%article
+				%img{:src =>"/images/Christina_Wodtke.jpg"}
+				.article-content
+					%h3 Christina Wodtke
+					%p Christina Wodtke has an impressive history of making things happen. Most recently she led the creation of a social network/gaming platform as a General Manager of Zynga.com. Before Zynga, she held senior positions at Myspace, LinkedIn and Yahoo!, back when Yahoo! was pretty neat. Currently she lives the slow life: advising start-ups, teaching, and speaking at conferences worldwide.
+				.article-footer
+					%a.button{:href=>"http://www.eleganthack.com/"} About Christina
 		/ .sponsors-listing.cf
-		/ 	%h5 Platinum Sponsors
+		/ 	%h5.section-header Platinum Sponsors
 		/ 	%ul.platinum
 		/ 		%li
 		/ 			%a.atomic-object{:href=>"http://atomicobject.com"} Atomic Object
@@ -61,7 +63,8 @@
 		/ 			%a.universal-mind{:href=>"http://universalmind.com"} Universal Mind
 		/ 		%li
 		/ 			%a.visual-hero{:href=>"http://visualhero.com"} Visual Hero
-		/ .news.cf
+		/ %section.news.cf
+		/ 	%h5.section-header Latest Conference News
 		/ 	%article
 		/ 		%img{:src => "/images/news/fireworks.jpg"}
 		/ 		.article-content

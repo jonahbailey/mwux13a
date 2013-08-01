@@ -18,3 +18,4 @@
 /build/volunteers/index.html
 /build/workshops/index.html
 build/*
+.DS_Store

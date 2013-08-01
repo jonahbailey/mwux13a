@@ -22,6 +22,9 @@ require 'susy'
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
+
+page "/blog/*", :layout => "blog-layout"
+
 #
 # A path which all have the same layout
 # with_layout :admin do
@@ -76,6 +79,15 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+end
+
+activate :blog do |blog|
+  # set options on blog
+  blog.prefix = "news"
+  blog.permalink = "news/:year/:month/:day/:title.html"
+  blog.summary_separator = /READMORE/
+  blog.layout = "blog"
+
 end
 
 # Activate sync extension

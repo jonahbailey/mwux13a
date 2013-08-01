@@ -253,6 +253,16 @@
   filter: alpha(opacity=$opacity);
 }
 
+// Blur
+
+@mixin blur($blur) {
+  filter:blur($blur);
+  -o-filter:blur($blur);
+  -ms-filter:blur($blur);
+  -moz-filter:blur($blur);
+  -webkit-filter:blur($blur);
+}
+
 // BACKGROUNDS
 // --------------------------------------------------
 
