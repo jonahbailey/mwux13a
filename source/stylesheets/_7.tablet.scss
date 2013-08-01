@@ -420,6 +420,15 @@
 			.button {
 				@include span-columns (24 omega, 24);
 			}
+
+			th {
+				text-align: center;
+				font-size: .85em;
+			}
+			th:first-of-type,
+			th:nth-of-type(2) {
+				text-align: left;
+			}
 		}
 	}
 }
