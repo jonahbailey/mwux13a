@@ -542,6 +542,36 @@ header {
 	@include transition-duration($duration);
 }
 
+// Registration
+
+.registration {
+
+	section {
+		&:first-of-type {
+			@include span-columns(16, 24);
+		}
+
+		&:last-of-type {
+			@include span-columns (8 omega, 24);
+		}
+	}
+
+	table {
+			width: 100%;
+			margin-bottom: 25px;
+		th{
+			text-align: left;
+			padding-bottom: 20px;
+		}
+		td{
+			padding-right: 15px;
+			padding-bottom: 15px;
+		}
+	}
+}
+
+
+
 // Speaker & Workshop submission form
 
 .form {

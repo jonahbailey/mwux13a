@@ -398,6 +398,30 @@
 			}
 		}
 	}
+
+	.registration {
+
+		section {
+			&:first-of-type {
+				@include span-columns(24 omega, 24);
+				margin-bottom: 3em;
+			}
+
+			&:last-of-type {
+				@include span-columns (24 omega, 24);
+
+				img {
+					width: 50%;
+					margin-left: 25%;
+					margin-bottom: 1em;
+				}
+			}
+
+			.button {
+				@include span-columns (24 omega, 24);
+			}
+		}
+	}
 }
 
 
