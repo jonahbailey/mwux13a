@@ -242,25 +242,12 @@ article {
 // Interior Pages (Grand Rapids & About MWUX)
 //================================================
 
-.container.grand-rapids {
+.grand-rapids {
 
-	section {
+	article {
 
-		article {
-
-			p {
-				height: auto;
-			}
-
-			&:last-child {
-				@include span-columns(16 omega,24);
-			}
-
-			&:first-of-type {
-				.article-content {
-					height: 393.578125px
-				}
-			}
+		&:nth-of-type(2) {
+			@include span-columns(16 omega,24);
 		}
 	}
 }
