@@ -199,12 +199,12 @@ article {
 
 .workshops {
 	article {
-		@include span-columns(6, 24);
+		@include span-columns(12, 24);
 		border: none;
 		background: $white;
 		margin-bottom: 1em;
 
-		&:nth-of-type(4n) {
+		&:nth-of-type(2n) {
 			@include omega;
 		}
 	}

@@ -439,13 +439,41 @@ header {
 
 	.sections {
 		width: 1070px;
+		background: $white;
+		
 		.button {
 			float: left;
 			width: 25%;
-			background: lighten($linkColor, 15%);
+			background: transparent;
+			color: $linkColor;
+			border: none;
+			
 			&.selected {
-				background: $linkColor;
+				border-bottom: 5px solid $linkColor
 			}
+
+			&:hover {
+				@include box-shadow(none);
+			}
+
+			// &:first-of-type {
+			// 	@include border-right-radius(0);
+			// 	border-right: 0;
+			// }
+
+			// &:nth-of-type(2) {
+			// 	@include border-radius(0);
+			// 	border-right: 0;
+			// }
+
+			// &:nth-of-type(3) {
+			// 	@include border-radius(0);
+			// 	border-right: 0;
+			// }
+
+			// &:nth-of-type(4) {
+			// 	@include border-left-radius(0);
+			// }
 		}
 	}
 }
