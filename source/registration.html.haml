@@ -1,24 +1,20 @@
-.container.program.interior
+.container.interior
 	.masthead.city.cf
 		.event-info.cf
 			%h1 Registration
 	.main.content.cf
-		.intro.cf			
-
+		.intro.cf
 		%section.registration.cf#registration
-			
 			%article
-				
 				.article-content
-					
 					%h3 Conference Pass + Excursion ($350)
 					%p The main conference is a full day <strong>Friday, October 18 & Saturday, October 19</strong>. The second half of our day on Friday will be spent exploring User Experience in context through excursions. These will include lunch at a local restaurant and an educational experience.
 					%p <strong>Excursion are included free with your conference pass</strong> but space is limited in each excursion and we expect some will sell out quickly, so buy your tickets today to reserve your place.
 					%form{:action => "http://www.eventbrite.com/orderstart?ebtv=C", :method => "post"}
 						%input{:name => "eid", :type => "hidden", :value => "3210614033"}
 						%input{:name => "has_javascript", :type => "hidden", :value => "1"}
-						%table
-							%tr								
+						%table#excursions
+							%tr
 								%th
 									Pass + Excursion
 								%th
@@ -27,233 +23,12 @@
 									Price
 								%th
 									Qty
-							%tr								
-								%td Start Garden Tour
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880529.ticket_table_select{:name => "quant_19880529"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td	GRid70 Tour
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880799.ticket_table_select{:name => "quant_19880799"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td The Rapid
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880803.ticket_table_select{:name => "quant_19880803"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Wealthy Theatre
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880801.ticket_table_select{:name => "quant_19880801"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td The Factory Tour
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880805.ticket_table_select{:name => "quant_19880805"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Meyer May House Tour
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880807.ticket_table_select{:name => "quant_19880807"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Brewery Tour
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880895.ticket_table_select{:name => "quant_19880895"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td SiTE:LAB
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880897.ticket_table_select{:name => "quant_19880897"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Public Museum Tour - Behind the Scenes
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880899.ticket_table_select{:name => "quant_19880899"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Public Museum Tour - Collections Tour
-								%td 10 Tickets
-								%td $350
-								%td
-									%select#quant_19880931.ticket_table_select{:name => "quant_19880931"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-						
 
 						%h3 Thursday Morning Workshops
 						%p Workshops will be held Thursday, October 16 &mdash; before the full conference. Tickets for workshops are sold separately and are all a half day (morning or afternoon).
 
-						%table
-							%tr								
+						%table#am-workshops
+							%tr
 								%th
 									Morning Workshops
 								%th
@@ -262,101 +37,12 @@
 									Price
 								%th
 									Qty
-							%tr								
-								%td Design Practice in a Place of Design Tradition
-								%td 10 Tickets
-								%td $100
-								%td
-									%select#quant_19863619.ticket_table_select{:name => "quant_19863619"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Drawing What you Mean – In Real Time
-								%td 10 Tickets
-								%td $100
-								%td
-									%select#quant_19863799.ticket_table_select{:name => "quant_19863799"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td UX Research and Strategy for Urban Spaces
-								%td 10 Tickets
-								%td $100
-								%td
-									%select#quant_19863893.ticket_table_select{:name => "quant_19863893"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Civic Engagement meets Sketch-Mapping
-								%td 10 Tickets
-								%td $100
-								%td
-									%select#quant_19863889.ticket_table_select{:name => "quant_19863889"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-
 
 						%h3 Thursday Afternoon Workshops
 						%p Workshops will be held Thursday, October 16 &mdash; before the full conference. Tickets for workshops are sold separately and are all a half day (morning or afternoon).
 
-						%table
-							%tr								
+						%table#pm-workshops
+							%tr
 								%th
 									Afternoon Workshops
 								%th
@@ -365,103 +51,11 @@
 									Price
 								%th
 									Qty
-							%tr								
-								%td Exposing Wayfinding Anchors with Sketch-mapping
-								%td 10 Tickets
-								%td $100
-								%td
-									%select#quant_19863801.ticket_table_select{:name => "quant_19863801"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-							%tr								
-								%td Design Studio for Context Aware Products
-								%td 10 Tickets
-								%td $100
-								%td
-									%select#quant_19288843.ticket_table_select{:name => "quant_19288843"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
 
-							%tr								
-								%td Making Places with Information (IA + Strategy)
-								%td 10 Tickets
-								%td $100
-								%td
-									%select#quant_19863891.ticket_table_select{:name => "quant_19863891"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-
-							%tr								
-								%td Arduino Workshop (Includes Materials)
-								%td 10 Tickets
-								%td $150
-								%td
-									%select#quant_19863895.ticket_table_select{:name => "quant_19863895"}
-										%option{:value => "0"} 0
-										%option{:value => "1"} 1
-										%option{:value => "2"} 2
-										%option{:value => "3"} 3
-										%option{:value => "4"} 4
-										%option{:value => "5"} 5
-										%option{:value => "6"} 6
-										%option{:value => "7"} 7
-										%option{:value => "8"} 8
-										%option{:value => "9"} 9
-										%option{:value => "10"} 10
-										%option{:value => "11"} 11
-										%option{:value => "12"} 12
-										%option{:value => "13"} 13
-										%option{:value => "14"} 14
-										%option{:value => "15"} 15
-									
 						%input.button{:type=>"submit", :value=>"Register Now"}
 			%article
-				
+
 				.article-content
 
 					%img{:src =>"/images/eventbrite.png"} &nbsp;
 					%p Our registration system is powered by Eventbrite. After making your selection of a conference pass paired with free excursion and two optional workshops (morning and afternoon) you will be sent to Eventbrite's site to complete your purchase.
-				
-			
