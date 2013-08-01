@@ -49,7 +49,12 @@
 
 		p {
 			padding: 1em;
+			margin: 0;
 		}
+	}
+
+	section {
+		margin: 0;
 	}
 
 	section,
@@ -66,7 +71,7 @@
 		article:last-child,
 		article:nth-of-type(even) {
 			@include span-columns(24 omega, 24);
-			margin-bottom: 2em;
+			margin-bottom: 1em;
 		}
 	}
 
@@ -137,6 +142,10 @@
 		}
 
 		h2 {
+			font-size: 1.25em;
+		}
+
+		h4 {
 			font-size: 1.25em;
 		}
 	}
@@ -224,6 +233,20 @@
 		}
 	}
 
+// Program
+//================================================//
+	.section-header {
+		font-size: 1.5em;
+		margin-top: 2em;
+	}
+
+	.program {
+
+		section {
+			margin: 0;
+		}
+	}
+
 // Why MWUX?
 //================================================//
 
@@ -266,5 +289,10 @@
 			margin-bottom: 2em;
 		}
 	}
+}
 
+@media only screen and (max-width: 320px) {
+	.sections {
+		display: none;
+	}
 }

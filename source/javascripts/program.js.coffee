@@ -9,7 +9,7 @@ $ ->
   $(window).scroll ->
     currentSection = $('.sections a:first')
     $('.sections a').each ->
-      if $($(this).attr("href")).offset().top <= $(window).scrollTop() + 150
+      if $($(this).attr("href")).offset().top <= $(window).scrollTop() + 350
         currentSection = $(this)
     $('.sections a.selected').removeClass("selected")
     currentSection.addClass("selected")
