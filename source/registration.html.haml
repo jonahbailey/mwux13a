@@ -14,8 +14,9 @@
 					%h3 Conference Pass + Excursion ($350)
 					%p The main conference is a full day <strong>Friday, October 18 & Saturday, October 19</strong>. The second half of our day on Friday will be spent exploring User Experience in context through excursions. These will include lunch at a local restaurant and an educational experience.
 					%p <strong>Excursion are included free with your conference pass</strong> but space is limited in each excursion and we expect some will sell out quickly, so buy your tickets today to reserve your place.
-
-					%form		
+					%form{:action => "http://www.eventbrite.com/orderstart?ebtv=C", :method => "post"}
+						%input{:name => "eid", :type => "hidden", :value => "3210614033"}
+						%input{:name => "has_javascript", :type => "hidden", :value => "1"}
 						%table
 							%tr								
 								%th
@@ -31,7 +32,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880529.ticket_table_select{:name => "quant_19880529", :onchange => "updateCheckout();"}
+									%select#quant_19880529.ticket_table_select{:name => "quant_19880529"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -53,7 +54,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880799.ticket_table_select{:name => "quant_19880799", :onchange => "updateCheckout();"}
+									%select#quant_19880799.ticket_table_select{:name => "quant_19880799"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -75,7 +76,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880803.ticket_table_select{:name => "quant_19880803", :onchange => "updateCheckout();"}
+									%select#quant_19880803.ticket_table_select{:name => "quant_19880803"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -97,7 +98,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880801.ticket_table_select{:name => "quant_19880801", :onchange => "updateCheckout();"}
+									%select#quant_19880801.ticket_table_select{:name => "quant_19880801"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -119,7 +120,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880805.ticket_table_select{:name => "quant_19880805", :onchange => "updateCheckout();"}
+									%select#quant_19880805.ticket_table_select{:name => "quant_19880805"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -141,7 +142,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880807.ticket_table_select{:name => "quant_19880807", :onchange => "updateCheckout();"}
+									%select#quant_19880807.ticket_table_select{:name => "quant_19880807"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -163,7 +164,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880895.ticket_table_select{:name => "quant_19880895", :onchange => "updateCheckout();"}
+									%select#quant_19880895.ticket_table_select{:name => "quant_19880895"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -185,7 +186,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880897.ticket_table_select{:name => "quant_19880897", :onchange => "updateCheckout();"}
+									%select#quant_19880897.ticket_table_select{:name => "quant_19880897"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -207,7 +208,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880899.ticket_table_select{:name => "quant_19880899", :onchange => "updateCheckout();"}
+									%select#quant_19880899.ticket_table_select{:name => "quant_19880899"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -229,7 +230,7 @@
 								%td 10 Tickets
 								%td $350
 								%td
-									%select#quant_19880931.ticket_table_select{:name => "quant_19880931", :onchange => "updateCheckout();"}
+									%select#quant_19880931.ticket_table_select{:name => "quant_19880931"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -266,7 +267,7 @@
 								%td 10 Tickets
 								%td $100
 								%td
-									%select#quant_19863619.ticket_table_select{:name => "quant_19863619", :onchange => "updateCheckout();"}
+									%select#quant_19863619.ticket_table_select{:name => "quant_19863619"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -288,7 +289,7 @@
 								%td 10 Tickets
 								%td $100
 								%td
-									%select#quant_19863799.ticket_table_select{:name => "quant_19863799", :onchange => "updateCheckout();"}
+									%select#quant_19863799.ticket_table_select{:name => "quant_19863799"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -310,7 +311,7 @@
 								%td 10 Tickets
 								%td $100
 								%td
-									%select#quant_19863893.ticket_table_select{:name => "quant_19863893", :onchange => "updateCheckout();"}
+									%select#quant_19863893.ticket_table_select{:name => "quant_19863893"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -332,7 +333,7 @@
 								%td 10 Tickets
 								%td $100
 								%td
-									%select#quant_19863889.ticket_table_select{:name => "quant_19863889", :onchange => "updateCheckout();"}
+									%select#quant_19863889.ticket_table_select{:name => "quant_19863889"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -369,7 +370,7 @@
 								%td 10 Tickets
 								%td $100
 								%td
-									%select#quant_19863801.ticket_table_select{:name => "quant_19863801", :onchange => "updateCheckout();"}
+									%select#quant_19863801.ticket_table_select{:name => "quant_19863801"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -391,7 +392,7 @@
 								%td 10 Tickets
 								%td $100
 								%td
-									%select#quant_19288843.ticket_table_select{:name => "quant_19288843", :onchange => "updateCheckout();"}
+									%select#quant_19288843.ticket_table_select{:name => "quant_19288843"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -414,7 +415,7 @@
 								%td 10 Tickets
 								%td $100
 								%td
-									%select#quant_19863891.ticket_table_select{:name => "quant_19863891", :onchange => "updateCheckout();"}
+									%select#quant_19863891.ticket_table_select{:name => "quant_19863891"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -437,7 +438,7 @@
 								%td 10 Tickets
 								%td $150
 								%td
-									%select#quant_19863895.ticket_table_select{:name => "quant_19863895", :onchange => "updateCheckout();"}
+									%select#quant_19863895.ticket_table_select{:name => "quant_19863895"}
 										%option{:value => "0"} 0
 										%option{:value => "1"} 1
 										%option{:value => "2"} 2
@@ -454,9 +455,8 @@
 										%option{:value => "13"} 13
 										%option{:value => "14"} 14
 										%option{:value => "15"} 15
-					
-				.article-footer
-					%a.button{:href=>"/speakers"} Register Now
+									
+						%input.button{:type=>"submit", :value=>"Register Now"}
 			%article
 				
 				.article-content
