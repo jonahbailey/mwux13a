@@ -25,20 +25,19 @@ $ ->
         name = name.replace(/^PM Workshop: /, '')
 
         $("#ticket-#{ticket.ticket.id} .name").text(name)
-        if ticket.ticket.quantity_available <= 0
-          $("#ticket-#{ticket.ticket.id} .quantity-available").html("<span class='sold-out'>Sold Out</span>")
-        else
-          $("#ticket-#{ticket.ticket.id} .quantity-available").text(
-            "#{ticket.ticket.quantity_available} #{owl.pluralize('Ticket', ticket.ticket.quantity_available)}"
-          )
         $("#ticket-#{ticket.ticket.id} .price").text("$#{Math.round(ticket.ticket.price)}")
 
         option_element = $("<option value='0'>0</option>")
         $("#ticket-#{ticket.ticket.id} .quantity-selected select").append(option_element)
+        max = Math.min(ticket.ticket.max, ticket.ticket.quantity_available)
+        for n in [ticket.ticket.min..max]
+          option_element = $("<option value='#{n}'>#{n}</option>")
+          $("#ticket-#{ticket.ticket.id} .quantity-selected select").append(option_element)
+
         if ticket.ticket.quantity_available <= 0
+          $("#ticket-#{ticket.ticket.id} .quantity-available").html("<span class='sold-out'>Sold Out</span>")
           $("#ticket-#{ticket.ticket.id} .quantity-selected select").attr("disabled", "disabled")
         else
-          max = Math.min(ticket.ticket.max, ticket.ticket.quantity_available)
-          for n in [ticket.ticket.min..max]
-            option_element = $("<option value='#{n}'>#{n}</option>")
-            $("#ticket-#{ticket.ticket.id} .quantity-selected select").append(option_element)
+          $("#ticket-#{ticket.ticket.id} .quantity-available").text(
+            "#{ticket.ticket.quantity_available} #{owl.pluralize('Ticket', ticket.ticket.quantity_available)}"
+          )
