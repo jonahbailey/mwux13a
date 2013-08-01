@@ -1,4 +1,6 @@
 $ ->
+  return unless $(".program").length > 0
+
   $(".sections a").click ->
     $('html,body').scrollTo(this.hash, this.hash)
     false
