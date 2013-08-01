@@ -1,7 +1,7 @@
 $ ->
   return unless $(".registration").length > 0
 
-  Eventbrite 'app_key': "RZQXZEESDHF3735ALY", (eb_client) ->
+  Eventbrite 'app_key': "RZQXZEESDHF3735ALY", 'user_key': "137165904265007877311", (eb_client) ->
     eb_client.event_get 'id': 3210614033, (response) ->
       $.each response.event.tickets, (index, ticket) ->
         console.log ticket.ticket
