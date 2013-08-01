@@ -26,7 +26,9 @@ $ ->
         name = name.replace(/^PM Workshop: /, '')
 
         $("#ticket-#{ticket.ticket.id} .name").text(name)
-        $("#ticket-#{ticket.ticket.id} .quantity-available").text("#{ticket.ticket.quantity_available} Tickets")
+        $("#ticket-#{ticket.ticket.id} .quantity-available").text(
+          "#{ticket.ticket.quantity_available} #{owl.pluralize('Ticket', ticket.ticket.quantity_available)}"
+        )
         $("#ticket-#{ticket.ticket.id} .price").text("$#{Math.round(ticket.ticket.price)}")
 
         option_element = $("<option value='0'>0</option>")
