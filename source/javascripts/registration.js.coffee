@@ -4,7 +4,6 @@ $ ->
   Eventbrite 'app_key': "RZQXZEESDHF3735ALY", 'user_key': "137165904265007877311", (eb_client) ->
     eb_client.event_get 'id': 3210614033, (response) ->
       $.each response.event.tickets, (index, ticket) ->
-        console.log ticket.ticket
         ticket_element = $("<tr id='ticket-#{ticket.ticket.id}'>
                               <td class='name'></td>
                               <td class='quantity-available'></td>
