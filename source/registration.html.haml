@@ -1,164 +1,467 @@
 .container.program.interior
 	.masthead.city.cf
 		.event-info.cf
-			%h1 Program
+			%h1 Registration
 	.main.content.cf
-		.intro.cf
-			%p The Midwest UX team is thrilled with the number and quality of submissions we received. Proposals arrived from as far away as Seattle and South Africa, on topics as varied as you can imagine. So you know what the selection committee is up against, here are the numbers…
-		.sections
-			%a.button{:href=>"#keynotes"} Keynotes
-			%a.button{:href=>"#workshops"} Workshops
-			%a.button{:href=>"#excursions"} Excursions
-			%a.button{:href=>"#sessions"} Sessions
-		%section.speaker-announcement.cf#keynotes
-			%h5.section-header Our Keynote Speakers
+		.intro.cf			
+
+		%section.registration.cf#registration
+			
 			%article
-				%img{:src =>"/images/Abby_Covert.jpg"}
+				
 				.article-content
-					%h3 Abby Covert
-					%p Abby Covert is an independent information architect working and living in New York City. For her work as Director of Strategic Planning & User Experience at DraftFCB, Abby was listed by the Direct Marketing Associations 30 Under 30 in 2011. She is also an active mentor to the design community, is a highly regarded speaker, and writes her popular blog under the pseudonym  Abby the IA.
+					
+					%h3 Conference Pass + Excursion ($350)
+					%p The main conference is a full day <strong>Friday, October 18 & Saturday, October 19</strong>. The second half of our day on Friday will be spent exploring User Experience in context through excursions. These will include lunch at a local restaurant and an educational experience.
+					%p <strong>Excursion are included free with your conference pass</strong> but space is limited in each excursion and we expect some will sell out quickly, so buy your tickets today to reserve your place.
+
+					%form		
+						%table
+							%tr								
+								%th
+									Pass + Excursion
+								%th
+									Remaining
+								%th
+									Price
+								%th
+									Qty
+							%tr								
+								%td Start Garden Tour
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880529.ticket_table_select{:name => "quant_19880529", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td	GRid70 Tour
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880799.ticket_table_select{:name => "quant_19880799", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td The Rapid
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880803.ticket_table_select{:name => "quant_19880803", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Wealthy Theatre
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880801.ticket_table_select{:name => "quant_19880801", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td The Factory Tour
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880805.ticket_table_select{:name => "quant_19880805", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Meyer May House Tour
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880807.ticket_table_select{:name => "quant_19880807", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Brewery Tour
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880895.ticket_table_select{:name => "quant_19880895", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td SiTE:LAB
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880897.ticket_table_select{:name => "quant_19880897", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Public Museum Tour - Behind the Scenes
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880899.ticket_table_select{:name => "quant_19880899", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Public Museum Tour - Collections Tour
+								%td 10 Tickets
+								%td $350
+								%td
+									%select#quant_19880931.ticket_table_select{:name => "quant_19880931", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+						
+
+						%h3 Thursday Morning Workshops
+						%p Workshops will be held Thursday, October 16 &mdash; before the full conference. Tickets for workshops are sold separately and are all a half day (morning or afternoon).
+
+						%table
+							%tr								
+								%th
+									Morning Workshops
+								%th
+									Remaining
+								%th
+									Price
+								%th
+									Qty
+							%tr								
+								%td Design Practice in a Place of Design Tradition
+								%td 10 Tickets
+								%td $100
+								%td
+									%select#quant_19863619.ticket_table_select{:name => "quant_19863619", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Drawing What you Mean – In Real Time
+								%td 10 Tickets
+								%td $100
+								%td
+									%select#quant_19863799.ticket_table_select{:name => "quant_19863799", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td UX Research and Strategy for Urban Spaces
+								%td 10 Tickets
+								%td $100
+								%td
+									%select#quant_19863893.ticket_table_select{:name => "quant_19863893", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Civic Engagement meets Sketch-Mapping
+								%td 10 Tickets
+								%td $100
+								%td
+									%select#quant_19863889.ticket_table_select{:name => "quant_19863889", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+
+
+						%h3 Thursday Afternoon Workshops
+						%p Workshops will be held Thursday, October 16 &mdash; before the full conference. Tickets for workshops are sold separately and are all a half day (morning or afternoon).
+
+						%table
+							%tr								
+								%th
+									Afternoon Workshops
+								%th
+									Remaining
+								%th
+									Price
+								%th
+									Qty
+							%tr								
+								%td Exposing Wayfinding Anchors with Sketch-mapping
+								%td 10 Tickets
+								%td $100
+								%td
+									%select#quant_19863801.ticket_table_select{:name => "quant_19863801", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+							%tr								
+								%td Design Studio for Context Aware Products
+								%td 10 Tickets
+								%td $100
+								%td
+									%select#quant_19288843.ticket_table_select{:name => "quant_19288843", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+
+							%tr								
+								%td Making Places with Information (IA + Strategy)
+								%td 10 Tickets
+								%td $100
+								%td
+									%select#quant_19863891.ticket_table_select{:name => "quant_19863891", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+
+							%tr								
+								%td Arduino Workshop (Includes Materials)
+								%td 10 Tickets
+								%td $150
+								%td
+									%select#quant_19863895.ticket_table_select{:name => "quant_19863895", :onchange => "updateCheckout();"}
+										%option{:value => "0"} 0
+										%option{:value => "1"} 1
+										%option{:value => "2"} 2
+										%option{:value => "3"} 3
+										%option{:value => "4"} 4
+										%option{:value => "5"} 5
+										%option{:value => "6"} 6
+										%option{:value => "7"} 7
+										%option{:value => "8"} 8
+										%option{:value => "9"} 9
+										%option{:value => "10"} 10
+										%option{:value => "11"} 11
+										%option{:value => "12"} 12
+										%option{:value => "13"} 13
+										%option{:value => "14"} 14
+										%option{:value => "15"} 15
+					
 				.article-footer
-					%a.button{:href=>"/speakers"} About Abby
+					%a.button{:href=>"/speakers"} Register Now
 			%article
-				%img{:src =>"/images/Karl_Fast.jpg"}
+				
 				.article-content
-					%h3 Karl Fast
-					%p Karl Fast is a professor of UX Design at Kent State University. His work explores how people adapt to live in a world where information and computation are abundant resources. He teaches information architecture, information visualization, and human-information interaction. He is a founding member of the Information Architecture Institute. He's also Canadian.
-				.article-footer
-					%a.button{:href=>"/speakers"} About Karl
-			%article
-				%img{:src =>"/images/Christina_Wodtke.jpg"}
-				.article-content
-					%h3 Christina Wodtke
-					%p Christina Wodtke has an impressive history of making things happen. Most recently she led the creation of a social network/gaming platform as a General Manager of Zynga.com. Before Zynga, she held senior positions at Myspace, LinkedIn and Yahoo!, back when Yahoo! was pretty neat. Currently she lives the slow life: advising start-ups, teaching, and speaking at conferences worldwide.
-				.article-footer
-					%a.button{:href=>"/speakers"} About Christina
-		%section.workshops.cf#workshops
-			%h5.section-header Thursday - Workshops
-			%article
-				.article-content
-					%h4 Creating Place — Using Sketch Mapping to Uncover Hidden Wayfinding Anchors
-					%p Think about every successful user interaction design you've seen. Now imagine those designs without a way for the user to place where they are within the interaction.  We think you'll agree that successful user-experience designs require some kind of way-finding anchors so the user can orient themselves within the experience.
-					%p Join this hands-on workshop to learn what sketch-mapping is and how it can help us discover and design the way-finding anchors that create the place within which user-experience emerges. You'll walk away with practical techniques you can apply in your next project.
-				.article-footer
-					%a{:href=>"http://www.designbrown.com/"} Duncan Brown
-			%article
-				.article-content
-					%h4 Making Places With Information Architecture and Content Strategy
-					%p Whether we realize it or not, UX is largely the art of tailoring the experiences we design to our content: its semantics, hierarchies, relationships and meaning. Some of the most important work necessary to successful experiences happens before anyone starts to sketch an interface.
-					%p Spend a half day exploring perspectives on how IA and Content Strategy provide important context that shapes user-experiences we design and learn learning new tools, techniques, and strategies for designing content-aware interfaces.
-				.article-footer
-					%a{:href=>"http://andrewhinton.com"} Andrew Hinton
-			%article
-				.article-content
-					%h4 Civic Engagement:  A Means to “Move” People from Place to Place
-					%p UX isn't just about software and hardware interfaces. Its practices and principles can be vital to transforming the most important spaces we experience: the shape of our communities and built environments, what we experience from them, and how we change them for the better.
-					%p This workshop focuses on the persuasion techniques needed to develop effective calls to action, mobilize support, and form valuable communities. When we get the message and approach correct, we have the potential to move our communities from one vision of our shared place to another.
-				.article-footer
-					%a{:href=>"https://www.facebook.com/davebulkowski"} David Bulkowski
-			%article
-				.article-content
-					%h4 The Design Studio: Traditional Design Practice in a Place of Design Tradition
-					%p Many working UX designers are the sole UX practitioner in their organization. Others they find themselves working in a place without a solid design practice. How do you integrate all the processes that give UX so much of its power into an existing workflow? Where do you turn for collaboration and outside perspective?
-					%p This workshop gives participants the experience of working in a UX studio environment. We'll practice core aspects of the design process while working in small project teams. By tackling a real problem through teamwork and design practice, participants will better understand how they can integrate aspects of this process in their daily work lives.
-				.article-footer
-					%a{:href=>"http://www.linkedin.com/in/mattnl"} Matt Nish-Lapidus
-			%article
-				.article-content
-					%h4 Design Studio for Context-Aware Products
-					%p There is a tension growing between mobile product development trends, user behavior, and hardware capabilities. Our phones are becoming more intimately integrated with our everyday lives. They're acquiring sensory capabilities via hardware components and are growing evermore context aware. In the process, former best-practice design patterns are fraying at the edges. The result is that the design of systems to take advantage of these capabilities is lagging, and design patterns are fragmenting.
-					%p This design studio will address these challenges with hands-on activities that move very quickly from idea generation to refinement to team consensus. You will work in small groups to define a problem space, explore multiple solutions, and combine ideas into a rough product sketch.
-				.article-footer
-					%a{:href=>"http://www.linkedin.com/in/thomasmwendt"} Thomas Wendt
-			%article
-				.article-content
-					%h4 Drawing What You Mean – in Real Time
-					%p Want to kickstart (or improve) your visual note-taking skills? Increase your visual IQ at the whiteboard during collaborative sessions? Hone your drawing capabilities in general? If you answered "yes" to any of these questions, this workshop is for you.
-					%p We will directly confront the daunting challenge of drawing what we mean in real time and help you get past your drawing frustrations with practical tips for framing the contexts for drawings, engaging others in visual thinking, and improving your visual lexicon and lettering skills, all while having fun with sketching.
-				.article-footer
-					%a{:href=>"http://www.linkedin.com/in/mjbroadbent"} MJ Broadbent
-			%article
-				.article-content
-					%h4 Putting UX in its Place: UX research and strategy techniques for architecture, interiors, and urban spaces.
-					%p This workshop will focus on how developing an understanding of users and their context enables diverse design disciplines to work together to influence, enhance, and even revolutionize the experience of place.
-					%p We’ll apply those concepts in a rapid design challenge where your team will find a nearby space, conduct guerrilla research to identify potential design opportunities, and create an innovative UX concept which integrates online interactions to improve users' offline experience of place.
-				.article-footer
-					%a{:href=>"http://kellyandrewsdowning.com/"} Kelly Downing
-		%section.excursions.cf#excursions
-			%h5.section-header Friday - Excursions
-			%article
-				.article-content
-					%h4 StartGarden
-					%em Capacity: 80
-					%p STARTGARDEN – Explore the Entrepreneurial hot bed known as StartGarden. StartGarden is an ecosystem of ideas – and has $15,000,000 to invest to help people start starting and turn those ideas into successful businesses. On this Excursion you will learn more about this catalyst that is fostering a movement of forward thinkers while funding a new batch of businesses. Hear how StartGarden got its start, learn from the successes – and failures – of incubated ideas, and get a peek at future ideas aiming to change the entrepreneurial landscape of tomorrow.
-				.article-footer
-					%a.button{:href=>"http://www.startgarden.com/"} startgarden.com
-			%article
-				.article-content
-					%h4 GRid70
-					%em Capacity: 35
-					%p GRid70 is currently the world's largest experiment in co-working which brings innovation and strategy teams from Steelcase, Amway, Wolverine Worldwide, and Meijer together in shared spaces. This Excursion focuses on ways space can be designed to create the "happy accidents" of collaboration essential to fostering new work structures and inter-industry collaboration. The participants will engage in a conversation about Grid70 – what it is, how it works, and the challenges it addresses. The Excursion will culminate with an exercise to expand the concepts discussed and deconstruct a proposed experience solution.
-				.article-footer
-					%a.button{:href=>"http://bit.ly/mwuxgrid70"} GRid70 on FastCompany.co
-			%article
-				.article-content
-					%h4 Wealthy Street Theatre
-					%em Capacity: 30
-					%p On this Excursion, you will explore the newly updated historical Wealthy Theatre and learn about the user-centered design and community-based planning behind its 2013 expansion. Wealthy Theatre was constructed in 1911. After several years as a vaudeville and live performance theatre, it became a neighborhood movie house. During World War I the building was used as a storehouse for aircraft parts. After an unsuccessful attempt to reopen as a movie theatre, the building became vacant & generally unused from the mid 70s until its eventual purchase and restoration. The theatre re-opened in 1998 and the GR Community Media Center acquired it in 2005.
-				.article-footer
-					%a.button{:href=>"http://www.grcmc.org/"} grcmc.com
-			%article
-				.article-content
-					%h4 The Rapid
-					%em Capacity: 30
-					%p Come with us on a ride on The Rapid. Find out what helps keep Grand Rapids' public transportation rolling. Explore this transit system and their efforts to improve the user experience while increasing ridership and reducing their carbon footprint – from their green busses to their LEED Certified Central Station. This Excursion will feature a presentation onboard a functioning Rapid route as well as explore the nationally acclaimed Central Station facilities.
-				.article-footer
-					%a.button{:href=>"http://www.ridetherapid.org/"} ridetherapid.org
-			%article
-				.article-content
-					%h4 The Factory
-					%em Capacity: 25
-					%p Experience a unique coworking environment in downtown Grand Rapids. The Factory, caters to creatives and other professionals with a space that  creates an ethos of comfort and productivity while encouraging collaboration. Everyone is welcome at The Factory – from freelancers to corporate innovators and teams. On this Excursion you will explore The Factory space, interact with members, and hear from the founder about what lead to the creation of The Factory, accomplishments created within its walls, and participate in a wide-ranging discussion of what the future of co-working is.
-				.article-footer
-					%a.button{:href=>"http://workthefactory.com/"} workthefactory.com
-			%article
-				.article-content
-					%h4 The Meyer May House
-					%em Capacity: 25
-					%p Step back in history to experience arguably the best restoration of Frank Lloyd Wright Prairie-period masterpiece in the world. Meticulously restored by Steelcase in 1987, the Mayer May house features an interior furnished with a mixture of the actual and painstakingly recreated furniture, artwork, rugs, and art glass Wright designed for the home. On this Excursion, you will enjoy a fascinating a private tour of the home as you explore the many unique features that Wright's design process (which can only be described as growing out of the site and the users' experience) created. This is certain to be a memorable and enlightening experience.
-				.article-footer
-					%a.button{:href=>"http://meyermayhouse.steelcase.com/"} meyermayhouse.steelcase.com
-			%article
-				.article-content
-					%h4 Brewery Tour
-					%em Capacity: 20
-					%p Join this Excursion to become enlightened by all things related to barley and hops. The Brewery Tour will visit breweries that were founded locally, but have grown to enjoy national - and even global - reputations for quality and innovation. Interact with brewery staff and the teams that design the end-to-end consumer experience, whether onsite or in the glass. This tour includes HopCat (Beer Advocate's #2 brewpub in the U.S.), Founders Brewery (Ratebeer's #2 brewery in the world 2011 and 2012), Grand Rapids Brewing Company (the first USDA Certified organic brewery in Michigan), and others. Experience first-hand several of the areas finest libations and the tap rooms that support them.
-				.article-footer
-					%a.button{:href=>"https://www.facebook.com/BeerCityUsaGR"} facebook.com/BeerCityUSAGR
-			%article
-				.article-content
-					%h4 SiTE:LAB and an Ideas Competition for a Former Public Museum
-					%em Capacity: 30
-					%p SiTE:LAB creates temporary site-specific art projects that facilitate dynamic collaboration between the art, education, business and cultural communities of Grand Rapids. Over the past year SiTE:LAB has transformed the former Public Museum, which was closed for 18 years, for a series of thriving Art events and started an ideas competition (inspired directly by the High-line competition in NYC) to spur conversation of what this place, steeped in the local history, should become to it's neighborhood. SiTE:LAB's 'The Not Yet' exhibition and 54Jeff.org competition will conclude during ArtPrize a week before MidwestUX and Excursion attendees will tour the exhibition and ideas competition winners with curator Paul Amenta.
-				.article-footer
-					%a.button{:href=>"http://www.site-lab.org/"} site-lab.org
-			%article
-				.article-content
-					%h4 Grand Rapids Public Museum
-					%em Capacity: 20
-					%p The Van Andel Museum Center, situated on the banks of the Grand River, brings globally-significant exhibits and situates them in a local context. This Excursion will feature a "behind the construction barrier" view of the Furniture City Exhibit, which will be underrenovation, as well as a private walk-through of the "work in progress" fabrication and installation of Dinosaurs Unearthed exhibit. The Excursion will tour the exhibit design and production facilities of the Museum and engage in informal discussions of the Museum's design process and its focus on improving exhibits' user experience. 
-				.article-footer
-					%a.button{:href=>"http://www.grmuseum.org"} grmuseum.org
-			%article
-				.article-content
-					%h4 Grand Rapids Public Museum Archives
-					%em Capacity: 20
-					%p Affectionately referred to as, "The City's Attic." This Excursion will give you a private look at what the Grand Rapids Public Museum has been collecting for over 155 years. This intimate tour of the Collections Storage Facility will give participants a peek at the over 250,000 artifacts and specimens, from mammals to manuscripts, that tell the story of Grand Rapids. Don't miss this rare opportunity to see the inner workings of a museum and get a glimpse at the private curation and preservation processes fundamental to a museum's success. 
-				.article-footer
-					%a.button{:href=>"http://www.grmuseum.org"} grmuseum.org
-			.intro.cf
-				%p More excursions to follow in the next few weeks...
-		%section.sessions.cf#sessions
-			%h5.section-header Friday/Saturday - Sessions
-			.intro.cf
-				%p In addition to the keynotes, the conference will feature 18 session speakers. We received nearly 190 for these 18 slots. There are so many quality proposals we're tempted to hold another three conference so we have room for them. (Just kidding.) The curation committee is hard at work finalizing invitations and schedules. We look forward to announcing the full schedule soon.
+
+					%img{:src =>"/images/eventbrite.png"} &nbsp;
+					%p Our registration system is powered by Eventbrite. After making your selection of a conference pass paired with free excursion and two optional workshops (morning and afternoon) you will be sent to Eventbrite's site to complete your purchase.
+				
+			
