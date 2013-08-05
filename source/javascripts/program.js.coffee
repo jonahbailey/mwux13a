@@ -2,14 +2,15 @@ $ ->
   return unless $(".program").length > 0
 
   $(".sections a").click ->
-    $('html,body').scrollTo(this.hash, this.hash)
+    $('.sections').css(position: 'fixed', top: '0px')
+    $('html,body').scrollTo(this.hash, this.hash, gap:{y:-75})
     false
 
   sectionsTop = $('.sections').offset().top
   $(window).scroll ->
     currentSection = $('.sections a:first')
     $('.sections a').each ->
-      if $($(this).attr("href")).offset().top <= $(window).scrollTop() + 350
+      if $($(this).attr("href")).offset().top <= $(window).scrollTop() + 150
         currentSection = $(this)
     $('.sections a.selected').removeClass("selected")
     currentSection.addClass("selected")
