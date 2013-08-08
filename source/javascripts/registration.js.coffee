@@ -27,6 +27,7 @@ $ ->
         $("#ticket-#{ticket.ticket.id} .name").text(name)
         $("#ticket-#{ticket.ticket.id} .price").text("$#{Math.round(ticket.ticket.price)}")
 
+        total_quantity = ticket.ticket.quantity_available
         quantity_remaining = ticket.ticket.quantity_available - ticket.ticket.quantity_sold
 
         option_element = $("<option value='0'>0</option>")
@@ -41,5 +42,5 @@ $ ->
           $("#ticket-#{ticket.ticket.id} .quantity-selected select").attr("disabled", "disabled")
         else
           $("#ticket-#{ticket.ticket.id} .quantity-available").text(
-            "#{quantity_remaining} #{owl.pluralize('Ticket', ticket.ticket.quantity_available)}"
+            "#{quantity_remaining}/#{total_quantity} #{owl.pluralize('Ticket', ticket.ticket.quantity_available)}"
           )
