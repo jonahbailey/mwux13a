@@ -167,38 +167,74 @@ header {
 		@include span-columns(24 omega, 24);
 	}
 
+	.one {
+		li {
+			&:first-of-type {
+				@include pre(8);
+			}
+		}
+	}
+
+	.two {
+		li {
+			&:first-of-type {
+				@include pre(6);
+			}
+		}
+	}
+
+	.three {
+		li {
+			&:first-of-type {
+				@include pre(4);
+			}
+		}
+	}
+
 	li {
 		@include span-columns(6, 24);
-
-		&:last-child {
-			@include span-columns(6 omega, 24);
-		}
 
 		a {
 			@include hide-text;
 			height: 60px;
 			display: block;
-			@include transition-property(background);
-			@include transition-duration($duration);
 		}
 
 		.atomic-object {
-			background: image-url("sponsors/atomic-object-gs.png")no-repeat center center;
+			background: image-url("sponsors/atomic-object.png")no-repeat bottom center;
 			background-size: 80%;
 
 			&:hover {
-				background: image-url("sponsors/atomic-object-color.png")no-repeat center center;
+				background: image-url("sponsors/atomic-object.png")no-repeat top center;
 				background-size: 80%;
 			}
 		}
 
 		.mutuallyhuman {
-			background: image-url("sponsors/mutuallyhuman-gs.png")no-repeat center center;
+			background: image-url("sponsors/mutuallyhuman.png")no-repeat bottom center;
 			background-size: 80%;
 
 			&:hover {
-				background: image-url("sponsors/mutuallyhuman-color.png")no-repeat center center;
+				background: image-url("sponsors/mutuallyhuman.png")no-repeat top center;
 				background-size: 80%;
+			}
+		}
+
+		.software-gr {
+
+			&:hover {
+
+			}
+		}
+
+		.mighty {
+			background: image-url("sponsors/mighty.png")no-repeat top center;
+			background-size: 100%;
+			height: 100px;
+
+			&:hover {
+				background: image-url("sponsors/mighty.png")no-repeat bottom center;
+				background-size: 100%;
 			}
 		}
 
