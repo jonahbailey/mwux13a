@@ -170,7 +170,7 @@ header {
 	.one {
 		li {
 			&:first-of-type {
-				@include pre(8);
+				@include pre(9);
 			}
 		}
 	}
@@ -186,7 +186,7 @@ header {
 	.three {
 		li {
 			&:first-of-type {
-				@include pre(4);
+				@include pre(3);
 			}
 		}
 	}
@@ -196,46 +196,58 @@ header {
 
 		a {
 			@include hide-text;
-			height: 60px;
+			height: 70px;
 			display: block;
+			@include opacity(50);
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+			filter: gray; /* IE6-9 */
+			-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+			@include transition-property(-webkit-filter);
+			@include transition-duration($duration);
+			background-size: 100%;
+
+			&:hover {
+				@include opacity(100);
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+				-webkit-filter: grayscale(0%);
+				background-size: 100%;
+			}
 		}
 
 		.atomic-object {
-			background: image-url("sponsors/atomic-object.png")no-repeat bottom center;
-			background-size: 80%;
-
-			&:hover {
-				background: image-url("sponsors/atomic-object.png")no-repeat top center;
-				background-size: 80%;
-			}
+			background: image-url("sponsors/atomic-object.png")no-repeat center center;
+			background-size: 100%;
 		}
 
 		.mutuallyhuman {
-			background: image-url("sponsors/mutuallyhuman.png")no-repeat bottom center;
-			background-size: 80%;
+			background: image-url("sponsors/mutuallyhuman.png")no-repeat center center;
+			background-size: 100%;
+		}
 
-			&:hover {
-				background: image-url("sponsors/mutuallyhuman.png")no-repeat top center;
-				background-size: 80%;
-			}
+		.people-design {
+			background: image-url("sponsors/people-design.png")no-repeat center center;
+			background-size: 100%;
 		}
 
 		.software-gr {
-
-			&:hover {
-
-			}
+			background: image-url("sponsors/software-gr.png")no-repeat center center;
+			background-size: 100%;
 		}
 
 		.mighty {
-			background: image-url("sponsors/mighty.png")no-repeat top center;
+			background: image-url("sponsors/mighty.png")no-repeat center center;
 			background-size: 100%;
-			height: 100px;
+			height: 150px;
+		}
 
-			&:hover {
-				background: image-url("sponsors/mighty.png")no-repeat bottom center;
-				background-size: 100%;
-			}
+		.kent-state {
+			background: image-url("sponsors/kent-state.png")no-repeat center center;
+			background-size: 100%;
+		}
+
+		.kendall {
+			background: image-url("sponsors/kendall.png")no-repeat center center;
+			background-size: 100%;
 		}
 
 		.visual-hero {
