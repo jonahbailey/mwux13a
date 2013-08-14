@@ -160,7 +160,7 @@ header {
 
 .sponsors-listing {
 	@include span-columns(24 omega, 24);
-	padding: 3em 0 4em;
+	padding: 2em 0 3em;
 
 	ul {
 		list-style: none;
@@ -190,6 +190,22 @@ header {
 			}
 		}
 	}
+
+	.four {
+		li {
+			&:last-of-type {
+				@include omega;
+			}
+		}
+	}
+
+	.education {
+		li:first-of-type {
+			@include pre(7);
+			@include span-columns(10,24);
+		}
+	}
+
 
 	li {
 		@include span-columns(6, 24);
@@ -240,6 +256,12 @@ header {
 			height: 150px;
 		}
 
+		.vitamin-t {
+			background: image-url("sponsors/vitamin-t.png")no-repeat center center;
+			background-size: 100%;
+			height: 150px;
+		}
+
 		.kent-state {
 			background: image-url("sponsors/kent-state.png")no-repeat center center;
 			background-size: 100%;
@@ -248,26 +270,17 @@ header {
 		.kendall {
 			background: image-url("sponsors/kendall.png")no-repeat center center;
 			background-size: 100%;
+			height: 125px;
 		}
 
 		.visual-hero {
 			background: image-url("sponsors/visual-hero-gs.png")no-repeat center center;
 			background-size: 80%;
-
-			&:hover {
-				background: image-url("sponsors/visual-hero-color.png")no-repeat center center;
-				background-size: 80%;
-				}
-			}
+		}
 
 		.universal-mind {
 			background: image-url("sponsors/universal-mind-gs.png")no-repeat center center;
 			background-size: 80%;
-
-			&:hover {
-				background: image-url("sponsors/universal-mind-color.png")no-repeat center center;
-				background-size: 80%;
-			}
 		}
 	}
 }

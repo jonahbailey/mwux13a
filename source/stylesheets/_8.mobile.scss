@@ -76,7 +76,7 @@
 	}
 
 	.sponsors-listing {
-		padding: 2em 0 2em;
+		padding: 1em 0 2em;
 
 		h5 {
 			margin-bottom: 1em;
@@ -89,6 +89,13 @@
 			a {
 
 				background-size: 75% !important;
+			}
+		}
+
+		.education {
+			li:first-of-type {
+				@include pre(0);
+				@include span-columns(24 omega,24);
 			}
 		}
 	}
