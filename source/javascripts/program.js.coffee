@@ -1,5 +1,5 @@
 $ ->
-  return unless $(".program").length > 0
+  return unless $(".program, .schedule").length > 0
 
   $(".sections a").click ->
     $('.sections').css(position: 'fixed', top: '0px')
