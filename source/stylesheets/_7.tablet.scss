@@ -2,8 +2,12 @@
 //================================================//
 
 @media only screen and (max-width: 1070px) {
-	.program .sections {
-		width: 100%;
+	.program,
+	.schedule {
+
+		.sections {
+			width: 100%;
+		}
 	}
 }
 

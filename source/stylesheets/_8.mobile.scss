@@ -66,11 +66,14 @@
 	.sessions,
 	.sponsors section,
 	.chairs,
-	.core-team {
+	.core-team
+	.schedule {
 
+		time,
 		article,
 		article:last-child,
-		article:nth-of-type(even) {
+		article:nth-of-type(even),
+		article:nth-of-type(odd) {
 			@include span-columns(24 omega, 24);
 			margin-bottom: 1em;
 		}
@@ -254,6 +257,42 @@
 			margin: 0;
 		}
 	}
+
+
+// Schedule
+//================================================//
+	.schedule {
+
+		.section-header {
+			font-size: 1.5em;
+		}
+
+		time {
+			position: relative;
+			@include span-columns(24 omega, 24);
+			font-size: 1.25em;
+			text-align: center;
+		}
+
+		.day {
+
+			article {
+				margin-left: 0;
+				margin-bottom: 0;
+			}
+
+			.article-footer {
+				padding-bottom: 0;
+			}
+
+			.article-content {
+				padding-bottom: .25em;
+			}
+		}
+	}
+
+
+
 
 // Why MWUX?
 //================================================//
