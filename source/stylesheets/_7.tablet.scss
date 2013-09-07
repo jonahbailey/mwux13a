@@ -90,14 +90,18 @@
 @media only screen and (max-width: 890px) {
 
 	.primary {
-		padding: .25em 0 0;
+		//padding: .25em 0 0;
 
-		.logo::after {
-			top: 40px;
+		li.logo {
+			padding: 1em 0 .75em;
+
+			&:after {
+				top: 70px;
+			}
 		}
 
 		li {
-			margin-top: 1em;
+			padding: 1.5em 0 1.5em;
 
 			a {
 				font-size: 1em;
@@ -132,6 +136,10 @@
 			// &:nth-child(2) {
 				// @include span-columns(12 omega, 24);
 			// }
+
+			.dropdown {
+				top: 70px;
+			}
 		}
 	}
 
@@ -282,13 +290,7 @@
 		.button {
 			padding: 1em;
 		}
-	}
 
-	.intro {
-
-	}
-
-	.intro {
 		p {
 			margin-top: 0;
 			margin-bottom: 2em;
@@ -331,19 +333,19 @@
 		position: relative;
 		padding: 0;
 		
-		.logo::after {
-			top: 45px;
-		}
-		ul {
-			list-style: none;
-			@include span-columns(24 omega, 24);
+		li.logo {
+			padding-bottom: 0;
+			
+			&:after {
+				top: 63px;
+			}
 		}
 	
 		li {
 			@include box-sizing(border-box);
 			position: relative;
 			text-align: center;
-			margin: .85em 0;
+			margin: 0;
 			font-size: .9em;
 	
 			&:nth-child(1) {
@@ -376,7 +378,11 @@
 			}
 	
 			&:nth-child(7) {
-				@include span-columns(3, 24);
+				@include span-columns(3 omega, 24);
+			}
+
+			.dropdown {
+				top: 63px;
 			}
 		}
 	}

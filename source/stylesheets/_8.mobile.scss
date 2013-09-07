@@ -128,6 +128,28 @@
 		font-size: .75em;
 	}
 
+	.dropdown {
+		position: relative;
+		display: block;
+		top: auto;
+		left: auto;
+		width: auto;
+		background: transparent;
+		border: none;
+		@include border-bottom-radius(none);
+
+		li {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			border: none;
+		}
+	}
+
+#user-tweets,
+#hashtag {
+	@include span-columns(24 omega,24);
+}
 
 // Interior Pages
 //================================================//

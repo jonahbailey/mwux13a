@@ -34,7 +34,6 @@ body {
 .container {
 	@include container;
 	padding: 0;
-	z-index: 10;
 }
 
 header {
@@ -110,6 +109,17 @@ header {
 	}
 }
 
+.tweets {
+	@include span-columns(24 omega, 24);
+}
+
+#user-tweets {
+	@include span-columns(12,24);
+}
+
+#hashtag {
+	@include span-columns(12 omega, 24);
+}
 
 
 // Homepage - Announcement
@@ -281,6 +291,12 @@ header {
 		.universal-mind {
 			background: image-url("sponsors/universal-mind-gs.png")no-repeat center center;
 			background-size: 80%;
+		}
+
+		.brightly {
+			background: image-url("sponsors/brightly.png")no-repeat center center;
+			background-size: 100%;
+			height: 150px;
 		}
 	}
 }
