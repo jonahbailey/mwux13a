@@ -220,6 +220,12 @@ article {
 			@include omega;
 		}
 	}
+
+	#studio-tour {
+		.button {
+			margin-bottom: 1em;
+		}
+	}
 }
 
 .sessions {
@@ -272,6 +278,17 @@ article {
 		}
 		&:nth-of-type(2) {
 			@include span-columns(8 omega,24);
+		}
+	}
+}
+
+.hotels {
+	article {
+		@include span-columns(6,24);
+		margin-bottom: 2em;
+
+		&:nth-of-type(4n) {
+			@include omega;
 		}
 	}
 }

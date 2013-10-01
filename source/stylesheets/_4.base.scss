@@ -164,7 +164,7 @@ header {
 
 // Callouts and News Articles are in _articles partial
 
-// Homepage - Sponsors
+// Sponsors
 //================================================
 
 
@@ -203,7 +203,7 @@ header {
 
 	.four {
 		li {
-			&:last-of-type {
+			&:nth-of-type(4n) {
 				@include omega;
 			}
 		}
@@ -290,8 +290,8 @@ header {
 		}
 
 		.visual-hero {
-			background: image-url("sponsors/visual-hero-gs.png")no-repeat center center;
-			background-size: 80%;
+			background: image-url("sponsors/visual-hero.png")no-repeat center center;
+			background-size: 100%;
 		}
 
 		.universal-mind {
@@ -303,6 +303,30 @@ header {
 			background: image-url("sponsors/brightly.png")no-repeat center center;
 			background-size: 100%;
 			height: 150px;
+		}
+	}
+}
+
+.in-kind {
+	li {
+		@include span-columns(6, 24);
+
+		a {
+			font: 2em/2em $sansFontFamily;
+			color: $linkColor;
+			text-shadow: none;
+			background-color: inherit;
+			@include opacity(100);
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+			filter: none; /* IE6-9 */
+			-webkit-filter: grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:hover {
+				color: $linkColorHover;
+			}
 		}
 	}
 }
@@ -367,11 +391,14 @@ header {
 
 .intro {
 
+	* {
+		padding: 1em 4em 0;
+	}
+
 	p {
 		font-size: 1.15em;
 		line-height: 1.6em;
 		color: $grayDarker;
-		padding: 1em 4em 0;
 	}
 }
 
@@ -419,6 +446,27 @@ header {
 			font-size: .75em;
 			margin-top: .5em;
 		}
+	}
+}
+
+.scholars {
+	.masthead {
+		.event-info {
+			@include span-columns(18,24);
+			@include pre(3, 24);
+		}
+	}
+
+	h2, 
+	h3 {
+		text-align: center;
+		margin-bottom: 1em;
+		padding: 0 6em;
+	}
+
+	strong,
+	a {
+		padding: 0;
 	}
 }
 
@@ -662,6 +710,7 @@ header {
 
 .form {
 	margin: 2em auto;
+	width: 100%;
 }
 
 // Volunteers
