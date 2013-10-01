@@ -177,3 +177,69 @@ a {
 
 // Fall Theme
 //================================================//
+
+// Summer Theme
+//================================================//
+
+.fall {
+	background: image-url("BG_Texture_B.png");
+
+	.home {
+
+		h1 {
+			background: image-url('logo-orange.svg') no-repeat center;
+			background-size: 80%;
+		}
+
+		&:hover {
+
+			h1 {
+				background: image-url('logo.svg') no-repeat center;
+				background-size: 80%;
+			}
+		}
+	}
+
+	.masthead#home {
+		background-size: cover;
+		padding-top: 22em;
+	}
+
+	.masthead.topo#home {
+		background: image-url("09-24_Masthead_Body.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	.masthead.brainwaves#home {
+		background: image-url("09-24_Masthead_Thought.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	.masthead.city#home {
+		background: image-url("09-24_Masthead_Location.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	.registration-callout {
+		background: image-url("city-fall.jpg") no-repeat $orange;
+		background-size: cover;
+	}
+
+// Interior Masthead Image
+	.interior {
+		.masthead.topo {
+			background: image-url("06-26_Body_Masthead_Rough_Blank_01.jpg") no-repeat;
+			background-size: cover;
+		}
+
+		.masthead.brainwaves {
+			background: image-url("06-26_Body_Masthead_Rough_Blank_02.jpg") no-repeat;
+			background-size: cover;
+		}
+
+		.masthead.city {
+			background: image-url("06-26_Body_Masthead_Rough_Blank_03.jpg") no-repeat;
+			background-size: cover;
+		}
+	}
+}
