@@ -58,6 +58,8 @@ set :images_dir, 'images'
 
 activate :directory_indexes
 
+activate :asset_hash
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -67,7 +69,7 @@ configure :build do
   # activate :minify_javascript
 
   # Enable cache buster
-  activate :cache_buster
+  # activate :cache_buster
 
   # Use relative URLs
   # activate :relative_assets
