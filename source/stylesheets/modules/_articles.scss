@@ -487,3 +487,32 @@ article {
 		}
 	}
 }
+
+// Welcome Letter
+//================================================
+
+.welcome-letter {
+
+	.check-in-registration,
+	.evening-fun {
+
+		article {
+			@include span-columns(12,24);
+
+			&:last-of-type {
+				@include span-columns(12 omega, 24);
+			}
+		}
+	}
+
+	.useful-logistics {
+
+		article {
+			@include span-columns(8,24);
+
+			&:last-of-type {
+				@include span-columns(8 omega, 24);
+			}
+		}
+	}
+}
