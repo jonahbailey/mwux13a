@@ -139,7 +139,7 @@ header {
 	}
 
 	.button {
-		@include span-columns(6,24);
+		@include span-columns(12,24);
 		color: $linkColor;
 		background: $white;
 		margin-bottom: 2em;
@@ -409,6 +409,10 @@ header {
 		font-size: 1.15em;
 		line-height: 1.6em;
 		color: $grayDarker;
+
+		a {
+			padding: 0;
+		}
 	}
 }
 

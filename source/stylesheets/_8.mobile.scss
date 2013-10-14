@@ -50,6 +50,7 @@
 
 	.intro {
 		padding: 0;
+		margin-bottom:2em;
 
 		p {
 			padding: 1em;
@@ -184,6 +185,15 @@
 
 		h4 {
 			font-size: 1.25em;
+		}
+
+		&.welcome-letter {
+
+			article,
+			article:last-child,
+			article:nth-of-type(even) {
+				@include span-columns(24 omega, 24);
+			}
 		}
 	}
 
