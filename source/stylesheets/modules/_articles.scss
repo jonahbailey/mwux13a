@@ -193,9 +193,6 @@ article {
 	}
 }
 
-// Program Articles
-//================================================
-
 .workshops {
 	article {
 		@include span-columns(12, 24);
@@ -209,6 +206,20 @@ article {
 	}
 }
 
+.sessions {
+	article {
+		@include span-columns(12, 24);
+		margin-bottom: 1em;
+
+		&:nth-of-type(2n) {
+			@include omega;
+		}
+	}
+}
+
+// Excursions Articles
+//================================================
+
 .excursions {
 	article {
 		@include span-columns(12, 24);
@@ -221,6 +232,20 @@ article {
 		}
 	}
 
+	.excursion-title {
+		margin-bottom: 1em;
+	}
+
+	h4 {
+		float: left;
+		width: 75%;
+	}
+
+	img {
+		float: left;
+		margin-right: 2%;
+	}
+
 	#studio-tour {
 		.button {
 			margin-bottom: 1em;
@@ -228,13 +253,197 @@ article {
 	}
 }
 
-.sessions {
-	article {
-		@include span-columns(12, 24);
-		margin-bottom: 1em;
+#start-garden {
+	h4 {
+		color: #0172BC;
+	}
 
-		&:nth-of-type(2n) {
-			@include omega;
+	.button {
+		background: #0172BC;
+
+		&:hover {
+			@include box-shadow(inset darken(#0172BC, 25%) 0px 0px 10px);
+			background: darken(#0172BC, 10%);
+		}
+	}
+}
+
+#grid-70 {
+	h4 {
+		color: #00BFF3;
+	}
+
+	.button {
+		background: #00BFF3;
+
+		&:hover {
+			@include box-shadow(inset darken(#00BFF3, 25%) 0px 0px 10px);
+			background: darken(#00BFF3, 10%);
+		}
+	}
+}
+
+#wealthy-street-theatre {
+	h4 {
+		color: #8DC73F;
+	}
+
+	.button {
+		background: #8DC73F;
+
+		&:hover {
+			@include box-shadow(inset darken(#8DC73F, 25%) 0px 0px 10px);
+			background: darken(#8DC73F, 10%);
+		}
+	}
+}
+
+#the-rapid {
+	h4 {
+		color: #01A651;
+	}
+
+	.button {
+		background: #01A651;
+
+		&:hover {
+			@include box-shadow(inset darken(#01A651, 25%) 0px 0px 10px);
+			background: darken(#01A651, 10%);
+		}
+	}
+}
+
+#the-factory {
+	h4 {
+		color: #eee233;
+	}
+
+	.button {
+		background: #eee233;
+
+		&:hover {
+			@include box-shadow(inset darken(#eee233, 25%) 0px 0px 10px);
+			background: darken(#eee233, 10%);
+		}
+	}
+}
+
+#meyer-may-house {
+	h4 {
+		color: #F69779;
+	}
+
+	.button {
+		background: #F69779;
+
+		&:hover {
+			@include box-shadow(inset darken(#F69779, 25%) 0px 0px 10px);
+			background: darken(#F69779, 10%);
+		}
+	}
+}
+
+#brewery-tour {
+	h4 {
+		color: #F36C4F;
+	}
+
+	.button {
+		background: #F36C4F;
+
+		&:hover {
+			@include box-shadow(inset darken(#F36C4F, 25%) 0px 0px 10px);
+			background: darken(#F36C4F, 10%);
+		}
+	}
+}
+
+#site-lab {
+	h4 {
+		color: #F26D7D;
+	}
+
+	.button {
+		background: #F26D7D;
+
+		&:hover {
+			@include box-shadow(inset darken(#F26D7D, 25%) 0px 0px 10px);
+			background: darken(#F26D7D, 10%);
+		}
+	}
+}
+
+#grpm {
+	h4 {
+		color: #EE1C24;
+	}
+
+	.button {
+		background: #EE1C24;
+
+		&:hover {
+			@include box-shadow(inset darken(#EE1C24, 25%) 0px 0px 10px);
+			background: darken(#EE1C24, 10%);
+		}
+	}
+}
+
+#grpm-archives {
+	h4 {
+		color: #605CA9;
+	}
+
+	.button {
+		background: #605CA9;
+
+		&:hover {
+			@include box-shadow(inset darken(#605CA9, 25%) 0px 0px 10px);
+			background: darken(#605CA9, 10%);
+		}
+	}
+}
+
+#gram {
+	h4 {
+		color: #91278E;
+	}
+
+	.button {
+		background: #91278E;
+
+		&:hover {
+			@include box-shadow(inset darken(#91278E, 25%) 0px 0px 10px);
+			background: darken(#91278E, 10%);
+		}
+	}
+}
+
+#people-design {
+	h4 {
+		color: #F6931D;
+	}
+
+	.button {
+		background: #F6931D;
+
+		&:hover {
+			@include box-shadow(inset darken(#F6931D, 25%) 0px 0px 10px);
+			background: darken(#F6931D, 10%);
+		}
+	}
+}
+
+#studio-tour {
+	h4 {
+		color: #A763A8;
+	}
+
+	.button {
+		background: #A763A8;
+
+		&:hover {
+			@include box-shadow(inset darken(#A763A8, 25%) 0px 0px 10px);
+			background: darken(#A763A8, 10%);
 		}
 	}
 }
