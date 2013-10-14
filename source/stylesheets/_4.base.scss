@@ -304,6 +304,16 @@ header {
 			background-size: 100%;
 			height: 150px;
 		}
+
+		.involution {
+			background: image-url("sponsors/involution-studios.png")no-repeat center center;
+			background-size: 100%;
+		}
+
+		.clutch {
+			background: image-url("sponsors/clutch-interactive.png")no-repeat center center;
+			background-size: 100%;
+		}
 	}
 }
 
@@ -700,7 +710,8 @@ header {
 	}
 }
 
-.sold-out {
+.sold-out,
+.cancelled {
 	color: $red;
 }
 
