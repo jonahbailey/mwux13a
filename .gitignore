@@ -1,19 +1,4 @@
 # compiled assets
 build/
-build/*.*
 *.sass-cache/
 .DS_Store
-/build/images/bg-nav.jpg
-/build/images/gr-night.jpg
-/build/images/gr-river.jpg
-/build/images/gr.jpg
-/build/images/grand-rapids-panorama.jpg
-/build/images/kendall.jpg
-/build/images/news/alancooper.jpg
-/build/images/news/awesome-peeps.jpg
-/build/images/news/fireworks.jpg
-/build/images/news/nightlife.jpg
-/build/images/speakers-home.jpg
-/build/images/uica.jpg
-/build/images/volunteers.jpg
-/build/javascripts/plugins/jquery.meanmenu.js
