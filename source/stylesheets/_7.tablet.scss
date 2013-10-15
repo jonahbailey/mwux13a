@@ -254,6 +254,19 @@
 
 		}
 	}
+
+	.map,
+	.map-key {
+		@include span-columns(24 omega, 24);
+	}
+
+	.map-key {
+		margin-top: 2em;
+	}
+
+	.excursion-title {
+		@include span-columns(11, 24);
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -454,5 +467,9 @@
 		height: 33px;
 		width: 100px;
 		margin: -15px auto 16px;
+	}
+
+	.excursion-title {
+		@include span-columns(24 omega, 24);
 	}
 }
