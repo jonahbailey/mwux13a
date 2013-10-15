@@ -82,7 +82,11 @@ nav {
 		margin: 1em 0 .75em 0;
 		color: #676768;
 	}
-	h5 { padding-bottom: .25em; border-bottom: 1px solid #676768;}
+	h5 { padding-bottom: .25em; border-bottom: 5px solid $linkColor;
+
+	color: $linkColor;
+
+	}
 }
 
 // Footer
