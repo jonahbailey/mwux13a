@@ -640,6 +640,8 @@ header {
 	time {
 		width: 25%;
 		position: absolute;
+		top: 0;
+		left: 0;
 		font-size: 2em;
 		// font-family: $sansFontFamily;
 	}
@@ -652,6 +654,7 @@ header {
 
 .day,
 .event-slot {
+	position: relative;
 	@include span-columns(24 omega, 24);
 	margin-bottom: 1.5em;
 
