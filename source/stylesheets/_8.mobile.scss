@@ -84,6 +84,18 @@
 		}
 	}
 
+	.core-team {
+
+		article {
+			@include span-columns(24,24);
+			margin-bottom: 1em;
+
+			&:nth-of-type(even) {
+				@include span-columns(24 omega, 24);
+			}
+		}
+	}
+
 	.sponsors-listing {
 		padding: 1em 0 2em;
 

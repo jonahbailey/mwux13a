@@ -386,7 +386,6 @@ article {
 }
 
 .venues {
-	padding-top: 2em;
 	@include span-columns(24 omega, 24);
 
 	article {
@@ -431,6 +430,29 @@ article {
 			}
 		}
 	}
+}
+
+// City Guide Map
+
+.map {
+	@include span-columns(16,24);
+}
+
+.map-key {
+	@include span-columns(8 omega, 24);
+
+	img {
+		float: left;
+	}
+
+	h4,
+	em {
+		@include span-columns(7 omega, 8);
+	}
+}
+
+.excursion-title {
+	margin-bottom: 1em;
 }
 
 .why-mwux {
