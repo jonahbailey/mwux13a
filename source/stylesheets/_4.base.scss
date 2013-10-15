@@ -167,7 +167,23 @@ header {
 // Sponsors
 //================================================
 
+.sponsors {
 
+	.button {
+		@include span-columns(6,24);
+		color: $linkColor;
+		background: $white;
+		margin-bottom: 2em;
+
+		&:first-of-type {
+			@include pre(6);
+		}
+
+		&:last-of-type {
+			margin-right: none;
+		}
+	}
+}
 .sponsors-listing {
 	@include span-columns(24 omega, 24);
 	padding: 2em 0 3em;
